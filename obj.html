@@ -1,0 +1,2424 @@
+const DBMedicamentos = {
+  "APARELHO CARDIOVASCULAR": {
+    "1-A- CARDIOTÓNICOS": [
+      {
+        "codigo": "1-A-1",
+        "nivelPrescricao": "2",
+        "nome": "DIGOXINA",
+        "apresentacao": "Comp. 0,25 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Controlo da resposta ventricular na fibrilhação auricular.",
+          "(2) Tratamento da insuficiência cardíaca com compromisso sistólico ou com baixo débito."
+        ],
+        "doses": {
+          "adultos": {
+            "digitalizacao": "0,75-1,5 mg divididos em 2 ou 3 tomas/dia durante 2 a 3 dias (raramente necessária)",
+            "manutencao": "varia de ½ a 2 comp./dia (usualmente 1 comp./dia)"
+          },
+          "criancas": "ver 1-A-2"
+        },
+        "efeitosSecundarios": [
+          "Anorexia, náusea e vómitos.",
+          "Por vezes cefaleia e tonturas, confusão, depressão e alteração da visão das cores, ginecomastia.",
+          "A toxicidade cardíaca manifesta-se por arritmias tais como bradicardia sinusal, bloqueio AV, extra-sístoles ventriculares multifocais, bigeminismo e taquicardia paroxística auricular por vezes bloqueada."
+        ],
+        "contraIndicacoes": [
+          "Arritmias ventriculares na ausência de insuficiência cardíaca",
+          "síndrome de Wolff-Parkinson-White",
+          "cardiomiopatia hipertrófica",
+          "tetralogia de Fallot",
+          "bloqueio AV"
+        ],
+        "notasPrecaucoes": [
+          "(1) A margem entre a dose terapêutica e a dose tóxica é muito estreita. Além disso, as doses terapêuticas são muito variáveis de indivíduo para indivíduo. Por isso, a digoxina deve ser utilizada com muita precaução, aumentando-se progressivamente as doses até à obtenção do efeito terapêutico desejado.",
+          "(2) As doses relativamente elevadas para a digitalização raramente são necessárias nas situações em que a digoxina está indicada; preferir em geral, a utilização desde o início das doses de manutenção.",
+          "(3) A digoxina é excretada principalmente pelo rim. Assim, em doentes com insuficiência renal, a sua dose deve ser reduzida. Nos idosos, em que já existe um certo grau de compromisso renal, a dose deve também ser reduzida.",
+          "(4) A hipokaliemia e a hipomagnesiemia potenciam os efeitos tóxicos deste fármaco.",
+          "(5) A quinidina, amiodarona, verapamil, diltiazem, espironolactona, cloroquina e o trimetroprim podem aumentar os níveis plasmáticos da digoxina em 50%.",
+          "(6) A utilização da digoxina na insuficiência cardíaca é actualmente controversa, pois não aumenta a sobrevida dos doentes, melhorando somente a sua sintomatologia e diminuindo a necessidade de reinternamento. Assim, só se justifica a utilização da digoxina nesta patologia em conjunto com um inibidor do enzima de conversão ou depois da introdução deste."
+        ]
+      },
+      {
+        "codigo": "1-A-2",
+        "nivelPrescricao": "2",
+        "nome": "DIGOXINA",
+        "apresentacao": "Gotas Orais, 2,5 mg - Fr. 50 mL",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 1-A-1, em crianças mais pequenas.",
+        "doses": {
+          "criancas": {
+            "digitalizacao": "0,015 mg/kg/dia divididos em 3 tomas nas primeiras 24 horas",
+            "manutencao": "0,01 mg/kg/dia dividido em duas tomas diárias"
+          }
+        },
+        "efeitosSecundarios": "Os mesmos de 1-A-1.",
+        "contraIndicacoes": "As mesmas de 1-A-1.",
+        "notasPrecaucoes": [
+          "(1) Por uma questão de economia e de comodidade, usar as gotas somente em crianças até aos 7 kg de peso. Acima deste peso, deve-se preferir comp.",
+          "(2) Ver também 1-A-1."
+        ]
+      },
+      {
+        "codigo": "1-A-3",
+        "nivelPrescricao": "2",
+        "nome": "DIGOXINA",
+        "apresentacao": "Inj. 0,5 mg/2 mL- Amp.",
+        "viaAdministracao": "I.M.; E.V.",
+        "indicacoes": "As mesmas de 1-A-1 em situações de urgência ou quando a via oral é impossível.",
+        "doses": "A indicada em 1-A-1 e 1-A-2.",
+        "notasPrecaucoes": [
+          "(1) Quando administrada por via E.V., deve-se sempre diluir em 10 mL de dextrose a 5% ou soro fisiológico e administrar lentamente.",
+          "(2) Nas taquiarritmias excluir a intoxicação digitálica ou hipokaliemia.",
+          "(3) O risco de intoxicação digitálica é maior quando administrada por via parentérica.",
+          "(4) Ver também 1-A-1."
+        ]
+      },
+      {
+        "codigo": "1-A-4",
+        "nivelPrescricao": "4",
+        "nome": "DOBUTAMINA",
+        "apresentacao": "Inj. 250 mg/5mL- Amp.",
+        "viaAdministracao": "Perfusão E.V. com bomba de infusão",
+        "indicacoes": [
+          "(1) Suporte inotrópico no choque cardiogénico, enfarte do miocárdio com baixo débito e pressão pulmonar aumentada, pós-cirurgia cardíaca e choque séptico (após preenchimento vascular adequado).",
+          "(2) Insuficiência cardíaca refractária."
+        ],
+        "doses": {
+          "adulto": "perfusão E.V., inicialmente 2,5-10 μg/kg/min, aumentando gradualmente em incrementos de 2,5 μg/kg/min, até 15 μg/kg/min, não devendo exceder 20 μg/kg/min. Pode ser administrada até 72 horas, estando o doente monitorizado; depois intermitentemente.",
+          "criancas": "2-10 μg/kg/min."
+        },
+        "efeitosSecundarios": [
+          "Palpitações, extra-sístoles, taquicardia ventricular; pode precipitar angina.",
+          "Aumento da TA sistólica (10-20 mmHg) mas podendo esta ser mais elevada nos doentes com HTA prévia.",
+          "Náusea, vómitos, cefaleia, parestesia e dispneia.",
+          "A extravasão do medicamento pode provocar necrose dos tecidos."
+        ],
+        "contraIndicacoes": [
+          "Cardiomiopatia hipertrófica idiopática obstrutiva e doentes com manifestação prévia de hipersensibilidade ao medicamento."
+        ],
+        "notasPrecaucoes": [
+          "(1) Fármaco para uso exclusivo em ambiente hospitalar; só deve ser administrado diluído em soro, com bomba de infusão e com estrito controlo dos parâmetros vitais.",
+          "(2) Em doentes em choque deve-se primeiro fazer o preenchimento vascular antes de administrar a dobutamina.",
+          "(3) Monitorizar cuidadosamente a TA, ECG e débito urinário.",
+          "(4) Vigiar a perfusão para evitar a extravasão que pode provocar necrose dos tecidos.",
+          "(5) Diluir em dextrose a 5% ou soro fisiológico, não sendo compatível com bicarbonato, nem devendo ser adicionados outros fármacos à perfusão.",
+          "(6) Os β-bloqueadores antagonizam o efeito inotrópico da dobutamina.",
+          "(7) Associado ao halotano aumenta o risco de arritmias ventriculares.",
+          "(8) Os IMAO não interferem com a dobutamina."
+        ]
+      },
+      {
+        "codigo": "1-A-5",
+        "nivelPrescricao": "3",
+        "nome": "DOPAMINA",
+        "apresentacao": "Inj. 200 mg/5 mL- Amp.",
+        "viaAdministracao": "Perfusão E.V. com bomba de infusão",
+        "indicacoes": [
+          "(1) Choque cardiogénico devido a enfarte do miocárdio, cirurgia cardíaca, insuficiência renal ou septicemia após adequado preenchimento vascular.",
+          "(2) Tratamento de curta duração da insuficiência cardíaca refractária."
+        ],
+        "doses": {
+          "adultos": {
+            "1-5": "1 a 5 μg/kg/min: efeito vasodilatador renal.",
+            "6-10": "6 a 10 μg/kg/min: efeito inotrópico positivo.",
+            "acima10": "Acima de 10 μg/kg/min, ao efeito inotrópico associa-se um efeito vasoconstritor periférico com aumento da pós-carga."
+          },
+          "criancas": "perfusão E.V., iniciar com 5 μg/kg/min, aumentar gradualmente até 15 μg/kg/min de acordo com as necessidades."
+        },
+        "efeitosSecundarios": [
+          "Com relativa frequência ocorrem náusea, vómitos e cefaleia.",
+          "As doses baixas podem provocar hipotensão.",
+          "Vasoconstrição e hipertensão podem ocorrer com doses elevadas.",
+          "Ocasionalmente provoca taquicardia, extra-sístoles, bradicardia e angina.",
+          "A extravasão da solução provoca com frequência necrose isquémica dos tecidos.",
+          "Pode ocorrer gangrena das extremidades após doses elevadas por longos períodos de tempo em doentes com choque severo."
+        ],
+        "contraIndicacoes": [
+          "Feocromocitoma e taquiarritmias."
+        ],
+        "notasPrecaucoes": [
+          "(1) Fármaco para uso exclusivo em ambiente hospitalar; só deve ser administrado diluído em soro, com bomba de infusão e com estrito controlo dos parâmetros vitais.",
+          "(2) Controlar a hipovolemia, antes de iniciar a administração da dopamina.",
+          "(3) Vigiar a hipoxemia, hipercapnia e acidose pois reduzem a eficácia e aumentam os efeitos adversos da dopamina.",
+          "(4) Fazer monitorização cardíaca e controlo frequente de TA, FC, PVC, e diurese, durante a sua administração.",
+          "(5) Usar com precaução em doentes com história de doença vascular oclusiva, vigiando a ocorrência de sinais de isquémia.",
+          "(6) Não fazer a interrupção brusca da perfusão; reduzir progressivamente o ritmo de perfusão até à suspensão.",
+          "(7) O uso em simultâneo com halotano e outros halogenados aumenta o risco de hipertensão e arritmias ventriculares.",
+          "(8) Os IMAO aumentam e prolongam os efeitos da dopamina quando usados em simultâneo e durante 3 semanas após a sua suspensão."
+        ]
+      }
+    ],
+    "1-B- ANTIARRÍTMICOS": [
+      {
+        "codigo": "1-B-1",
+        "nivelPrescricao": "4",
+        "nome": "ADENOSINA",
+        "apresentacao": "Inj. 6 mg/2 mL- Amp.",
+        "viaAdministracao": "E.V.",
+        "indicacoes": "Conversão para ritmo sinusal da taquicardia paroxística supra-ventricular.",
+        "doses": {
+          "adultos": "6 mg em bólus rápido (1-2 segundos). Se ineficaz após 1-2 min. administrar 12 mg, que pode ser repetido uma vez, 2 min. mais tarde.",
+          "criancas": "0,05 mg/kg a repetir cada 2 min. se necessário até um máximo de 0,25 mg/kg."
+        },
+        "efeitosSecundarios": [
+          "Bradicardia, hipotensão prolongada, dor torácica, dor do braço, dispneia, rubor facial, cefaleia, tosse e tonturas."
+        ],
+        "contraIndicacoes": [
+          "Doença do Nódulo Sinusal, bloqueio AV (na ausência de marcapasso) e hipersensibilidade conhecida à adenosina."
+        ],
+        "notasPrecaucoes": [
+          "(1) A administração de adenosina deve ser seguida de um flush rápido de 20 mL de soro fisiológico e de elevação do membro onde foi administrada.",
+          "(2) Usar com precaução nos asmáticos.",
+          "(3) O dipiridamol potencia e prolonga o efeito da adenosina. Se usado concomitantemente, reduzir a dose desta.",
+          "(4) A carbamazepina pode potenciar o seu efeito.",
+          "(5) A teofilina e a cafeína antagonizam o efeito anti-arrítmico da adenosina."
+        ]
+      },
+      {
+        "codigo": "1-B-2",
+        "nivelPrescricao": "3",
+        "nome": "AMIODARONA",
+        "apresentacao": "Comp. 200 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Profilaxia e tratamento de arritmias ventriculares e supra-ventriculares.",
+        "doses": "Iniciar com 200 mg, 3 x/dia durante a primeira semana. Em seguida, reduzir progressivamente até à dose de manutenção (habitualmente 200 mg/dia).",
+        "efeitosSecundarios": [
+          "Torsade de points, especialmente em presença de factores predisponentes como hipokaliemia, fármacos com efeito semelhante à quinidina ou antidepressivos tricíclicos.",
+          "Neuropatia periférica, fotossensibilidade cutânea, hiper ou hipotiroidismo, micro depósitos na córnea (não parecem causar perturbação visual), náusea, vómitos, fadiga e sabor metálico na boca.",
+          "Menos frequentemente fibrose pulmonar, hipersensibilidade ou pneumonite intersticial (sintomas incluem tosse, dispneia e febre ligeira), descoloração da pele, bradicardia, insuficiência cardíaca congestiva.",
+          "Raramente reacções alérgicas, hepatotoxicidade com icterícia e aumento dos enzimas hepáticos."
+        ],
+        "contraIndicacoes": [
+          "Bloqueio AV importante ou bradicardia sinusal (a não ser na presença de marcapasso funcionante)",
+          "hipertiroidismo",
+          "hipersensibilidade ao iodo",
+          "em presença de factores de risco de Torsades de points (hipokaliemia ou terapêutica pré existente com fármacos da classe Ia ou sotalol) porfíria."
+        ],
+        "notasPrecaucoes": [
+          "(1) Fármaco recomendado para uso exclusivo por médicos experientes, devendo ser utilizado apenas em situações de taquiarritmias refractárias à terapêutica convencional.",
+          "(2) Usar com precaução em doentes com insuficiência cardíaca ou hepática. Recomenda-se a monitorização periódica da função hepática e do ionograma (K+) principalmente se se usam concomitantemente diuréticos.",
+          "(3) As reacções cardíacas adversas (pouco comuns) são geralmente relacionadas com a dose e surgem com mais frequência nos doentes que tomam concomitantemente digoxina e em idosos pelo que se deve reduzir a dose de digoxina para metade ou suspendê-la.",
+          "(4) A amiodarona contém iodo e pode induzir hipo ou hipertiroidismo pelo que é conveniente fazer cada 6 meses, ou pelo menos anualmente, controlo da função tiroideia.",
+          "(5) A eliminação é muito longa (semi-vida até 40 dias) podendo interferir com outros fármacos durante meses após a sua suspensão. Concentra-se no fígado e pode interferir com o metabolismo hepático de muitos fármacos.",
+          "(6) Usado em simultâneo com anticoagulantes orais há risco aumentado de hemorragia pelo que se recomenda vigiar.",
+          "(7) O uso concomitante da fenitoína aumenta os níveis séricos desta.",
+          "(8) Evitar na gravidez e na lactação."
+        ]
+      },
+      {
+        "codigo": "1-B-3",
+        "nivelPrescricao": "4",
+        "nome": "AMIODARONA",
+        "apresentacao": "Inj. 150 mg/3 mL - Amp.",
+        "viaAdministracao": "E.V.",
+        "indicacoes": "Profilaxia e tratamento de arritmias ventriculares e supra-ventriculares.",
+        "doses": "(1) Na taquicardia ventricular/fibrilhação ventricular sem pulso refractárias à desfibrilhação, administrar um bólus rápido de 300 mg no adulto (5 mg/kg), podendo repetir-se uma dose de 150 mg. (2) Em caso de taquicardia ventricular/fibrilhação ventricular recorrente manter em perfusão na dose de 5 mg/kg em perfusão lenta, em veia central, até uma dose cumulativa máxima de 2,2 g em 24 horas.",
+        "efeitosSecundarios": "Os mesmos de 1-B-2.",
+        "contraIndicacoes": "As mesmos de 1-B-2.",
+        "notasPrecaucoes": [
+          "(1) Pode provocar hipotensão.",
+          "(2) Pode aumentar o intervalo QT e aumentar a propensão para arritmias ventriculares polimórficas pelo que não é recomendado o uso concomitante de procainamida.",
+          "(3) Para reduzir formação de espuma, aspirar o conteúdo das amp. para seringa com agulha de grande calibre diluindo em 20 a 30 mL de dextrose a 5%."
+        ]
+      },
+      {
+        "codigo": "1-B-4",
+        "nivelPrescricao": "3",
+        "nome": "VERAPAMIL",
+        "apresentacao": "Comp. 40 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Arritmias supra-ventriculares.",
+          "(2) Angina de peito.",
+          "(3) HTA."
+        ],
+        "doses": "Adultos e crianças maiores de 2 anos: 40 a 120 mg 2 a 3 x/dia de acordo com a idade e a resposta.",
+        "efeitosSecundarios": "Obstipação, náusea, cefaleia, elevação dos enzimas hepáticos e fadiga.",
+        "contraIndicacoes": [
+          "Doença do nó sinusal",
+          "bloqueios AV prévios",
+          "hipotensão severa",
+          "síndrome de Wolff-Parkinson-White com condução anterógrada",
+          "depressão da função sistólica ventricular."
+        ],
+        "notasPrecaucoes": "A associação aos digitálicos e aos β-bloqueadores potencia o seu efeito bloqueador AV e pode provocar hipotensão e insuficiência cardíaca."
+      },
+      {
+        "codigo": "1-B-5",
+        "nivelPrescricao": "4",
+        "nome": "VERAPAMIL",
+        "apresentacao": "Inj. 5 mg/2 mL- Amp.",
+        "viaAdministracao": "E.V.",
+        "indicacoes": "Arritmias supra-ventriculares, em situações de urgência.",
+        "doses": {
+          "adultos": "2,5 a 5 mg E.V. lento e diluído em 20 mL de soro fisiológico. Repetir, se necessário, 10 min. depois.",
+          "criancas": {
+            "menores1ano": "0,1 a 0,2 mg/kg",
+            "1-15anos": "0,1 a 0,3 mg/kg, não se devendo ultrapassar 5 mg. A dose pode ser repetida cerca de 30 min. depois, se a primeira não for eficaz."
+          }
+        },
+        "efeitosSecundarios": "Raramente, pode provocar reacções cardiovasculares sérias como bradicardia e hipotensão severas, bloqueios AV, insuficiência cardíaca, edema do pulmão e assistolia.",
+        "contraIndicacoes": "Hipotensão severa e distúrbios da condução AV.",
+        "notasPrecaucoes": [
+          "(1) A administração E.V. deve ser feita com monitorização cardíaca do doente e avaliação repetida da TA.",
+          "(2) Em caso de precipitação de insuficiência cardíaca, injectar cálcio E.V. e administrar atropina, se surgir um bloqueio AV sintomático."
+        ]
+      }
+    ],
+    "1-C- ANTI-HIPERTENSIVOS": [
+      {
+        "codigo": "1-C-1",
+        "nivelPrescricao": "2",
+        "nome": "DIHIDRALAZINA",
+        "apresentacao": "Inj. 25 mg/5 mL- Amp.",
+        "viaAdministracao": "E.V.; I.M.; Perfusão E.V.",
+        "indicacoes": [
+          "(1) Urgência hipertensiva.",
+          "(2) Controlo da HTA durante a gravidez e pré-eclâmpsia/eclâmpsia."
+        ],
+        "doses": {
+          "perfusaoEV": "Diluir o conteúdo da amp., em 1 mL de água destilada e adicionar em seguida a 500 mL de soro fisiológico. Perfundir a um ritmo inicial de 100-200 μg/min e seguidamente ajustar em função da resposta clínica, para um ritmo de manutenção entre 50-150 μg/min.",
+          "EVDirecta": "Diluir o conteúdo da amp., em 1 mL de água destilada e depois fazer uma diluição adicional em 10 mL de soro fisiológico. Administrar por via E.V. muito lenta, na dose de 6,25 a 12,5 mg. Repetir, se necessário, passados 20-30 min.",
+          "IM": "½ -1 amp., a repetir se necessário, passados 20-30 min., até se atingir uma resposta adequada."
+        },
+        "efeitosSecundarios": "Os mesmos de 1-C-2.",
+        "contraIndicacoes": "As mesmas de 1-C-2.",
+        "notasPrecaucoes": [
+          "(1) A administração E.V. só deve ser feita em ambiente hospitalar e unicamente por médicos habituados a manejar este fármaco, por esta via.",
+          "(2) Na administração E.V. preferir sempre a administração em perfusão, reservando a administração E.V. directa somente para situações específicas e sob estrito controlo médico.",
+          "(3) Durante a administração fazer monitorização frequente da TA e FC.",
+          "(4) Devido a incompatibilidade química, não se deve diluir a dihidralazina em dextrose a 5%.",
+          "(5) A administração I.M. apesar de não ser tão eficaz como a E.V., deve ser preferida nas situações menos severas, sempre que não haja condições para a monitorização rigorosa do doente.",
+          "(5) Ver também 1-C-2."
+        ]
+      },
+      {
+        "codigo": "1-C-2",
+        "nivelPrescricao": "2",
+        "nome": "HIDRALAZINA",
+        "apresentacao": "Comp. 25 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) HTA.",
+          "(2) Insuficiência cardíaca congestiva."
+        ],
+        "doses": "25 mg, 2 x/dia, podendo aumentar-se para 50 a 75 mg, 3 x/dia.",
+        "efeitosSecundarios": [
+          "Cefaleia, náusea, palpitações, taquicardia e hipotensão postural.",
+          "Em doses altas, poderá causar um síndrome, semelhante ao lúpus eritematoso, que desaparece uma vez suspenso o fármaco."
+        ],
+        "contraIndicacoes": [
+          "Absolutas: estenose aórtica, cardiomiopatia hipertrófica, porfíria e lúpus eritematoso sistémico.",
+          "Relativas: doença isquémica, estenose mitral."
+        ],
+        "notasPrecaucoes": [
+          "(1) O efeito taquicardizante pode ser evitado, combinando a hidralazina com um β-bloqueador. Esta associação é muito útil no tratamento da HTA.",
+          "(2) A retenção de fluidos pode requerer terapia com diuréticos.",
+          "(3) Os doentes com insuficiência renal são mais sensíveis ao efeito hipotensor.",
+          "(4) É recomendada na pré-eclâmpsia e no tratamento da HTA durante a gravidez.",
+          "(5) Pode ser usada em associação com o dinitrato de isossorbido na insuficiência cardíaca congestiva estando particularmente indicada esta combinação nos doentes de raça negra."
+        ]
+      },
+      {
+        "codigo": "1-C-3",
+        "nivelPrescricao": "4",
+        "nome": "LABETALOL",
+        "apresentacao": "Inj. 5 mg/mL- Amp.",
+        "viaAdministracao": "E.V.",
+        "indicacoes": [
+          "Bloqueador misto α e β-adrenérgico indicado:",
+          "(1) Emergência hipertensiva, incluindo a hipertensão durante a última metade da gravidez.",
+          "(2) Hipertensão com angina ou na sequência de um enfarte do miocárdio.",
+          "(3) Para produzir hipotensão controlada durante a cirurgia."
+        ],
+        "doses": "Administrar por via E.V. em perfusão, diluído em 100 mL de soro fisiológico, na dose de 2 mg/min até uma dose total de 1-2 mg/kg. Instituir terapêutica oral alternativa posteriormente.",
+        "efeitosSecundarios": [
+          "Em doses elevadas poderá provocar hipotensão postural.",
+          "Menos comummente broncospasmo, alterações da condução AV e insuficiência cardíaca.",
+          "Ver também 1-E-3."
+        ],
+        "contraIndicacoes": [
+          "Absolutas: bloqueio AV de segundo ou terceiro grau. Insuficiência cardíaca sintomática, bradicardia sinusal ou choque cardiogénico; asthma.",
+          "Relativas: broncospasmo severo, história de alergia.",
+          "Ver também 1-E-1, 1-E-2 e 1-E-3."
+        ],
+        "notasPrecaucoes": [
+          "(1) Usar com precaução em doentes com doença hepática ou com insuficiência cardíaca tratada.",
+          "(2) Em associação com álcool e anestésicos aumenta o seu efeito sedativo.",
+          "(3) O efeito do labetalol é potenciado pela cimetidina.",
+          "(4) Usar com precaução em associação com outros anti-hipertensivos pela potenciação dos efeitos hipotensores.",
+          "(5) Reduzir as doses na insuficiência hepática.",
+          "(6) Nos idosos usar doses iniciais baixas e aumentar gradualmente de acordo com a resposta.",
+          "(7) Só deve ser usado em ambiente hospitalar e por médicos familiarizados com o seu uso."
+        ]
+      },
+      {
+        "codigo": "1-C-4",
+        "nivelPrescricao": "1",
+        "nome": "METILDOPA",
+        "apresentacao": "Comp. 250 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) HTA da gravidez.",
+          "(2) HTA ligeira a moderada, não controlável com o uso isolado de diuréticos tiazídicos.",
+          "(3) Como alternativa terapêutica à reserpina em situações em que ela está contra-indicada ou quando a sua dose máxima é insuficiente para controlar a hipertensão."
+        ],
+        "doses": "De 125 mg de 12/12 h até a dose máxima de 1g de 8 /8 h.",
+        "efeitosSecundarios": [
+          "Sedação, secura da boca, retenção de sódio e água, congestão nasal, depressão, parkinsonismo, diminuição da libido, impotência sexual.",
+          "Ocasionalmente, febre medicamentosa, anemia hemolítica, leucopenia e trombocitopenia.",
+          "Raramente, provoca manifestações de hepatotoxicidade (hepatite colestática, necrose hepática aguda)."
+        ],
+        "contraIndicacoes": [
+          "Doença hepática activa",
+          "história de anemia hemolítica",
+          "depressão",
+          "doença de Parkinson."
+        ],
+        "notasPrecaucoes": [
+          "(1) Os AINEs reduzem a eficácia anti-hipertensiva deste medicamento bem como de outros fármacos anti-hipertensivos, podendo elevar abruptamente a TA.",
+          "(2) Começar com doses pequenas e aumentar paulatinamente.",
+          "(3) Em caso de tonturas, administrar duas doses desiguais sendo a maior, no período nocturno.",
+          "(4) Excepto em situações excepcionais, não deve ser ultrapassada a dose de 1 g/dia (2 comp. de 12/12 h), devendo em caso de necessidade ser associado outro fármaco anti-hipertensivo."
+        ]
+      },
+      {
+        "codigo": "1-C-5",
+        "nivelPrescricao": "1",
+        "nome": "RESERPINA",
+        "apresentacao": "Comp. 0,25 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "HTA ligeira a moderada, não controlável com o uso isolado de diuréticos tiazídicos.",
+        "doses": "0,125 a 0,25 mg/dia (½ a 1 comp./dia) em toma única.",
+        "efeitosSecundarios": [
+          "Sedação, tonturas, secura da boca, bradicardia, diminuição da libido, congestão nasal, dispepsia ulcerosa, diarreia, cefaleia, depressão e retenção de líquidos."
+        ],
+        "contraIndicacoes": [
+          "História prévia ou actual de depressão mental",
+          "úlcera péptica",
+          "colite ulcerosa",
+          "feocromocitoma",
+          "doença de Parkinson",
+          "epilepsia e doentes com terapêutica anti-convulsivante."
+        ],
+        "notasPrecaucoes": [
+          "(1) Doses superiores a 0,25 mg (1 comp./dia) não trazem grandes vantagens pois a incidência de efeitos secundários importantes, ultrapassa os benefícios anti-hipertensivos do medicamento.",
+          "(2) Não recomendado na gravidez."
+        ]
+      }
+    ],
+    "1-E- β-BLOQUEADORES": [
+      {
+        "codigo": "1-E-1",
+        "nivelPrescricao": "3",
+        "nome": "ATENOLOL",
+        "apresentacao": "Comp. 50 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) HTA.",
+          "(2) Angina do peito.",
+          "(3) Arritmias cardíacas e sempre que é desejável uma maior cardio-selectividade (doente com asma ou outra DPOC) ou quando se pretenda maior aderência terapêutica."
+        ],
+        "doses": "25 a 100 mg por dia em toma única.",
+        "efeitosSecundarios": [
+          "Bradicardia e disfunção sexual.",
+          "Pode também provocar broncospasmo em doentes com doença pulmonar obstrutiva e desencadear insuficiência cardíaca em doentes com reserva miocárdica diminuída.",
+          "Porém estas complicações ocorrem sobretudo com o uso de doses elevadas, mas mais raramente do que com o propranolol."
+        ],
+        "contraIndicacoes": [
+          "Insuficiência cardíaca sintomática",
+          "bloqueios A.V do 2º ou 3º graus.",
+          "São contra-indicações relativas: a asma e a doença pulmonar obstrutiva."
+        ],
+        "notasPrecaucoes": [
+          "(1) É bloqueador β1-cardio-selectivo o que o torna mais indicado do que o propranolol nos doentes com asma ou outras doenças pulmonares obstrutivas e também nos diabéticos e nos doentes com claudicação intermitente. Em doentes que não sofram dessas afecções é preferível usar o propranolol, devido à sua melhor relação custo/eficácia.",
+          "(2) Deve-se ter presente que a cárdio-selectividade é relativa e desaparece com uso de doses elevadas. Por isso, o uso do atenolol nas situações acima indicadas deverá ser feito apenas se a prescrição de um β-bloqueador for imprescindível.",
+          "(3) A sua utilização no tratamento da HTA está relacionada com uma maior probabilidade de aparecimento a longo prazo de resistência à insulina e diabetes tipo II.",
+          "(4) Ver também 1-E-3."
+        ]
+      },
+      {
+        "codigo": "1-E-2",
+        "nivelPrescricao": "3",
+        "nome": "BISOPROLOL",
+        "apresentacao": "Comp. 2,5 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Insuficiência cardíaca.",
+        "doses": "1,25-10 mg por dia em dose única.",
+        "efeitosSecundarios": "Os mesmos de 1-E-1.",
+        "contraIndicacoes": "As mesmas de 1-E-1.",
+        "notasPrecaucoes": [
+          "(1) Efeito benéfico na mortalidade quando associado a um IECA e diuréticos no tratamento da insuficiência cardíaca congestiva.",
+          "(2) Só deve ser administrado a doentes com insuficiência cardíaca quando compensados, em classe funcional II-III e já medicados com IECA e diuréticos.",
+          "(3) Começar com a dose de 1,25 mg por dia e ir duplicando a dose ao fim de cada semana, se não surgirem sinais ou sintomas de agravamento da insuficiência cardíaca. Se necessário, aumentar a dose dos diuréticos.",
+          "(4) Só deve ser utilizado por médicos familiarizados com seu uso pois pode agravar bastante o quadro de insuficiência cardíaca.",
+          "(5) Não é necessário reduzir a dose na insuficiência renal e hepática.",
+          "(6) Ver também 1-E-1."
+        ]
+      },
+      {
+        "codigo": "1-E-3",
+        "nivelPrescricao": "2",
+        "nome": "PROPRANOLOL",
+        "apresentacao": "Comp. 40 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Angina de peito, (profilaxia a longo prazo de novas crises).",
+          "(2) Arritmias cardíacas.",
+          "(3) HTA.",
+          "(4) Pode ainda ser utilizado na: a) tireotoxicose, b) cardiomiopatia hipertrófica, c) episódios cianóticos da tetralogia de Fallot, d) tremor essencial, e) ansiedade, sobretudo com predomínio de manifestações somáticas cardiovasculares ou neurológicas e f) profilaxia da enxaqueca."
+        ],
+        "doses": "Variável conforme os casos. Como regra, iniciar com 20-40 mg de 12/12 h, podendo aumentar-se paulatinamente até 360 mg/dia, divididos em duas ou três tomas diárias.",
+        "efeitosSecundarios": [
+          "Bradicardia, tonturas, distúrbios do sono, disfunção sexual.",
+          "Broncospasmo em doentes com asma e outras doenças pulmonares obstrutivas.",
+          "Acentuação dos sintomas de doença vascular periférica.",
+          "Desencadeamento de um quadro de insuficiência cardíaca congestiva, com edema pulmonar, em doentes com reserva miocárdica diminuída.",
+          "A administração prolongada pode provocar alterações dos lípidos plasmáticos (aumento de triglicéridos e LDL-colesterol e diminuição HDL-colesterol) de significado não esclarecido."
+        ],
+        "contraIndicacoes": [
+          "Asma ou doença pulmonar obstrutiva severa",
+          "insuficiência cardíaca",
+          "bloqueio AV do 2º ou 3º graus",
+          "síndrome de Raynaud."
+        ],
+        "notasPrecaucoes": [
+          "(1) Em doentes diabéticos, o seu uso deve ser ponderado, pois inibe a taquicardia e outros sinais de alerta de uma hipoglicemia.",
+          "(2) Em doentes anginosos, nunca deve ser interrompido abruptamente, pois pode provocar um aumento da severidade da angina.",
+          "(3) A administração de propranolol a longo termo, iniciada na fase precoce do enfarte do miocárdio, parece diminuir a mortalidade e a frequência de re-enfarte.",
+          "(4) A associação com a hidralazina ou a nifedipina constitui uma boa combinação para o tratamento da HTA.",
+          "(5) É útil no alívio de extra-sistoles ventriculares isoladas e mono-mórficas, de palpitações taquicárdicas e de pontadas no tórax, associadas à ansiedade ou ao prolapso da válvula mitral.",
+          "(6) É útil quando associado aos anti-tiroideus, na fase inicial do tratamento da tireotoxicose para controlo dos sintomas, até que haja uma regularização da função tiroideia (ver 3-D-1 e 3-D-2).",
+          "(7) Excepto em condições muito particulares, não é recomendável o uso concomitante de verapamil ou diltiazem (risco de bloqueio AV)."
+        ]
+      }
+    ],
+    "1-F- BLOQUEADORES DOS CANAIS DE CÁLCIO": [
+      {
+        "codigo": "1-F-1",
+        "nivelPrescricao": "2",
+        "nome": "AMLODIPINA",
+        "apresentacao": "Comp. 10 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) HTA.",
+          "(2) Angina de peito."
+        ],
+        "doses": "Dose inicial 5 mg, aumentar após 10-14 dias para um máximo de 10 mg/dia (dose única).",
+        "efeitosSecundarios": "Edema dos membros inferiores, tonturas e palpitações. Raramente bradicardia, hipotensão ortostática, hiperplasia gengival.",
+        "contraIndicacoes": [
+          "Absolutas: hipotensão arterial.",
+          "Relativas: estenose aórtica; cardiomiopatia hipertrófica, angina instável na ausência de β-bloqueadores."
+        ],
+        "notasPrecaucoes": [
+          "(1) Usar com precaução na insuficiência hepática.",
+          "(2) A cimetidina inibe o metabolismo hepático da amlodipina podendo potenciar o efeito hipotensor.",
+          "(3) O uso simultâneo com outros anti-hipertensores, particularmente com os β-bloqueadores, potencia o efeito hipotensor.",
+          "(4) Não está comprovada a segurança na gravidez e lactação pelo que só deverá ser usada em caso de necessidade.",
+          "(5) Usar com extrema precaução na porfíria e apenas se os benefícios ultrapassam os riscos.",
+          "(6) Particularmente eficaz nos hipertensos de raça negra e nos idosos mas nestes iniciar com doses mais baixas.",
+          "(7) Na insuficiência cardíaca congestiva de grau III ou IV de NYHA secundária a HTA é segura se associada a terapêutica standard para esta situação."
+        ]
+      },
+      {
+        "codigo": "1-F-2",
+        "nivelPrescricao": "2",
+        "nome": "NIFEDIPINA",
+        "apresentacao": "Comp. de acção prolongada, 30 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Angina de peito em especial na angina de repouso e nalguns casos de angina de esforço que não respondam a β-bloqueadores ou em situações em que estes estejam contra-indicados.",
+          "(2) HTA moderada a severa (3ª linha).",
+          "(3) Doença de Reynaud."
+        ],
+        "doses": "30-60 mg em dose única diária.",
+        "efeitosSecundarios": [
+          "Cefaleia, tonturas, rubor, edema do tornozelo, fraqueza, palpitações e hipotensão.",
+          "Raramente, agravamento de insuficiência cardíaca e aumento da intensidade, frequência e duração da angina especialmente quando instável.",
+          "Náusea, azia, obstipação, hiperplasia gengival, dispneia, congestão nasal, visão turva, cãibras musculares, rigidez articular e erupção cutânea."
+        ],
+        "contraIndicacoes": [
+          "Absolutas: hipotensão, angina instável ou enfarte agudo de miocárdio na ausência de β-bloqueadores.",
+          "Relativas: estenose aórtica; cardiomiopatia hipertrófica, angina; gravidez."
+        ],
+        "notasPrecaucoes": [
+          "(1) A associação da nifedipina aos diuréticos ou β-bloqueadores é útil no controlo da HTA que não responde à monoterapia com um destes fármacos.",
+          "(2) A cimetidina inibe o metabolismo hepático da nifedipina podendo potenciar o seu efeito hipotensor.",
+          "(3) O uso simultâneo com outros fármacos anti-hipertensivos, especialmente os α e β-bloqueadores pode provocar hipotensão severa.",
+          "(4) O uso simultâneo com outros fármacos com alta ligação às proteínas (AINEs, varfarina, quinidina, sulfonamidas, salicilatos, quinino e sulfonilureias) pode provocar a deslocação de qualquer dos fármacos e inesperada potenciação de efeitos.",
+          "(5) Atravessa a placenta e não está comprovada a sua segurança na gravidez pelo que não deve ser usada.",
+          "(6) É excretada no leite mas pode ser usada devendo contudo monitorizar-se com cuidado eventuais efeitos secundários no recém-nascido.",
+          "(7) Usar com extrema precaução na porfíria e apenas se os benefícios ultrapassam os riscos.",
+          "(8) Nos idosos iniciar com doses baixas e aumentar de acordo com a resposta.",
+          "(9) Deve ser engolido inteiro com um pouco de líquido."
+        ]
+      }
+    ],
+    "1-G- VASODILATADORES": [
+      {
+        "codigo": "1-G-1",
+        "nivelPrescricao": "3",
+        "nome": "DINITRATO DE ISOSSORBIDO",
+        "apresentacao": "Comp. de acção prolongada, 40 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Profilaxia da crise anginosa.",
+          "(2) Tratamento da insuficiência cardíaca."
+        ],
+        "doses": "1 a 2 comp. em intervalos de 12/12 h.",
+        "efeitosSecundarios": "Os mesmos de 1-G-2.",
+        "contraIndicacoes": "As mesmas de 1-G-2.",
+        "notasPrecaucoes": [
+          "(1) Devido ao seu efeito, mais prolongado do que o da nitroglicerina, deve ser reservado para a terapêutica de manutenção das situações indicadas; a nitroglicerina deve ser reservada para as situações mais agudas.",
+          "(2) A tolerância desenvolve-se com terapêuticas prolongadas e contínuas. Para minimizá-la, respeitar intervalos de 12 h entre a administração da terapêutica.",
+          "(3) Fazer uma administração excentríca com um intervalo livre de 12 h para restabelecer os receptores."
+        ]
+      },
+      {
+        "codigo": "1-G-2",
+        "nivelPrescricao": "2",
+        "nome": "NITROGLICERINA",
+        "apresentacao": "Comp. 0,5 mg",
+        "viaAdministracao": "Sub-lingual",
+        "indicacoes": [
+          "(1) Alívio e profilaxia das crises de angina do peito.",
+          "(2) Alívio, a curto prazo, da congestão pulmonar em situações de insuficiência cardíaca esquerda."
+        ],
+        "doses": "1 Comp. sub-lingual que pode ser repetido em intervalos de 3-5 min., até ao alívio da dor ou da dispneia. Não ultrapassar 4 comp.",
+        "efeitosSecundarios": [
+          "Cefaleia, taquicardia e rubor da face, no início da terapêutica.",
+          "Náusea, vómitos, hipotensão postural, tonturas e eventualmente síncope.",
+          "Excepcionalmente, bradicardia em certos casos de enfarte do miocárdio.",
+          "A tolerância ao medicamento desenvolve-se rapidamente em caso de uso contínuo e prolongado, desaparecendo também, nestas circunstâncias, os efeitos secundários."
+        ],
+        "contraIndicacoes": [
+          "Hipotensão arterial, bradicardia ou taquicardia severa, enfarte do ventrículo direito, uso de sildenafil nas últimas 24 horas, pericardite constritiva",
+          "angina associada à estenose aórtica ou à cardiomiopatia hipertrófica",
+          "cor pulmonale",
+          "anemia importante.",
+          "Usar com cuidado em doentes com hemorragia cerebral recente."
+        ],
+        "notasPrecaucoes": [
+          "(1) Se ocorrer hipotensão e síncope, elas podem ser aliviadas elevando as pernas do doente.",
+          "(2) Sempre que possível, o fármaco deve ser tomado pela primeira vez com o doente sentado; a aplicação com o doente de pé propicia a síncope, enquanto que em decúbito aumenta o retorno venoso e o trabalho cardíaco.",
+          "(3) A tolerância evita-se fazendo intervalos de 12 h entre a administração da terapêutica.",
+          "(4) A suspensão da terapêutica deve ser feita sempre paulatinamente.",
+          "(5) Os comp. devem ser guardados em recipientes bem fechados, protegidos da luz (por exemplo num frasco de vidro castanho) porque perdem a sua eficácia quando expostos à luz ou ao ar.",
+          "(6) O efeito hipotensor da nitroglicerina é potenciado pelo consumo de álcool."
+        ]
+      },
+      {
+        "codigo": "1-G-3",
+        "nivelPrescricao": "4",
+        "nome": "NITROGLICERINA",
+        "apresentacao": "Inj. 25 mg/5 mL- Amp.",
+        "viaAdministracao": "perfusão E.V. com bomba de perfusão ou seringa eléctrica",
+        "indicacoes": [
+          "(1) Angina instável.",
+          "(2) Fase precoce do enfarte do miocárdio, particularmente com infra-nivelamento do ST.",
+          "(3) Urgência hipertensiva com síndrome coronário agudo ou com edema agudo do pulmão.",
+          "(4) Tratamento agudo da insuficiência cardíaca severa."
+        ],
+        "doses": "Bólus de 12,5-25 μg. Diluir em soro e administrar entre 10-20 μg/min.",
+        "efeitosSecundarios": "Os mesmos de 1-G-2.",
+        "contraIndicacoes": "As mesmas de 1-G-2.",
+        "notasPrecaucoes": [
+          "(1) Medicamento de uso exclusivo em hospitais e por médicos familiarizados com o seu uso.",
+          "(2) Deve ser administrada unicamente em perfusão com bomba de perfusão ou seringa eléctrica e com controlo permanente da TA e FC.",
+          "(3) Não misturar com outros fármacos.",
+          "(4) Quando há evidência de enfarte do miocárdio, limitar a descida da TA sistólica a menos de 10% no doente normotenso, e a menos de 30 % no doente hipertenso e evitar quedas abaixo de 90 mmHg.",
+          "(5) Não misturar com outros fármacos."
+        ]
+      },
+      {
+        "codigo": "1-G-4",
+        "nivelPrescricao": "4",
+        "nome": "NITROPRUSSIATO DE SÓDIO",
+        "apresentacao": "Inj. 50 mg - Amp.",
+        "viaAdministracao": "Perfusão E.V. com bomba de perfusão ou seringa eléctrica",
+        "indicacoes": [
+          "(1) Terapêutica da emergência hipertensiva.",
+          "(2) Dissecção da aorta.",
+          "(3) Insuficiência cardíaca severa e refractária."
+        ],
+        "doses": "Iniciar com 10 μg/min, aumentar depois 10 μg/min de 10 em 10 min., até se atingir o efeito desejado (usualmente entre 40-75 μg/min). Dose máxima: 300 μg/ min (4 μg/kg/min).",
+        "efeitosSecundarios": [
+          "Os resultantes de uma queda muito rápida da TA como náusea e vómitos, cefaleia, palpitações, tonturas, inquietação e dor abdominal que podem desaparecer se se reduzir o ritmo de perfusão.",
+          "Distúrbios neurológicos como convulsões, confusão e hiperreflexia.",
+          "A extravasão no tecido celular subcutâneo pode provocar irritação importante e necrose dos tecidos."
+        ],
+        "contraIndicacoes": [
+          "Absolutas: doença hepática activa; atrofia óptica hereditária; aumento da pressão intra-raquidiana; deficiência de Vit. B12.",
+          "Relativas: hipovolemia, hipertensão secundária a um shunt artério-venoso, coarctação da aorta; estenose aórtica; insuficiência renal severa e distúrbios da circulação cerebral."
+        ],
+        "notasPrecaucoes": [
+          "(1) Para uso exclusivo em hospitais centrais e por médicos com experiência no uso do fármaco.",
+          "(2) Deve ser sempre utilizada com bomba de perfusão ou seringa eléctrica e diluída exclusivamente em dextrose a 5%.",
+          "(3) A solução deve ser protegida da luz solar com folha de alumínio e substituída ao fim de 24 horas ou sempre que se verificar mudança da sua cor ligeiramente acastanhada, para castanho-escuro, laranja ou azul.",
+          "(4) Monitorizar constantemente a TA para evitar quedas exageradas ou muito rápidas da mesma.",
+          "(5) A terapêutica prolongada (mais de 24-48 horas) pode levar a uma acumulação de tiocianato. Os sinais precoces de intoxicação são a acidose metabólica, que pode ser seguida de dispneia, cefaleia, desorientação, psicose ou perda de consciência.",
+          "(6) A toxicidade pelo cianeto pode aparecer sempre que se fazem administrações muito rápidas do medicamento (mais de 2 μg/kg/min). Esta manifesta-se por taquipneia, taquicardia, convulsões ou coma."
+        ]
+      }
+    ],
+    "1-H- INIBIDORES DO ENZIMA DE CONVERSÃO DA ANGIOTENSINA": [
+      {
+        "codigo": "1-H-1",
+        "nivelPrescricao": "3",
+        "nome": "ENALAPRIL",
+        "apresentacao": "Comp. 5 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Insuficiência cardíaca congestiva, particularmente no pós-enfarte agudo do miocárdio.",
+          "(2) HTA.",
+          "(3) Prevenção ou regressão da progressão da micro-albuminúria no doente diabético."
+        ],
+        "doses": "Nas indicações (1) e (2), iniciar com 2,5 mg sob vigilância, seguida de 5-20 mg/dia dividida em duas tomas. Na indicação (3), iniciar com 5-20 mg/dia, dependendo da severidade, seguida de 10-20 mg/dia em duas tomas.",
+        "efeitosSecundarios": [
+          "Tonturas, cefaleia, astenia, náusea, hipotensão, tosse seca persistente, erupção cutânea, perda da sensibilidade gustativa, broncospasmo, rinorreia e angioedema."
+        ],
+        "contraIndicacoes": [
+          "Absoluta: estenose da artéria renal bilateral, história de angioedema e gravidez.",
+          "Relativa: insuficiência renal pré-existente (clearance de creatinina inferior a 20 mL/min), estenose da artéria renal unilateral, transplante renal e hiperkaliemia."
+        ],
+        "notasPrecaucoes": [
+          "(1) Pertence ao grupo de fármacos de primeira linha no tratamento da insuficiência cardíaca, mesmo em doentes assintomáticos.",
+          "(2) Reduz a dilatação remodeladora do ventrículo esquerdo em doentes pós enfarte agudo do miocárdio.",
+          "(3) Em doentes com TA baixa, ou nos susceptíveis a hipotensão e nos idosos usar dose inicial de 5 mg ou menos.",
+          "(4) Na HTA está particularmente indicado em doentes com diabetes mellitus associada ou em doentes que apresentem um quadro de insuficiência cardíaca sistólica associado a hipertensão. Nos restantes doentes hipertensos só deve ser utilizado associado a diuréticos tiazídicos, bloqueadores dos canais de cálcio e β-bloqueadores quando esta associação tiver sido utilizada previamente sem controlo da HTA.",
+          "(5) Associado a outros anti-hipertensivos e diuréticos tem efeito hipotensor aditivo.",
+          "(6) Os suplementos de potássio ou diuréticos poupadores de potássio devem ser usados com precaução devido ao risco de hiperkaliemia.",
+          "(7) O uso simultâneo dos AINEs diminui os efeitos hipotensores e anti insuficiência cardíaca do enalapril pelo seu mecanismo inibidor da síntese das prostaglandinas a nível renal.",
+          "(8) Os anti-ácidos reduzem a sua biodisponibilidade.",
+          "(9) Uma redução do sal na dieta e o uso concomitante com diuréticos aumenta o efeito hipotensor.",
+          "(10) Em doentes com insuficiência renal, podem atrasar a progressão desta. No entanto deve ser controlada periodicamente a função renal destes doentes e em caso de deterioração a dose deve ser reduzida ou suspensa.",
+          "(11) Usado em simultâneo com sais de lítio e digoxina aumenta os níveis séricos destes.",
+          "(12) Particularmente indicado em doentes com HTA e diabetes mellitus. Na diabetes tipo II reduz a progressão da microalbuminúria e atrasa a evolução em caso de nefropatia estabelecida."
+        ]
+      },
+      {
+        "codigo": "1-H-2",
+        "nivelPrescricao": "3",
+        "nome": "ENALAPRIL",
+        "apresentacao": "Comp. 20 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 1-H-1.",
+        "doses": "As mesmas de 1-H-1.",
+        "efeitosSecundarios": "Os mesmos de 1-H-1.",
+        "contraIndicacoes": "As mesmas de 1-H-1.",
+        "notasPrecaucoes": "As mesmas de 1-H-1."
+      }
+    ],
+    "1-I- BLOQUEADORES DOS RECEPTORES DA ANGIOTENSINA II": [
+      {
+        "codigo": "1-I-1",
+        "nivelPrescricao": "4",
+        "nome": "IRBESARTAM",
+        "apresentacao": "Comp. 150 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 1-H-1 mas reservado para doentes que desenvolvam efeitos adversos importantes, particularmente tosse com os inibidores do enzima de conversão.",
+        "doses": "Iniciar com 150 mg/dia podendo aumentar para 300 mg/dia dose única. Em caso de depleção de volume intravascular usar inicialmente doses mais baixas (75 mg/dia).",
+        "efeitosSecundarios": [
+          "Tonturas ligeiras, cefaleia, hipotensão ortostática dose dependente particularmente em doentes com depleção de volume, tosse seca persistente (muito menos frequente que os IECAs), erupção cutânea, efeitos gastrointestinais, perda da sensibilidade gustativa, fadiga, hiperkaliemia, aumento dos enzimas hepáticos e raramente angioedema."
+        ],
+        "contraIndicacoes": [
+          "Estenose da artéria renal uni ou bilateral, história de angioedema, gravidez."
+        ],
+        "notasPrecaucoes": [
+          "(1) Não tem qualquer vantagem quando comparado com os inibidores do enzima de conversão, pelo que a sua utilização só está indicada nos doentes que desenvolvam tosse insuportável com aquela terapêutica.",
+          "(2) Particularmente indicado em doentes com HTA e diabetes mellitus. Na diabetes tipo II reduz a progressão da microalbuminúria e atrasa a evolução em caso de nefropatia estabelecida.",
+          "(3) Pode ser usado com segurança em doentes com insuficiência renal.",
+          "(4) Os suplementos de potássio ou diuréticos poupadores de potássio devem ser usados com precaução devido ao risco de hiperkaliemia.",
+          "(5) Pode ocorrer hiperkaliemia devendo os níveis de potássio ser monitorizados particularmente em idosos e doentes com insuficiência renal.",
+          "(6) Não há dados sobre a sua segurança na porfíria pelo que deve ser evitado."
+        ]
+      }
+    ],
+    "1-J- ANTI-DISLIPIDÉMICOS": [
+      {
+        "codigo": "1-J-1",
+        "nivelPrescricao": "3",
+        "nome": "BEZAFIBRATO",
+        "apresentacao": "Comp. 200 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Tratamento da hiperlipidemia como um adjuvante da dieta.",
+        "doses": "Iniciar com 200 mg/dia, aumentar para 200 mg 2-3 x/dia após as refeições.",
+        "efeitosSecundarios": [
+          "Distúrbios gastrointestinais, mialgias e síndrome semelhante a miosite.",
+          "Efeitos dermatológicos incluem alopécia, prurido, dermatite, urticária e sudação.",
+          "Pode ocorrer arritmia.",
+          "Outros efeitos incluem insónia e impotência.",
+          "Elevação transitória das transaminases, leucopénia transitória e aumento da ureia, da creatinina e da creatinaquinase."
+        ],
+        "contraIndicacoes": [
+          "Hipersensibilidade aos fibratos, insuficiência renal ou hepática severa, cirrose biliar primária, gravidez e lactação."
+        ],
+        "notasPrecaucoes": [
+          "(1) Fármaco a ser utilizado unicamente em situações bem definidas, por médico familiarizado com o seu uso e sob estrito controlo devido aos efeitos adversos por vezes severos.",
+          "(2) A dieta deve ser sempre a primeira medida terapêutica e só quando esta não for suficiente para controlar os níveis lipídicos se deve introduzir em definitivo este fármaco.",
+          "(3) Pode potenciar o efeito da varfarina e aumentar os níveis plasmáticos da fenitoína.",
+          "(4) Quando administrado com as sulfanilureiras pode ocorrer hipoglicemia.",
+          "(5) A administração da colesteramina deve ser feita com intervalos de 2 horas.",
+          "(6) A administração simultânea dos inibidores HMG CoA reductase aumenta o risco dos efeitos musculares e pode ocorrer rabdomiolise.",
+          "(7) Usar com cuidado na insuficiência renal, litiase biliar e outras doenças da vesícula biliar, na úlcera péptica, hipertiroidismo, hiperalbuminémia, porfíria e doença cardiovascular."
+        ]
+      },
+      {
+        "codigo": "1-J-2",
+        "nivelPrescricao": "3",
+        "nome": "SINVASTATINA",
+        "apresentacao": "Comp. 20 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Indicado nas hipercolesterolemia severas (colesterol total > 7 mmol/L) ou nas moderadas (colesterol total superior a 5.0 mmol/L) quando associadas a outros factores de risco para a doença isquémica coronária, particularmente a diabetes mellitus.",
+        "doses": "Iniciar com 10 mg/dia, podendo elevar-se a dose até ao máximo de 40 mg/dia.",
+        "efeitosSecundarios": [
+          "Elevação das transaminases, náusea, flatulência, obstipação, cefaleia e insónia.",
+          "Raramente podem ocorrer mialgias e rabdomiolise com insuficiência renal."
+        ],
+        "contraIndicacoes": [
+          "Doença hepática ou elevação das transaminases, gravidez e lactação."
+        ],
+        "notasPrecaucoes": [
+          "(1) Fármaco a ser utilizado unicamente em situações bem definidas, por médico familiarizado com o seu uso e sob estrito controlo devido aos efeitos adversos por vezes severos.",
+          "(2) A dieta deve ser sempre a primeira medida terapêutica e só quando esta não for suficiente para controlar os níveis lipídicos se deve introduzir em definitivo este fármaco.",
+          "(3) Pode potenciar o efeito da digoxina e varfarina.",
+          "(4) O álcool pode potenciar a sua toxicidade hepática.",
+          "(5) Absorção facilitada com os alimentos.",
+          "(6) As transaminases devem ser pedidas antes da prescrição do fármaco e às 6 semanas, 3 meses e ao ano."
+        ]
+      }
+    ]
+  },
+  "APARELHO DIGESTIVO": {
+    "2-A- ANTI-ÁCIDOS E OUTROS MEDICAMENTOS ANTI-ULCEROSOS": [
+      {
+        "codigo": "2-A-1",
+        "nivelPrescricao": "0",
+        "nome": "HIDRÓXIDO DE ALUMÍNIO",
+        "apresentacao": "Comp. 500 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Alívio sintomático da dispepsia ulcerosa e do refluxo gastroesofágico não erosivo.",
+          "(2) Dispepsia funcional (não ulcerosa).",
+          "(3) Hiperfosfatémia (na insuficiência renal) e nefrolitíase fosfática."
+        ],
+        "doses": {
+          "alivioSintomatico": "1-3 comp., entre as refeições, ao deitar e quando aparecer a dor ou azia.",
+          "hiperfosfatemia": "2-10 g, 3-4 x/dia, às refeições."
+        },
+        "efeitosSecundarios": "Pode ocorrer obstipação, sobretudo em doentes desidratados.",
+        "contraIndicacoes": [
+          "Obstrução intestinal.",
+          "Não dar antes das endoscopias pois dificulta a visualização da mucosa."
+        ],
+        "notasPrecaucoes": [
+          "(1) Mastigar ou chupar os comprimidos.",
+          "(2) Os anti-ácidos podem dar com a suspensão do tratamento, hipersecreção ácida reactiva.",
+          "(3) As doses elevadas e a frequência das tomas necessárias para o tratamento da úlcera péptica, dificultam a observância da terapêutica, sendo por isso de preferir o uso da ranitidina ou do omeprazol, nessa situação.",
+          "(4) Evitar doses elevadas durante a gravidez.",
+          "(5) Diminui a absorção intestinal de vários medicamentos (ex. a tetraciclina, o sal ferroso e a digoxina).",
+          "(6) O uso abusivo pode dar síndrome de depleção de fosfatos (hipofosfatémia, hipofosfatúria, hipercalciúria e osteomalácia).",
+          "(7) O uso prolongado e em doses altas nos doentes com insuficiência renal pode provocar uma encefalopatia e demência."
+        ]
+      },
+      {
+        "codigo": "2-A-2",
+        "nivelPrescricao": "1",
+        "nome": "HIDRÓXIDO DE MAGNÉSIO",
+        "apresentacao": "Susp. 425 mg/5 mL",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 2-A-1.",
+        "doses": {
+          "adultos": "5-10 mL, 1-3 h depois das refeições e ao deitar de acordo com as necessidades.",
+          "criancas": "2,5-5 mL, 1-3 h depois das refeições e ao deitar de acordo com as necessidades."
+        },
+        "efeitosSecundarios": "Pode provocar diarreia e flatulência.",
+        "contraIndicacoes": "Doentes desidratados ou com obstrução intestinal.",
+        "notasPrecaucoes": [
+          "(1) Risco de hipermagnesémia grave nos doentes com insuficiência renal aguda ou crónica.",
+          "(2) Vigiar a ocorrência de sintomas de hipermagnesémia (náusea, vómitos, arritmias e alteração da consciência), sobretudo em doentes com nefropatias.",
+          "(3) O uso excessivo pode desencadear desequilíbrio hidro-electrolítico."
+        ]
+      },
+      {
+        "codigo": "2-A-3",
+        "nivelPrescricao": "1",
+        "nome": "HIDRÓXIDO DE MAGNÉSIO + HIDRÓXIDO DE ALUMÍNIO",
+        "apresentacao": "Gel (665 mg de hidróxido de magnésio + 1200 mg de hidróxido de alumínio/5 mL)",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "As mesmas de 2-A-1 e 2-A-2.",
+          "Útil também (só ou associado à ranitidina), na prevenção da úlcera de stress ou da hemorragia digestiva alta."
+        ],
+        "doses": "10-20 mL, 1-3 h após as refeições e ao deitar e quando aparecer dor ou azia. Dose máxima de 80 mL/dia.",
+        "efeitosSecundarios": "Os mesmos de 2-A-1 e 2-A-2.",
+        "contraIndicacoes": "Ver 2-A-1 e 2-A-2.",
+        "notasPrecaucoes": [
+          "(1) Devido ao custo relativamente elevado e eficácia não significativamente superior à das formas sólidas, deve ser reservado para situações específicas.",
+          "(2) Ver também 2-A-1 e 2-A-2."
+        ]
+      },
+      {
+        "codigo": "2-A-4",
+        "nivelPrescricao": "3",
+        "nome": "OMEPRAZOL",
+        "apresentacao": "Cáps. 20 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Refluxo gastroesofágico e esofagite erosiva, ulcerativa ou estenosante.",
+          "(2) Úlcera gástrica benigna e úlcera duodenal.",
+          "(3) Erradicação de H. pylori.",
+          "(4) S. de Zollinger-Ellison.",
+          "(5) Tratamento e profilaxia da úlcera péptica associada à utilização de AINEs."
+        ],
+        "doses": {
+          "adultos": {
+            "refluxo": "20 mg 1 x/dia durante 4-8 semanas. Nos casos graves pode ser necessário aumentar para 40 mg/dia. No tratamento a longo prazo são usadas doses de 10 mg/dia ou 20 mg/dia se os sintomas reaparecerem.",
+            "esofagite": "20 mg, 1 x/dia durante 4 semanas e continuar mais 4-8 semanas se não estiver completamente curada; pode-se dar 40 mg 1 x/dia nos casos refractários a outros tratamentos; Dose de manutenção: 20 mg/dia.",
+            "ulcera": "20 mg, 1 x/dia durante 4 semanas na úlcera duodenal e durante 8 semanas na úlcera gástrica; nos casos graves ou recorrentes aumentar para 40 mg/dia; prevenção da recaída na úlcera duodenal 10 mg/dia e aumentar para 20 mg/dia se os sintomas reaparecerem; prevenção da recaída na úlcera gástrica: 20 mg/dia.",
+            "zollinger": "começar com 60 mg 1 x/dia (dose máxima 120 mg); acima dos 80 mg/dia dividir em 2 tomas.",
+            "erradicacao": "20 mg, 2 x/dia claritromicina 500 mg, 2 x/dia + amoxicilina 1 g 2 x/dia (ou 500 mg, 3 x/dia), durante 7 dias. A claritromicina pode ser substituída pelo metronidazol 500 mg, 2 x/dia. No caso de falência destes 2 regimes recomenda-se o uso de omeprazol associado a claritromicina e ao metronidazol nas doses acima indicadas.",
+            "tratamentoAINEs": "20 mg 1 x/dia durante 4 semanas, e continuar por mais 4 semanas se não estiver completamente curada.",
+            "profilaxiaAINEs": "20 mg, 1 x/dia."
+          },
+          "criancas": "Refluxo gastroesofágico ulcerativo grave: maiores de 20 kg, 20 mg, 1 x/dia e aumentar para 40 mg, 1 x/dia se os sintomas reaparecerem. De 10-20 kg, 10 mg, 1 x/dia e aumentar para 20 mg, 1 x/dia se os sintomas reaparecerem."
+        },
+        "efeitosSecundarios": [
+          "Os frequentes incluem distúrbios gastrointestinais (náusea, vómitos, dor abdominal, flatulência, diarreia, obstipação), cefaleia e tonturas.",
+          "Os menos frequentes incluem boca seca, insónias, tonturas, mal-estar, visão turva, erupção cutânea e prurido.",
+          "Os raros incluem perturbações do paladar, disfunção hepática, edema periférico, reacções de hipersensibilidade (urticária, angioedema, broncospasmo, anafilaxia), fotossensibilidade, febre, suores, depressão, nefrite intersticial, distúrbios hematológicos (leucopenia, leucocitose, pancitopenia, trombocitopenia), artralgia, mialgia e reacções cutâneas (S. de Stevens-Johnson, necrólise epidérmica tóxica, erupções bolhosas).",
+          "Também reportado: parestesias, vertigens, alopécia, ginecomastia, impotência, estomatite, encefalopatia na doença hepática grave; hiponatremia; confusão reversível, agitação e alucinações nos doentes muito graves; disfunção visual com doses elevadas quando usado por via E.V."
+        ],
+        "contraIndicacoes": "Gravidez e lactação.",
+        "notasPrecaucoes": [
+          "(1) Tem que ser usado com precaução em doentes com anomalias hepáticas, nas grávidas e durante a lactação.",
+          "(2) Mascara os sintomas do cancro do estômago; cuidado particular naqueles em que a dispepsia se acompanha de sinais de alarme (sangramento, disfagia, vómitos recorrentes e perda de peso), nos doentes de meia-idade e nos idosos.",
+          "(3) Pode aumentar o risco de infecções gastrointestinais.",
+          "(4) Pode interferir com a absorção e o metabolismo hepático de vários medicamentos em particular diminuir os níveis séricos das penicilinas, sal ferroso, diazepam e aumentar o INR em doentes que estejam a tomar varfarina."
+        ]
+      },
+      {
+        "codigo": "2-A-5",
+        "nivelPrescricao": "3",
+        "nome": "OMEPRAZOL",
+        "apresentacao": "Inj. 40 mg-Fr.",
+        "viaAdministracao": "E.V.",
+        "indicacoes": "As de 2-A-4 quando não for possível a utilização da via oral",
+        "doses": {
+          "profilaxiaAspiracao": "40 mg 1 x/dia, até a administração oral ser possível.",
+          "refluxoUlcera": "40 mg 1 x/dia até a administração oral ser possível."
+        },
+        "efeitosSecundarios": "Os mesmos de 2-A-4.",
+        "contraIndicacoes": "As mesmas de 2-A-4.",
+        "notasPrecaucoes": "As mesmas de 2-A-4."
+      },
+      {
+        "codigo": "2-A-6",
+        "nivelPrescricao": "2",
+        "nome": "RANITIDINA",
+        "apresentacao": "Comp. 150 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 2-A-4.",
+        "doses": {
+          "adultos": {
+            "refluxo": "ligeira, 150 mg 2 x/dia ou 300 mg à noite até 8 semanas, ou se necessário 12 semanas; moderada a grave, 600 mg/dia dividido em 2-4 tomas até 12 semanas); dose de manutenção: 150 mg 2 x/dia.",
+            "ulcera": "150 mg 2 x/dia ou 300 mg à noite 4-8 semanas.",
+            "dispepsiaCronica": "150 mg 2 x/dia ou 300 mg à noite até 6 semanas.",
+            "ulcerasAINEs": "300 mg 2 x/dia 4 semanas.",
+            "zollinger": "150 mg 3 x/dia; dose máxima 6 g/dia em doses divididas.",
+            "profilaxiaAINEs": "300 mg 2 x/dia.",
+            "profilaxiaAspiracao": "parto, 150 mg no início do trabalho de parto e depois de 6/6 h; cirurgia, 150 mg 2h antes da indução da anestesia e se possível na noite anterior."
+          },
+          "criancas": "Úlcera péptica: 2-4 mg/kg 2 x/dia; dose máxima, 300 mg/dia"
+        },
+        "efeitosSecundarios": [
+          "Diarreia e outros distúrbios do aparelho gastrointestinal, alteração dos testes hepáticos (raramente lesão hepática), cefaleia, vertigens e fadiga.",
+          "Raramente pancreatite aguda, bradicardia, bloqueio AV, confusão, agitação, depressão e alucinações (particularmente nos doentes graves ou idosos), distúrbios visuais e alopécia.",
+          "Reacções de hipersensibilidade (febre, artralgias, mialgias, anafilaxia), distúrbios hematológicos (agranulocitose, leucopenia, pancitopenia, trombocitopenia) e reacções cutâneas (eritema multiforme, necrólise epidérmica tóxica).",
+          "Ocasionalmente ginecomastia, impotência e nefrite intersticial."
+        ],
+        "notasPrecaucoes": [
+          "(1) Tem de ser usado com precaução em doentes com problemas hepáticos e renais, na gravidez e lactação.",
+          "(2) Pode mascarar os sintomas de um tumor gástrico. Tomar cuidado particular nos doentes em que a dispepsia se acompanha de sinais de alarme (sangramento, disfagia, vómitos recorrentes e perda de peso), nos doentes de meia-idade e nos idosos."
+        ]
+      },
+      {
+        "codigo": "2-A-7",
+        "nivelPrescricao": "3",
+        "nome": "RANITIDINA",
+        "apresentacao": "Inj. 50 mg/2 mL- Amp.",
+        "viaAdministracao": "E.V., Perfusão E.V., I.M.",
+        "indicacoes": "As de 2-A-6 quando não for possível a utilização da via oral",
+        "doses": {
+          "IM": "50 mg de 6/6 ou de 8/8 h.",
+          "EVLenta": "50 mg diluídos em 20 mL e administrado em pelo menos 2 min podendo ser repetido de 6/6 ou de 8/8 h.",
+          "perfusaoEV": "25 mg/2 h podendo ser repetido cada 6-8 h.",
+          "profilaxiaStress": "inicialmente 50 mg por injecção E.V. lenta e depois perfusão contínua 125-200 μg/kg/h podendo ser seguido por 150 mg 2 x/dia por via oral logo que se reinicie a alimentação.",
+          "profilaxiaAspiracao": "injecção I.M. ou E.V. lenta de 50 mg, 45-60 min. antes da indução da anestesia."
+        },
+        "efeitosSecundarios": "Os mesmos de 2-A-6.",
+        "notasPrecaucoes": "As mesmas de 2-A-6."
+      }
+    ],
+    "2-B- ANTI-ESPASMÓDICOS": [
+      {
+        "codigo": "2-B-1",
+        "nivelPrescricao": "0",
+        "nome": "BUTILESCOPOLAMINA, brometo",
+        "apresentacao": "Comp. 10 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Alívio sintomático de distúrbios gastrointestinais ou genito-urinários caracterizados por espasmo da musculatura lisa.",
+        "doses": {
+          "geral": {
+            "adultos": "10 -20 mg 3-4 x/dia (pouco absorvida).",
+            "criancas": "6-12 anos: 10 -20 mg 3 x/dia, de 3-6 anos: 10 mg 3 x/dia, 1-3 anos: 5-10 mg 3 x/dia, de 3 meses-1 ano: 2,5-5 mg 3 x/dia, de 1-3 meses: 2,5 mg 3 x/dia."
+          },
+          "colonIrritavel": "10 mg 3 x/dia aumentar se necessário para 20 mg 4 x/dia."
+        },
+        "efeitosSecundarios": [
+          "Obstipação, bradicardia transitória (seguida de taquicardia, palpitações e arritmias) redução das secreções brônquicas, urgência e retenção urinária, dilatação da pupila com perda da acomodação, fotofobia, boca seca, rubor e secura da pele.",
+          "Ocasionalmente confusão (particularmente nos idosos), náusea, vómitos e tonturas."
+        ],
+        "contraIndicacoes": [
+          "Glaucoma de ângulo fechado, miastenia gravis (mas pode ser utilizada para reduzir os efeitos secundários dos anti-colinesterásicos) íleus paralítico, estenose do piloro e hipertrofia da próstata."
+        ],
+        "notasPrecaucoes": [
+          "(1) Fármaco de eficácia duvidosa (por deficiente absorção intestinal) e que têm menos efeitos anti-muscarínicos centrais (atravessa mal a barreira hemato-encefálica).",
+          "(2) Deve ser utilizada com cuidado em doentes com Síndrome de Down, nas crianças e nos idosos.",
+          "(3) Deve ser utilizada com cuidado: no refluxo gastroesofágico, diarreia, colite ulcerosa, enfarte agudo do miocárdio, hipertensão, situações caracterizadas por taquicardia (hipertiroidismo, insuficiência cardíaca, cirurgia cardíaca), febre, gravidez e durante a lactação.",
+          "(4) Os efeitos anti-muscarínicos são mais acentuados em associação com outros fármacos com esses efeitos (anti-histamínicos, anti-depressivos tricíclicos, clorpromazina, etc.).",
+          "(5) Antagoniza os efeitos da metoclopramida.",
+          "(6) Pode ser substituída pela atropina mas esta, apesar da sua maior eficácia, tem maior incidência de efeitos adversos.",
+          "(7) Evitar na porfiria."
+        ]
+      },
+      {
+        "codigo": "2-B-2",
+        "nivelPrescricao": "1",
+        "nome": "BUTILESCOPOLAMINA, brometo",
+        "apresentacao": "Inj. 20 mg/mL- Amp.",
+        "viaAdministracao": "I.M.; E.V.",
+        "indicacoes": [
+          "(1) As mesmas de 2-B-1 mas em situações agudas ou em que não possa ser utilizada a via oral.",
+          "(2) Adjuvante nos exames endoscópicos e radiológicos do tracto digestivo"
+        ],
+        "doses": {
+          "adultos": "20 mg I.M. ou E.V. lenta 3-4 x/dia podendo se necessário ser repetida 30 min. depois (pode ser repetida mais frequentemente nas endoscopias). Dose máxima de 100 mg/dia",
+          "criancas": "Não recomendada."
+        },
+        "efeitosSecundarios": "Os mesmos de 2-B-1 e 18-F-1.",
+        "contraIndicacoes": "As mesmas de 2-B-1 e 18-F-1.",
+        "notasPrecaucoes": "As mesmas de 2-B-1 e 18-F-1."
+      },
+      {
+        "codigo": "2-B-3",
+        "nivelPrescricao": "3",
+        "nome": "MEBEVERINA, hidrocloreto",
+        "apresentacao": "Comp. 135 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Adjuvante nos distúrbios gastrointestinais caracterizados por espasmo da musculatura lisa.",
+        "doses": "Adultos e crianças com mais de 10 anos: 1 comp. 3 x/dia de preferência 20 min antes das refeições.",
+        "efeitosSecundarios": "Raramente, reacções alérgicas incluindo erupção cutânea, urticária, angioedema.",
+        "contraIndicacoes": "Doentes com íleus paralítico.",
+        "notasPrecaucoes": [
+          "(1) Fármaco de eficácia não totalmente comprovada.",
+          "(2) No geral bem tolerado e sem efeitos anti-muscarínicos (anticolinérgicos) de relevo, pode por isso ser usado em doentes com glaucoma, hipertrofia prostática e outras situações que contra-indicam o uso de anti-muscarínicos."
+        ]
+      }
+    ],
+    "2-C- ESTIMULANTES DA MOTILIDADE DIGESTIVA": [
+      {
+        "codigo": "2-C-1",
+        "nivelPrescricao": "1",
+        "nome": "METOCLOPRAMIDA",
+        "apresentacao": "Comp. 10 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "Adultos: tratamento de náusea e vómitos, particularmente em:",
+          "(1) Distúrbios gastrointestinais",
+          "(2) Enxaqueca",
+          "(3) Tratamento com citostáticos e radioterapia (pouco utilizada)",
+          "(4) Hiperemese gravídica (2ª linha depois da prometazina)",
+          "(5) Pós-operatório (efeitos limitados)",
+          "(6) Adjuvante em procedimentos diagnósticos (radiográficos e endoscópicos) do tracto gastrointestinal.",
+          "Doentes com menos de 20 anos: uso restrito aos casos graves e intratáveis de vómitos de causa conhecida, vómitos da rádio e quimioterapia, ajuda para a entubação, pré-medicação."
+        ],
+        "doses": {
+          "adultos": "10 mg 3x/dia.",
+          "criancas": "9-14 anos (30 kg ou mais) 5 mg 3 x/dia; 5-9 anos (20-29 kg): 2,5 mg 3 x/dia; 3-5 anos (15-19 kg): 2 mg 2-3 x/dia; 1-3 anos (10-14 kg): 1 mg 2-3 x/dia; até 1ano (menos de 10 kg): 1 mg 2 x/dia; dose máxima de 0.5 mg/kg/dia especialmente em crianças e jovens adultos.",
+          "procedimentosDiagnosticos": {
+            "adultos": "dose única, 5-10 min. antes do exame, de 10-20 mg (10 mg em jovens adultos de 15-19 anos).",
+            "criancas": "9-14 anos: 5 mg; 3-9 anos: 2 mg e menores de 3 anos: 1 mg."
+          }
+        },
+        "efeitosSecundarios": [
+          "Efeitos extra-piramidais (especialmente em crianças e jovens adultos), hiperprolactinemia (ginecomastia, galactorreia, diminuição da libido)",
+          "ocasionalmente discinésia tardia na administração prolongada",
+          "também reportado, sonolência, inquietação, diarreia, depressão, síndrome maligno por neurolépticos, erupção cutânea, prurido, edema",
+          "raramente metamoglobinemia (mais grave nos casos de deficiência de G6PD).",
+          "Estes sintomas desaparecem 24 horas após a suspensão do tratamento. Se a sintomatologia for intensa pode ser controlada com biperideno ou com difenidramina."
+        ],
+        "contraIndicacoes": [
+          "Obstrução, perfuração ou hemorragia gastrointestinal",
+          "3-4 dias depois de cirurgia gastrointestinal",
+          "no feocromocitoma",
+          "durante a lactação."
+        ],
+        "notasPrecaucoes": [
+          "(1) Reduzir a dose na disfunção hepática e renal; no idoso, nos jovens e nas crianças (calcular a dose com precisão).",
+          "(2) Pode mascarar distúrbios subjacentes como a irritação cerebral; epilepsia; porfiria.",
+          "(3) Evitar na gravidez."
+        ]
+      },
+      {
+        "codigo": "2-C-2",
+        "nivelPrescricao": "2",
+        "nome": "METOCLOPRAMIDA",
+        "apresentacao": "Inj. 10 mg/2 mL-Amp.",
+        "viaAdministracao": "I.M. e E.V.",
+        "indicacoes": "As mesmas de 2-C-1",
+        "doses": "As mesmas de 2-C-1. A injecção E.V. deve ser feita em 1-2 min.",
+        "efeitosSecundarios": "As mesmas de 2-C-1",
+        "contraIndicacoes": "As mesmas de 2-C-1",
+        "notasPrecaucoes": "As mesmas de 2-C-1"
+      },
+      {
+        "codigo": "2-C-3",
+        "nivelPrescricao": "2",
+        "nome": "METOCLOPRAMIDA",
+        "apresentacao": "Xp. 5 mg/5 mL",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 2-C-1",
+        "doses": "As mesmas de 2-C-1.",
+        "efeitosSecundarios": "As mesmas de 2-C-1",
+        "contraIndicacoes": "As mesmas de 2-C-1",
+        "notasPrecaucoes": "As mesmas de 2-C-1"
+      }
+    ],
+    "2-D- LAXANTES": [
+      {
+        "codigo": "2-D-1",
+        "nivelPrescricao": "1",
+        "nome": "BISACODIL",
+        "apresentacao": "Comp. 5 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "Laxante estimulante útil:",
+          "(1) No alívio sintomático da obstipação.",
+          "(2) Na limpeza do cólon para preparação para exame radiológico abdominal, endoscopia digestiva ou intervenções cirúrgicas.",
+          "O seu efeito manifesta-se em geral 10-12 h após a administração."
+        ],
+        "doses": {
+          "obstipacao": {
+            "adultos": "5 a 10 mg à noite",
+            "criancas": "4-10 anos: 5 mg à noite."
+          },
+          "cirurgiaRadiologia": {
+            "adultos": "10-20 mg na noite anterior.",
+            "criancas": "4-10 anos: 5 mg na noite anterior."
+          }
+        },
+        "efeitosSecundarios": "Ocasionalmente cólica abdominal.",
+        "contraIndicacoes": [
+          "No abdómen agudo cirúrgico",
+          "na doença inflamatória aguda do intestino e na desidratação grave."
+        ],
+        "notasPrecaucoes": [
+          "(1) Reduzir a dose na disfunção hepática e renal; no idoso, nos jovens e nas crianças (calcular a dose com precisão).",
+          "(2) Pode mascarar distúrbios subjacentes como a irritação cerebral; epilepsia; porfiria.",
+          "(3) Evitar na gravidez."
+        ]
+      },
+      {
+        "codigo": "2-D-2",
+        "nivelPrescricao": "3",
+        "nome": "CITRATO DE SÓDIO",
+        "apresentacao": "Microenema 450 mg/5 mL",
+        "viaAdministracao": "Rectal",
+        "indicacoes": "Laxante osmótico, particularmente indicado na preparação para exames endoscópicos, radiológicos ou para cirurgia.",
+        "doses": "Administrar um enema, cerca de 1-2 h antes do exame.",
+        "contraIndicacoes": "Patologia gastrointestinal aguda.",
+        "notasPrecaucoes": "Pode levar à retenção de sódio e água em indivíduos susceptíveis."
+      },
+      {
+        "codigo": "2-D-3",
+        "nivelPrescricao": "0",
+        "nome": "GLICERINA",
+        "apresentacao": "Sup. 1,5 g",
+        "viaAdministracao": "Rectal",
+        "indicacoes": [
+          "Laxante estimulante útil no adulto para:",
+          "(1) Tratamento sintomático da obstipação.",
+          "(2) Preparação do cólon para exame endoscópico ou radiológico.",
+          "Início da acção em 15-30 min."
+        ],
+        "doses": "1 sup. humidificado com água antes da utilização.",
+        "efeitosSecundarios": "Raramente irritação anal e tenesmo."
+      },
+      {
+        "codigo": "2-D-4",
+        "nivelPrescricao": "0",
+        "nome": "GLICERINA",
+        "apresentacao": "Sup. 3 g",
+        "viaAdministracao": "Rectal",
+        "indicacoes": "As mesmas de 2-D-3 em adultos.",
+        "doses": "1 ou 2 sup. humidificado(s) com água antes da utilização.",
+        "efeitosSecundarios": "Os mesmos de 2-D-3."
+      },
+      {
+        "codigo": "2-D-5",
+        "nivelPrescricao": "2",
+        "nome": "ISPAGHULA",
+        "apresentacao": "Saqueta de 3,5 g (ou pó de 200 g)",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "Laxante que aumenta a massa fecal e estimula o peristaltismo útil:",
+          "(1) No alívio da obstipação.",
+          "(2) Em doentes com: colostomia, ileostomia, hemorróidas, fissura anal, diarreia crónica associada à doença diverticular, síndrome do cólon irritável.",
+          "(3) Como adjuvante na colite ulcerosa.",
+          "(4) Na hipercolesterolemia."
+        ],
+        "doses": {
+          "obstipacao": {
+            "adultos": "2 colheres de chá com água 1-3 x/dia.",
+            "criancas": "dos 6-12 anos: 1/2 da dose do adulto."
+          }
+        },
+        "efeitosSecundarios": "Flatulência, distensão abdominal e hipersensibilidade.",
+        "contraIndicacoes": [
+          "Doentes com dificuldade em deglutir, obstrução intestinal, atonia do cólon e impactação fecal."
+        ],
+        "notasPrecaucoes": [
+          "(1) O efeito demora alguns dias a aparecer.",
+          "(2) Recomenda-se a sua ingestão sem mastigar e com bastante líquido.",
+          "(3) Risco de obstrução esofágica ou intestinal e impactação fecal (especialmente se tomados com pouco liquido)."
+        ]
+      },
+      {
+        "codigo": "2-D-6",
+        "nivelPrescricao": "3",
+        "nome": "LACTULOSE",
+        "apresentacao": "Xpe. 100 mg-Fr. 200 mL",
+        "viaAdministracao": "Oral ou rectal (enema de retenção)",
+        "indicacoes": [
+          "Laxante osmótico útil:",
+          "(1) No alívio da obstipação (pode levar até 48 h para agir).",
+          "(2) Na encefalopatia hepática (encefalopatia porto-sistémica)."
+        ],
+        "doses": {
+          "obstipacao": {
+            "adultos": "15-30 mL, 1-2 x/dia, com ajustamento subsequente da dose até produzir 2-3 dejecções moles/dia.",
+            "criancas": "6-12 anos, 10 mL; 1-5 anos, 5 mL; menores de 1 ano, 2,5 mL reduzir gradualmente."
+          },
+          "encefalopatiaHepatica": {
+            "adultos": "90-150 mL/dia divididos em 3-4 tomas; a dose deverá ser ajustada após 1-2 dias para produzir 2-3 dejecções moles/dia ou manter o pH das fezes cerca de 5."
+          }
+        },
+        "efeitosSecundarios": "Flatulência, cólica, desconforto e distensão abdominal.",
+        "contraIndicacoes": [
+          "Galactosemia",
+          "obstrução intestinal."
+        ],
+        "notasPrecaucoes": [
+          "(1) Reservar só para casos de encefalopatia porto-sistémica por ser muito mais cara que os outros laxantes igualmente eficazes no tratamento da obstipação banal.",
+          "(2) Evitar em doentes com intolerância à lactose.",
+          "(3) Determinar periodicamente os electrólitos particularmente nos idosos.",
+          "(4) Usar com precaução em doentes diabéticos."
+        ]
+      },
+      {
+        "codigo": "2-D-7",
+        "nivelPrescricao": "0",
+        "nome": "PARAFINA LÍQUIDA",
+        "apresentacao": "Emulsão de 100 g",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Amolecedor fecal útil no alívio da obstipação sobretudo em doentes com hemorróidas e fissura anal que não respondem a outros laxantes.",
+        "doses": "10-30 mL à noite.",
+        "efeitosSecundarios": [
+          "Corrimento anal de parafina e consequente irritação anal depois de utilização prolongada, reacções granulomatosas causadas pela absorção de pequenas quantidades de parafina líquida (sobretudo na forma de emulsão), pneumonia lipóide e interferência com a absorção de vitaminas lipossolúveis."
+        ],
+        "contraIndicacoes": "Crianças menores de 3 anos.",
+        "notasPrecaucoes": [
+          "(1) Não deve ser tomado imediatamente antes de deitar.",
+          "(2) Não usar de forma prolongada."
+        ]
+      },
+      {
+        "codigo": "2-D-8",
+        "nivelPrescricao": "3",
+        "nome": "SULFATO DE SÓDIO E POLIETILENOGLICOL",
+        "apresentacao": "Pó-saqueta",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Solução para limpeza dos intestinos, antes de cirurgia do cólon, colonoscopia ou exame radiológico para se assegurar de que o cólon está livre de conteúdos sólidos.",
+        "doses": "Reconstituir a solução misturando 4 saquetas com 4 litros de água. Um copo (± 250 mL) da solução reconstituída cada 10-15 min, ou por sonda nasogástrica 20-30 mL/min, até acabar os 4 litros ou aparecerem fezes aquosas livres de matérias sólidas. A solução das 4 saquetas deve ser bebida entre 4-6 h, sabores podem ser acrescentados se necessário; para facilitar o esvaziamento gástrico pode administrar-se metoclopramida 30 min. antes de começar. Alternativamente a administração pode ser dividida em duas, ex. 2 L na noite que antecede o exame e 2 L na manhã do exame.",
+        "efeitosSecundarios": [
+          "Náusea e distensão abdominal, menos frequentemente cólicas abdominais (geralmente transitórias, reduzidas por ingestão mais lenta), vómitos e reacções alérgicas reportadas."
+        ],
+        "contraIndicacoes": [
+          "Obstrução intestinal, retenção gástrica, ulceração gastrointestinal, perfuração intestinal, insuficiência cardíaca congestiva",
+          "colite tóxica, megacólon tóxico ou íleos.",
+          "Não é recomendado em crianças."
+        ],
+        "notasPrecaucoes": "Depois de reconstituída a solução deve ser conservada na geleira e descartada se não for utilizada em 24 h."
+      }
+    ],
+    "2-E- ANTI-DIARREICOS": [
+      {
+        "codigo": "2-E-1",
+        "nivelPrescricao": "2",
+        "nome": "DIFENOXILATO E ATROPINA",
+        "apresentacao": "Comp. 2,5 mg de hidrocloreto de difenoxilato + 0,025 mg de sulfato de atropina",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Como adjuvante da rehidratação oral na diarreia aguda não-complicada do adulto.",
+          "(2) Tratamento sintomático da colite ulcerosa crónica ligeira.",
+          "(3) Controle da consistência fecal depois de uma ileostomia ou colostomia."
+        ],
+        "doses": {
+          "adultos": "iniciar com 2 comp. seguido de 1 comp. a cada 6-8 h até controlar a diarreia.",
+          "criancas": "13-16 anos, 1 comp. até 3 x/dia; 9-12 anos, 1 comp. até 4 x/dia; 4-8 anos, 1 comp. até 3 x/dia."
+        },
+        "efeitosSecundarios": "Raros nas doses habituais. Em doses altas podem surgir efeitos atropínicos (secura da boca, visão turva, taquicardia, palpitações, retenção urinária, etc.).",
+        "contraIndicacoes": [
+          "Nas diarreias agudas das crianças, em particular nos menores de 4 anos.",
+          "Nas diarreias infecciosas em particular na disenteria bacilar (prolongamento da febre, atraso no desaparecimento do microrganismo das fezes etc.).",
+          "Na colite ulcerosa moderada a grave (risco de dilatação tóxica do cólon) e na insuficiência hepática."
+        ],
+        "notasPrecaucoes": [
+          "(1) Não recomendado em menores de 4 anos.",
+          "(2) A 1ª linha de tratamento de qualquer diarreia aguda, sobretudo nas crianças, deve incidir na prevenção e/ou tratamento da depleção hidro-electrolítica (sais de rehidratação oral ou soros conforme as circunstâncias).",
+          "(3) Ver também 2-E-2."
+        ]
+      },
+      {
+        "codigo": "2-E-2",
+        "nivelPrescricao": "2",
+        "nome": "LOPERAMIDA",
+        "apresentacao": "Comp. 2 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Tratamento sintomático da diarreia aguda.",
+          "(2) Adjuvante da rehidratação na diarreia aguda dos adultos e crianças com mais de 4 anos.",
+          "(3) Diarreia crónica só nos adultos."
+        ],
+        "doses": {
+          "adultos": "4 mg seguido de 2 mg após cada dejecção não moldada, até 5 dias. Dose habitual 6-8 mg/dia. Dose máxima de 16 mg/dia.",
+          "criancas": "9-12 anos, 2 mg 4 x/dia até 5 dias; 4-8 anos, 1 mg 3-4 x/dia só até 3 dias."
+        },
+        "efeitosSecundarios": "Cólicas abdominais, tonturas, sonolência e reacções cutâneas incluindo a urticária; também foram reportados íleus paralítico e flatulência.",
+        "contraIndicacoes": [
+          "Situações em que a inibição do peristaltismo deve ser evitada, quando se desenvolve uma distensão abdominal, ou em situações como a colite ulcerosa activa ou a colite associada a antibióticos."
+        ],
+        "notasPrecaucoes": [
+          "(1) Não recomendado em menores de 4 anos",
+          "(2) A desidratação pode afectar a resposta especialmente em idosos.",
+          "(3) É recomendada a reposição hidroeletrolítica.",
+          "(4) A retenção de fluidos nos intestinos (devido a diminuição do peristaltismo) pode mascarar ou agravar a desidratação.",
+          "(5) Se ocorrer desidratação pare com a loperamida até que se inicie a terapia de reposição.",
+          "(6) Suspender a loperamida se não houver resposta depois de 48 horas (na diarreia aguda).",
+          "(7) Uma resposta positiva pode ser esperada dentro de 10 dias de tratamento com doses máximas na diarreia crónica."
+        ]
+      }
+    ],
+    "2-F- MEDICAMENTOS PARA AS AFECÇÕES INFLAMATÓRIAS GASTROINTESTINAIS": [
+      {
+        "codigo": "2-F-1",
+        "nivelPrescricao": "3",
+        "nome": "MESALAZINA",
+        "apresentacao": "Comp. 400 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Tratamento da colite ulcerativa ligeira a moderada e manutenção da remissão.",
+        "doses": {
+          "adultos": "dose de ataque inicial de 2 comp. de 8/8 h e dose de manutenção de 1-2 comp. de 8/8 h. Dose máxima de 4 g/dia nos casos mais severos.",
+          "criancas": "não é recomendado."
+        },
+        "efeitosSecundarios": [
+          "Diarreia, náusea, vómitos, dor abdominal, exacerbação dos sintomas da colite, cefaleia, reacções de hipersensibilidade (erupção cutânea e urticária)",
+          "raramente, pancreatite aguda, hepatite, miocardite, pericardite, distúrbios pulmonares (eosinofilia, alveolite fibrosante), neuropatia periférica, distúrbios hematológicos (agranulocitose, anemia aplástica, leucopenia, metamoglobinemia, neutropenia e trombocitopenia), disfunção renal (nefrite intersticial, síndrome nefrótico), mialgia, artralgia, reacções cutâneas (síndrome tipo lúpus, Stevens-Johnson), alopécia."
+        ],
+        "notasPrecaucoes": [
+          "(1) Evitar o uso prolongado pelo risco de absorção intestinal e manifestação dos efeitos adversos sistémicos da corticoterapia (ver 3-A-4).",
+          "(2) A suspensão do tratamento com mais de 3 semanas de duração deve ser progressiva.",
+          "(3) Nas formas graves ou extensas da colite ulcerosa ou na doença de Crohn do intestino delgado, é preferível fazer-se terapêutica com corticosteróides por via sistémica.",
+          "(4) Reservar o seu uso só para as crises de agudização de colite ulcerosa ou doença de Crohn localizadas no cólon terminal.",
+          "(5) Não está indicada na prevenção da ocorrência de novas crises dessas afecções."
+        ]
+      },
+      {
+        "codigo": "2-F-2",
+        "nivelPrescricao": "3",
+        "nome": "PREDNISOLONA, fosfato sódico",
+        "apresentacao": "Enema de retenção 20 mg-100 mL",
+        "viaAdministracao": "Rectal",
+        "indicacoes": "Tratamento de crises agudas, ligeiras ou moderadas da colite ulcerosa ou de Doença de Crohn localizada no recto ou rectosigmóide.",
+        "doses": "Adultos: inicialmente 1 enema ao deitar durante 2-4 semanas, prolongar o tratamento se se obtiver boa resposta.",
+        "notasPrecaucoes": [
+          "(1) Evitar o uso prolongado pelo risco de absorção intestinal e manifestação dos efeitos adversos sistémicos da corticoterapia (ver 3-A-4).",
+          "(2) A suspensão do tratamento com mais de 3 semanas de duração deve ser progressiva.",
+          "(3) Nas formas graves ou extensas da colite ulcerosa ou na doença de Crohn do intestino delgado, é preferível fazer-se terapêutica com corticosteróides por via sistémica.",
+          "(4) Reservar o seu uso só para as crises de agudização de colite ulcerosa ou doença de Crohn localizadas no cólon terminal.",
+          "(5) Não está indicada na prevenção da ocorrência de novas crises dessas afecções."
+        ]
+      }
+    ],
+    "2-G- MEDICAMENTOS QUE AFECTAM AS SECREÇÕES DIGESTIVAS": [
+      {
+        "codigo": "2-G-1",
+        "nivelPrescricao": "3",
+        "nome": "COLESTIRAMINA",
+        "apresentacao": "Saqueta de 4 g",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Alívio do prurido associado a uma obstrução parcial das vias biliares e cirrose biliar primária.",
+          "(2) Diarreia associada à doença de Crohn, ressecção do íleo, vagotomia, neuropatia diabética vagal e radiação.",
+          "(3) Hiperlipidemias, particularmente em doentes que não respondem apropriadamente à dieta e outras medidas alternativos."
+        ],
+        "doses": {
+          "adultos": {
+            "prurido": "4-8 g/dia dissolvido em água ou outro líquido adequado.",
+            "diarreiaHiperlipidemia": "4-8 g 3 x/dia ajustadas de acordo com as necessidades misturado com água ou outro líquido adequado. Dose máxima 36 g/dia. Se não houver resposta em 3 dias deverá ser iniciada uma terapia alternativa."
+          }
+        },
+        "efeitosSecundarios": [
+          "A obstipação é frequente mas pode ocorrer diarreia, náusea, vómitos e desconforto abdominal.",
+          "A hipertrigliceridemia pode agravar-se.",
+          "Uma tendência aumentada para o sangramento foi reportada devido à hipotrombinemia associada à deficiência de Vit.K."
+        ],
+        "contraIndicacoes": "Na obstrução biliar total.",
+        "notasPrecaucoes": [
+          "(1) Deve ser utilizado com cuidado em doentes com insuficiência renal, durante a gravidez e a lactação.",
+          "(2) Podem aparecer distúrbios hematológicos e por isso avisar os doentes para se apresentarem de imediato se notarem algum sangramento inexplicado, equimoses, púrpura, dores de garganta ou febres durante o tratamento; se houver suspeita efectuar um hemograma e parar imediatamente o medicamento.",
+          "(3) Evitar em doentes com hipersensibilidade aos salicilatos.",
+          "(4) Interfere com a absorção de vitaminas lipossolúveis. Suplementos de Vit. A, D, E e K podem ser necessários se o tratamento for prolongado.",
+          "(5) Os outros medicamentos devem ser tomados uma hora antes ou 4-6 h depois da colestiramina para reduzir possível interferência com a absorção.",
+          "(6) Cuidado na disfunção hepática, durante a gravidez e lactação."
+        ]
+      },
+      {
+        "codigo": "2-G-2",
+        "nivelPrescricao": "3",
+        "nome": "PANCREATINA",
+        "apresentacao": "Cáps. contendo 5000 U.I. BP lipase, 2900 U.I. BP de amilase e 330 U.I. BP de protease.",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Insuficiência pancreática exócrina (fibrose quística, pós-pancreatectomia, pancreatite crónica, pós-gastrectomia total).",
+        "doses": "1-2 (ocasionalmente 3) cáps. durante as refeições principais e uma cáps. com os lanches.",
+        "efeitosSecundarios": "Raramente podem ocorrer reacções de hipersensibilidade, hiperuricemia e em doses elevadas irritação da mucosa oral e da região anal.",
+        "notasPrecaucoes": [
+          "(1) Eficácia não comprovada, sobretudo nas doses usuais e para sintomatologia digestiva inespecífica, para a qual é muitas vezes erradamente utilizada.",
+          "(2) A associação com cimetidina (1 h antes), parece melhorar a sua eficácia por reduzir a sua inactivação por digestão péptica.",
+          "(3) Não mastigar nunca as cápsulas nem retê-las na boca para evitar o efeito irritativo sobre a mucosa oral.",
+          "(4) Ajustar a dose de acordo com volume, número e consistência das dejecções.",
+          "(5) Se houver dificuldade na deglutição das cápsulas, dispersar o seu conteúdo sobre os alimentos (não muito quentes) e ingeri-los logo de seguida."
+        ]
+      }
+    ],
+    "2-H- OUTROS FÁRMACOS NOS DISTÚRBIOS FUNCIONAIS DO TRACTO DIGESTIVO": [
+      {
+        "codigo": "2-H-1",
+        "nivelPrescricao": "1",
+        "nome": "DIMETICONE",
+        "apresentacao": "Gotas. 50 mg/mL-Fr.",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Fármaco de efeito duvidoso usado na flatulência, dispepsia funcional, cólica abdominal do lactente e como adjuvante no síndrome de cólon irritável.",
+        "doses": {
+          "lactentes": "8-12 gotas com as refeições",
+          "criancas": "2,5 mL com as refeições."
+        },
+        "efeitosSecundarios": "Alterações gastrointestinais como dor abdominal, diarreia, náusea e vómitos.",
+        "contraIndicacoes": "Não usar nos casos de hipersensibilidade ao dimeticone."
+      }
+    ],
+    "2-I- ANTI-HEMORROIDÁRIOS": [
+      {
+        "codigo": "2-I-1",
+        "nivelPrescricao": "1",
+        "nome": "ANTI-HEMORROIDÁRIO",
+        "apresentacao": "Creme – bisnagas de 30 g, contendo um anestésico local (lidocaína base), um anti-inflamatório (subgalhato de bismuto, 22.5 mg) e um adstringente (óxido de zinco 107.5 mg).",
+        "viaAdministracao": "Tópica anal",
+        "indicacoes": "Hemorróides externas, fissura anal.",
+        "doses": "Massagem suave da zona afectada antes da defecação (fissura anal), ou depois da defecação (hemorróidas externas) 2 x/dia; repetir, se necessário, algumas horas depois.",
+        "efeitosSecundarios": "Raramente reacções de hipersensibilidade e atrofia cutânea com uso abusivo de preparados contendo corticóides.",
+        "notasPrecaucoes": [
+          "(1) Terapêutica sintomática essencialmente analgésica e anti-inflamatória de eficácia duvidosa.",
+          "(2) Corrigir sempre os factores predisponentes e agravantes como a obesidade, obstipação, dietas condimentadas e ricas em resíduos e vida sedentária.",
+          "(3) Descartar sempre previamente a presença de infecção por Cândida ou Herpes que podem ser agravadas pelos corticoesteróides contidos em alguns destes preparados.",
+          "(4) Só devem ser usados por curtos períodos (alguns dias) porque o anestésico pode sensibilizar a pele anal."
+        ]
+      },
+      {
+        "codigo": "2-I-2",
+        "nivelPrescricao": "1",
+        "nome": "ANTI-HEMORROIDÁRIO",
+        "apresentacao": "Sup. - mesma composição de 2-I-1",
+        "viaAdministracao": "Tópica anal",
+        "indicacoes": "Hemorróidas internas.",
+        "doses": "1 depois da defecação.",
+        "efeitosSecundarios": "Raramente reacções de hipersensibilidade.",
+        "notasPrecaucoes": [
+          "(1) Terapêutica sintomática de eficácia duvidosa.",
+          "(2) Corrigir sempre os factores predisponentes e agravantes como a obesidade, obstipação, dietas condimentadas e ricas em resíduos e vida sedentária"
+        ]
+      }
+    ]
+  },
+  "ENDOCRINOLOGIA E METABOLISMO": {
+    "3-A- CORTICOSTERÓIDES": [
+      {
+        "codigo": "3-A-1",
+        "nivelPrescricao": "3",
+        "nome": "DEXAMETASONA, fosfato sódico",
+        "apresentacao": "Inj. 4 mg/mL- Amp.",
+        "viaAdministracao": "E.V.; Perfusão E.V.; I.M.; I.A.; I.L.",
+        "indicacoes": [
+          "Corticóide de elevada potência e longa duração de acção, útil:",
+          "(1) Na supressão de distúrbios inflamatórios e alérgicos.",
+          "(2) No diagnóstico da doença de Cushing.",
+          "(3) Na hiperplasia supra-renal congénita.",
+          "(4) No edema cerebral associado a neoplasias.",
+          "(5) Na náusea e vómitos associados à quimioterapia.",
+          "(6) Antes do parto, nas situações em que o feto está em risco de sofrer um síndrome de distress respiratório."
+        ],
+        "doses": {
+          "geral": {
+            "adultos": "0,5-2 mg/dia (doses altas, até 24 mg/dia, podem ser necessárias).",
+            "criancas": "200-400 μg/kg/dia."
+          },
+          "edemaCerebral": {
+            "adultos": "Iniciar com 10 mg E.V. lento, seguido de 4 mg I.M. de 6/6 h durante 2-4 dias segundo a necessidade, e depois reduzir gradualmente e parar em 5-7 dias.",
+            "criancas": "0,25 mg/kg/dia divididos em 4 tomas em 48 horas, depois reduzir gradualmente em 5 dias."
+          }
+        },
+        "efeitosSecundarios": [
+          "Os mesmos de 3-A-4.",
+          "Uma irritação perineal pode seguir-se à administração E.V. do ester fosfato.",
+          "Ver também 3-A-4."
+        ],
+        "contraIndicacoes": "Tratamento do edema cerebral associado ao traumatismo crânio-encefálico ou ao AVC.",
+        "notasPrecaucoes": [
+          "(1) Equivalência anti-inflamatória: 0,75 mg dexametasona = 5 mg prednisolona.",
+          "(2) 1 mg de dexametasona = 1,3 mg de fosfato sódico de dexametasona.",
+          "(3) Tem potente acção glucocorticóide e é praticamente desprovido de actividade mineralocorticóide o que a torna útil em doses altas, para situações em que a retenção hidro-salina é inconveniente (edema cerebral).",
+          "(4) Tem acção supressora da secreção do ACTH (útil na hiperplasia supra-renal congénita).",
+          "(5) Ver também 3-A-4."
+        ]
+      },
+      {
+        "codigo": "3-A-2",
+        "nivelPrescricao": "3",
+        "nome": "FLUDROCORTISONA, acetato",
+        "apresentacao": "Comp. 0,1 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Tratamento substitutivo mineralocorticóide na insuficiência supra-renal.",
+        "doses": {
+          "adultos": "50-100 μg/dia, dose máxima diária de 300 μg.",
+          "criancas": "5 μg/kg/dia"
+        },
+        "efeitosSecundarios": "Os mesmos de 3-A-4 no que se refere à actividade mineralcorticóide (retenção hidro-salina, hipokaliemia e suas consequências).",
+        "notasPrecaucoes": [
+          "(1) Tem potente acção mineralcorticóide e é praticamente desprovido de actividade glucocorticóide por isso não é útil nas afecções inflamatórias.",
+          "(2) Na insuficiência supra-renal crónica é necessário associar a hidrocortisona ou prednisolona oral que tem propriedades glicocorticóides mas não tem actividade mineralcorticóide suficiente para compensar a insuficiência supra-renal.",
+          "(3) Com a hidrocortisona as doses necessárias de fludrocortisona são em geral menores (0,05 mg) do que na associação com a prednisolona (0,1 mg de fludrocortisona).",
+          "(4) Na insuficiência supra-renal por hipopituitarismo é suficiente a administração de hidrocortisona (a secreção da aldosterona está mantida por depender do sistema renina-angiotensina).",
+          "(5) Durante o tratamento, assegurar uma ingestão abundante de sal.",
+          "(6) Ver também 3-A-4."
+        ]
+      },
+      {
+        "codigo": "3-A-3",
+        "nivelPrescricao": "1",
+        "nome": "HIDROCORTISONA, acetato",
+        "apresentacao": "Creme 1%- bisnagas de 10 g",
+        "viaAdministracao": "Tópica",
+        "indicacoes": "Eczema, dermatite e outras afecções inflamatórias da pele.",
+        "doses": "Aplicar uma fina camada 1 a 2 x/dia.",
+        "efeitosSecundarios": [
+          "Atrofia cutânea (com o uso prolongado), infecções secundárias, acne, dermatite de contacto, despigmentação e hipertricose.",
+          "Raramente absorção sistémica com supressão do eixo hipotálamo-hipófise-supra-renal (particularmente em crianças), síndrome de Cushing, hiperglicemia e glicosúria."
+        ],
+        "contraIndicacoes": [
+          "Infecções da pele não tratadas",
+          "rosácea",
+          "acne vulgar",
+          "dermatite peri-oral",
+          "prurido genital sem inflamação",
+          "psoríase generalizada."
+        ],
+        "notasPrecaucoes": [
+          "(1) Evitar uso prolongado, particularmente na face.",
+          "(2) Evitar o contacto com os olhos.",
+          "(3) Em geral deve evitar-se os pensos oclusivos que aumentam a absorção sistémica.",
+          "(4) Na psoríase pode provocar recaída por mecanismo de "rebound", psoríase pustulosa e desenvolvimento de tolerância local.",
+          "(5) Em crianças evitar aplicação prolongada ou em grandes áreas devido ao risco de absorção sistémica.",
+          "(6) As afecções infecciosas requerem tratamento com um agente antimicrobiano apropriado. Se não houver resposta rápida, interromper o corticosteróide até se controlar a infecção."
+        ]
+      },
+      {
+        "codigo": "3-A-4",
+        "nivelPrescricao": "2",
+        "nome": "PREDNISOLONA",
+        "apresentacao": "Comp. 5 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "Corticóide sistémico útil numa grande variedade de situações:",
+          "(1) Doenças inflamatórias como a artrite reumatóide e outras artrites, bursite aguda, epicondilite.",
+          "(2) Doenças alérgicas como a asma brônquica, dermatite atópica, dermatite de contacto, urticária, angioedema, doença do soro, rinite alérgica.",
+          "(3) Doenças do colagénio como o lúpus eritematoso sistémico, arterite temporal, polimialgia reumática.",
+          "(4) Doenças dermatológicas como pênfigo, síndrome Stevens-Johnson.",
+          "(5) Edema associado a síndrome nefrótico ou cirrose hepática.",
+          "(6) Doenças gastro-intestinais como a colite ulcerosa, doença regional do intestino.",
+          "(7) Doenças respiratórias como a sarcoidose sintomática, síndrome de Loeffler, beriliose, pneumonia aspirativa.",
+          "(8) Doenças hematológicas como a anemia hemolítica (auto-imune), leucemia e linfoma em adultos, púrpura trombocitopénica idiopática em adultos, anemia hipoplástica congénita (eritróide).",
+          "(9) Doenças neoplásicas para tratamento paliativo de leucemia e linfoma em adultos e leucemia aguda em crianças.",
+          "(10) Estados de edema para induzir diurese ou remissão de proteinúria no síndrome nefrótico idiopático sem uremia ou naquele devido ao lúpus eritematoso.",
+          "(11) Episódios agudos de esclerose múltipla.",
+          "(12) Teste para diagnóstico de hiperactividade supra-renal."
+        ],
+        "doses": {
+          "adultos": "inicialmente 5-80 mg/dia (situações severas requerem doses mais altas). Para manutenção tentar a menor dose possível; pode ser possível reduzir a dose inicial após alguns dias mas pode ser necessário aumentá-la durante períodos de stress ou recaída da doença.",
+          "criancas": "inicialmente 1-2 mg/kg/dia; nas situações severas podem ser necessárias doses mais altas."
+        },
+        "efeitosSecundarios": [
+          "Dependem largamente da dose e duração do tratamento. Incluem:",
+          "Endócrino-metabólicos: síndrome cushingóide, hiperglicemia e diabetes, catarata, osteoporose, necrose avascular óssea (especialmente da cabeça do fémur), retardo do crescimento em crianças, amenorreia, impotência, atrofia supra-renal com supressão da resposta do stress, que pode persistir durante meses após a interrupção da terapêutica.",
+          "Músculo-esqueléticos: fraqueza muscular, atrofia muscular.",
+          "Gastro-intestinais: úlcera péptica com possível perfuração e hemorragia, pancreatite, distensão abdominal, candidíase esofágica.",
+          "Dermatológicos: atrofia cutânea, fragilidade cutânea, petéquias e equimoses, cicatrização demorada das feridas, acne, hirsutismo, estrias.",
+          "Sistema nervoso central: euforia, distúrbios psicológicos, depressão, convulsões, aumento da pressão intracraniana com papiledema (pseudo-tumor cerebral) usualmente após a descontinuação do tratamento.",
+          "Cardiovasculares e hidro-electrolíticos: retenção de fluidos e sódio, perda de potássio, hipertensão, insuficiência cardíaca congestiva.",
+          "Outros: aumento da susceptibilidade e mascaramento de sinais de infecção; insuficiência supra-renal aguda pode precipitar-se por redução muito rápida da dose após terapêutica prolongada."
+        ],
+        "contraIndicacoes": [
+          "Infecção sistémica (a não ser que seja utilizada terapêutica anti-microbiana específica)",
+          "administração de vacinas de vírus vivos."
+        ],
+        "notasPrecaucoes": [
+          "(1) A susceptibilidade à infecção está aumentada; pode ocorrer infecção séria sem sintomatologia típica e as infecções podem atingir um grau de severidade não habitual. Pode ocorrer reactivação de tuberculose.",
+          "(2) Suprimir gradualmente a terapêutica sistémica de corticosteróides. A retirada abrupta após terapêutica prolongada pode levar à insuficiência supra-renal aguda, hipotensão ou morte. A retirada pode também estar associada a febre, mialgias, artralgias, rinite, conjuntivite, nódulos cutâneos dolorosos e perda de peso.",
+          "(3) Durante períodos de stress (doença intercorrente, trauma ou intervenção cirúrgica) pode ser necessário um aumento temporário da dose; se os corticosteróides foram interrompidos seguindo-se terapêutica prolongada pode ser necessário reintroduzi-los temporariamente.",
+          "(4) Use com cuidado na osteoporose, hipertensão, insuficiência cardíaca congestiva, tromboembolismo, história de distúrbios psiquiátricos; úlcera péptica, diverticulite, anastomose intestinal recente, miastenia gravis, diabetes mellitus, glaucoma, hipotiroidismo, cirrose hepática, insuficiência renal, epilepsia, na gravidez e durante a lactação, em crianças e idosos.",
+          "(5) Para minimizar os efeitos secundários dar de preferência em dose única matinal ou em dias alternados.",
+          "(6) Monitorizar doentes em terapêutica de longa duração para detectar hipertensão, diabetes, infecções (incluindo tuberculose), osteoporose (em idosos), catarata e glaucoma; em crianças monitorizar o crescimento.",
+          "(7) Avisar os doentes para usar sempre um cartão de esteróide especificando o medicamento, dose, duração do tratamento e dando instruções para situações de emergência; este precaução é especialmente importante se a terapêutica é prolongada ou se o doente está também a tomar outros medicamentos que suprimem a resposta imunitária. Avisar os doentes para não interromper o tratamento abruptamente.",
+          "(8) Usar com especial cuidado em idosos já que os efeitos adversos dos corticosteróides sistémicos podem ser mais sérios especialmente osteoporose, hipertensão, hipokaliemia, diabetes, susceptibilidade à infecção e atrofia cutânea.",
+          "(9) Em crianças a administração de corticosteróides pode resultar na supressão do crescimento; monitorizar o crescimento. A supressão do crescimento pode ser irreversível.",
+          "(10) O efeito dos corticosteróides pode ser aumentado em doentes com hipotiroidismo ou cirrose.",
+          "(11) O efeito dos corticosteróides pode ser reduzido em doentes com hipertiroidismo.",
+          "(12) A hipokaliemia pode ser aumentada com o uso concomitante de digoxina.",
+          "(13) O efeito da varfarina pode ser aumentado ou diminuído.",
+          "(14) A resposta aos anticoagulantes pode estar diminuída.",
+          "(15) A hipokaliemia pode resultar com o uso simultâneo de diuréticos de ansa ou tiazídicos.",
+          "(16) O risco de hipokaliemia é aumentado se usado com teofilina ou agonistas β2.",
+          "(17) O risco de distúrbios gastrointestinais é aumentado se usado com AINEs.",
+          "(18) A eficácia das vacinas pode estar diminuída; evitar o uso de vacinas de vírus vivos."
+        ]
+      },
+      {
+        "codigo": "3-A-5",
+        "nivelPrescricao": "3",
+        "nome": "PREDNISOLONA, succinato sódico",
+        "apresentacao": "Inj. 25 mg- Amp.",
+        "viaAdministracao": "E.V.; I.M.",
+        "indicacoes": "As mesmas de 3-A-4 quando a administração oral não é possível.",
+        "doses": {
+          "adultos": "10-500 mg até 4 x/dia; quando altas doses são necessárias pode-se usar até 1g/dia.",
+          "criancas": "1-2 mg/kg repetido até 4 x/dia ou como alternativa 1-2 mg/kg/dia por perfusão E.V. contínua após uma dose inicial."
+        },
+        "efeitosSecundarios": "Os mesmos de 3-A-4.",
+        "contraIndicacoes": "As mesmas de 3-A-4.",
+        "notasPrecaucoes": "As mesmas de 3-A-4."
+      }
+    ],
+    "3-B- FÁRMACOS USADOS NO TRATAMENTO DA DIABETES MELLITUS": [
+      {
+        "codigo": "3-B-1",
+        "nivelPrescricao": "3",
+        "nome": "ACARBOSE",
+        "apresentacao": "Comp. 50 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "Inibidor da α-glucosidase intestinal, indicada no tratamento da DM tipo II inadequadamente controlada com exercício e dieta só ou dieta e hipoglicemiantes orais.",
+          "Redução da glicemia pós-prandial em doentes com DM tipo II."
+        ],
+        "doses": {
+          "adultos": "iniciar com 50 mg/dia (para minimizar os efeitos secundários), aumentar para 50 mg 3 x/dia, se necessário depois de 6-8 semanas aumentar para 100 mg 3 x/dia; dose máxima de 200 mg 3 x/dia.",
+          "criancas": "menores de 12 anos: não recomendada."
+        },
+        "efeitosSecundarios": [
+          "Flatulência (tendência a diminuir com o tempo), fezes moles, diarreia (pode ser necessário redução da dose ou suspensão), distensão e dor abdominal",
+          "raramente náusea, testes anormais da função hepática e reacções cutâneas",
+          "estão reportados casos raros de íleos, edema, icterícia e hepatite."
+        ],
+        "contraIndicacoes": [
+          "Gravidez e lactação",
+          "doença inflamatória do intestino (colite ulcerosa, Doença de Crohn), obstrução intestinal parcial (ou predisposição)",
+          "disfunção hepática ou renal grave",
+          "hérnia e história de cirurgia abdominal recente."
+        ],
+        "notasPrecaucoes": [
+          "(1) Monitorizar a função hepática; pode aumentar os efeitos hipoglicemiantes da glibenclamida ou das insulinas (os episódios de hipoglicemia podem ser tratados com glucose oral mas não com sacarose).",
+          "(2) Os comprimidos devem ser mastigados com a primeira ingestão de alimentos ou engolidos com pouca água imediatamente antes de iniciar a refeição."
+        ]
+      },
+      {
+        "codigo": "3-B-2",
+        "nivelPrescricao": "2",
+        "nome": "GLIBENCLAMIDA",
+        "apresentacao": "Comp. 5 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Sulfonilureia de acção prolongada, indicada em doentes diabéticos sem excesso de peso ou com excesso de peso mas nos quais a metformina é mal tolerada ou contra-indicada.",
+        "doses": "Iniciar com 2,5 a 5 mg/dia ao pequeno-almoço e aumentar progressivamente esta dose em intervalos de 5-7 dias, até se conseguir o controlo de glicemia ou até se atingir um máximo de 15 mg/dia.",
+        "efeitosSecundarios": [
+          "Ligeiros e pouco frequentes.",
+          "Incluem distúrbios gastrointestinais (náusea, vómitos, diarreia e obstipação), distúrbios da função hepática (que raramente podem levar a uma icterícia colestática, hepatite e insuficiência hepática), reacções de hipersensibilidade geralmente nas primeiras 6-8 semanas (erupção cutânea, que progride raramente para eritema multiforme, dermatite exfoliativa, icterícia e febre), raramente distúrbios hematológicos (leucopenia, trombocitopenia, agranulocitose, pancitopenia, anemia hemolítica e anemia aplástica).",
+          "Ocasionalmente \"efeito antabus\" com ingestão de álcool.",
+          "Hipoglicemia com sobredosagem.",
+          "Tendência para provocar aumento de peso."
+        ],
+        "contraIndicacoes": [
+          "Cetoacidose, tratamento de doentes com diabetes associada a uma doença intercorrente (infecção e trauma graves, enfarte, coma, cirurgia, etc.), insuficiência hepática e renal grave, porfíria, gravidez e lactação."
+        ],
+        "notasPrecaucoes": [
+          "(1) Reservar a utilização desta sulfonilureia unicamente para os casos em que não se tenha obtido controlo da DMNID após pelo menos 1 mês de adequada restrição calórica, de hidratos de carbono e exercício.",
+          "(2) Leva a aumento do peso; a glibenclamida deve ser usada para reforçar o dieta e não para a substituir.",
+          "(3) Reduzir a dose em doentes idosos, na insuficiência renal, hepática e cardíaca ligeiras a moderadas (risco de hipoglicemia).",
+          "(4) A intercorrência de doenças como infecções graves, traumatismo severo, enfarte do miocárdio ou descompensação grave da DMNID, obrigam à substituição das formas orais pela insulina.",
+          "(5) Omitir na manhã da intervenção cirúrgica e substituir por insulina.",
+          "(6) O controlo duma doente diabética durante a gravidez deve ser feito com insulina, prolongando-se este tratamento durante o período da lactação.",
+          "(7) A hidroclorotiazida, furosemida, corticóides, antipsicóticos e o lítio aumentam a glicemia e podem aumentar as necessidades de glibenclamida, enquanto que o álcool, diminuindo a glicemia, pode reduzir as suas necessidades.",
+          "(8) O efeito da glibenclamida é diminuído pela administração concomitante da rifampicina e anticonceptivos orais e potenciada pelo cloranfenicol, cotrimoxazol, varfarina e metildopa.",
+          "(9) Os β-bloqueadores reforçam o efeito hipoglicemiante e mascaram a percepção dos sinais de hipoglicemia.",
+          "(10) A hipoglicemia por sulfonilureias pode durar muitas horas e deve ser sempre tratada em regime hospitalar."
+        ]
+      },
+      {
+        "codigo": "3-B-3",
+        "nivelPrescricao": "1",
+        "nome": "INSULINA HUMANA (Cristalina)",
+        "apresentacao": "Inj. 40 U.I./mL- Fr. 10 mL",
+        "viaAdministracao": "S.C., I.M., E.V.",
+        "indicacoes": [
+          "(1) Diabetes mellitus tipo I (insulino-dependente).",
+          "(2) Diabetes mellitus tipo II (não insulino-dependente) quando a dieta e os hipoglicemiantes orais são ineficazes.",
+          "(3) Diabetes mellitus durante a gravidez.",
+          "(4) Emergência diabética (cetoacidose diabética, coma hiperosmolar não cetótico).",
+          "(5) Cirurgia e doenças intercorrentes em diabéticos."
+        ],
+        "doses": {
+          "geral": "Determinar individualmente de acordo com as necessidades do doente; habitualmente administrada 15-30 min antes da refeição. Início da acção: 30-60 min.; duração: 6-8 h.",
+          "cetoacidose": "Inicialmente 0,15 U.I./kg em bólus E.V. seguido de 0,1 U.I./kg/h E.V. em perfusão contínua; quando a glicemia chegar aos 15 mmol/L (270 mg/100 mL) reduzir para 0,05 U.I./kg/h; quando a glicemia for inferior a 10 mmol/L (180 mg/100 mL), mudar para dextrose a 5% e continuar a insulina até correcção da cetoacidose."
+        },
+        "efeitosSecundarios": [
+          "Hipoglicemia (suores, tremor, palpitação, ansiedade, fome, parestesias dos lábios e língua e alteração do comportamento; coma, convulsões nos casos severos).",
+          "Lipoatrofia ou lipohipertrofia no local da injecção; podem ser minimizadas pela rotação dos locais de injecção e pelo uso de insulina humana.",
+          "Resistência à insulina.",
+          "Raramente reacções alérgicas."
+        ],
+        "notasPrecaucoes": [
+          "(1) Entender que nas formas 3-B-3, 3-B-4 e 3-B-5 a concentração é de 40 U.I./mL e não de 100 U.I./mL como é habitual em muitos países. Por isso ter cuidado na utilização de seringas que devem ser graduadas para 40 U.I./mL.",
+          "(2) Deve ser conservada na geleira mas nunca no congelador. Uma vez aberto o frasco pode ser conservado à temperatura ambiente por um mês.",
+          "(3) Só a insulina cristalina pode ser administrada por via E.V.",
+          "(4) Vigiar cuidadosamente os sinais de hipoglicemia, sobretudo no início do tratamento.",
+          "(5) Os doentes devem ser educados no auto-controlo da diabetes incluindo monitorização da glicemia, técnica de administração de insulina, reconhecimento dos sinais de hipo e hiperglicemia e acção a tomar.",
+          "(6) Durante episódios de doença intercorrente, stress ou quando se altera o padrão de exercício ou alimentação pode ser necessário o ajuste da dose; não suspender insulina durante a doença mesmo se incapaz de comer.",
+          "(7) Pode ser necessário o ajustamento da dose durante a condução ou operação de máquinas; deve-se ter sempre à mão açúcar ou hidratos de carbono.",
+          "(8) A hipoglicemia pode ser precipitada por ingestão inadequada de alimentos ou omissão de refeições, exercício não habitual, ingestão de álcool.",
+          "(9) Os β-bloqueadores podem mascarar os sinais de hipoglicemia e atrasar a recuperação da hipoglicemia.",
+          "(10) As necessidades de insulina podem ser aumentadas pela administração de corticosteróides, diuréticos tiazídicos, hormônio tiroideu e simpaticomiméticos.",
+          "(11) As necessidades de insulina podem ser diminuídas na insuficiência renal ou hepática.",
+          "(12) O álcool pode aumentar o efeito hipoglicemiante."
+        ]
+      },
+      {
+        "codigo": "3-B-4",
+        "nivelPrescricao": "2",
+        "nome": "INSULINA HUMANA (NPH)",
+        "apresentacao": "Inj. 40 U.I./mL- Fr. 10 mL",
+        "viaAdministracao": "S.C.",
+        "indicacoes": "As mesmas de 3-B-3 excepto a emergência diabética.",
+        "doses": "Determinar individualmente de acordo com as necessidades do doente; habitualmente administrada 30-60 min antes da refeição. Início da acção: 1-2 h; duração: 18-24 h.",
+        "efeitosSecundarios": "Os mesmos de 3-B-3.",
+        "notasPrecaucoes": [
+          "(1) Insulina de acção intermédia.",
+          "(2) Homogeneizar suavemente antes de usar.",
+          "(3) Não administrar por via E.V.",
+          "(4) Ver também 3-B-3."
+        ]
+      },
+      {
+        "codigo": "3-B-5",
+        "nivelPrescricao": "3",
+        "nome": "INSULINA HUMANA (30/70)",
+        "apresentacao": "Inj. 40 U.I./mL- Fr. 10 mL (30% de insulina cristalina + 70% de insulina NPH)",
+        "viaAdministracao": "S.C.",
+        "indicacoes": "As mesmas de 3-B-4.",
+        "doses": "Determinar individualmente de acordo com as necessidades do doente; habitualmente administrada 30 min antes da refeição. Início da acção: 30 min.; duração: 18-24 h.",
+        "efeitosSecundarios": "Os mesmos de 3-B-3.",
+        "notasPrecaucoes": [
+          "(1) Insulina bifásica de acção rápida e intermédia.",
+          "(2) Homogeneizar suavemente antes de usar.",
+          "(3) Não administrar por via E.V.",
+          "(4) Ver também 3-B-3."
+        ]
+      },
+      {
+        "codigo": "3-B-6",
+        "nivelPrescricao": "2",
+        "nome": "METFORMINA",
+        "apresentacao": "Comp. 500 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Diabetes mellitus tipo II (particularmente em doentes obesos) quando a dieta só é insuficiente para o controlo da glicemia.",
+        "doses": "Inicialmente 500 mg com o pequeno-almoço durante 1 semana, depois 500 mg com o pequeno-almoço e jantar durante mais 1 semana, depois 500 mg 3 x/dia com as principais refeições; dose máxima 3 g/dia (embora pouco provável que doses superiores a 2 g/dia proporcionem benefício adicional).",
+        "efeitosSecundarios": [
+          "Anorexia, náusea, vómitos, diarreia, dor abdominal e sabor metálico; estes efeitos são usualmente ligeiros e transitórios.",
+          "Diminuição da absorção de Vit. B12.",
+          "Raramente acidose láctica (interromper de imediato o tratamento)."
+        ],
+        "contraIndicacoes": [
+          "Insuficiência renal, cardiovascular ou respiratória",
+          "história de acidose láctica",
+          "alcoolismo",
+          "gravidez."
+        ],
+        "notasPrecaucoes": [
+          "(1) Interromper se ocorrer vómitos, desidratação, infecção severa e choque (risco de acidose láctica).",
+          "(2) Interromper temporariamente antes de anestesia geral (reiniciar quando a função renal é normal) e antes da administração de meios de contraste iodados (pode causar insuficiência renal).",
+          "(3) Usar com cuidado em idosos.",
+          "(4) Determinar anualmente a Vit. B12 em tratamento a longo prazo.",
+          "(5) Os efeitos gastro-intestinais podem ser reduzidos tomando com comida ou aumentando a dose gradualmente.",
+          "(6) Pode potenciar o efeito hipoglicemiante da glibenclamida e da insulina.",
+          "(7) O álcool aumenta o risco de acidose láctica.",
+          "(8) Os diuréticos, corticosteróides e simpaticomiméticos tendem a produzir hiperglicemia.",
+          "(9) A nifedipina aumenta a absorção e os efeitos da metformina."
+        ]
+      }
+    ],
+    "3-C- FÁRMACOS USADOS EM DISTÚRBIOS DA TIRÓIDE": [
+      {
+        "codigo": "3-C-1",
+        "nivelPrescricao": "3",
+        "nome": "CARBIMAZOL",
+        "apresentacao": "Comp. 5 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Hipertiroidismo.",
+        "doses": {
+          "adultos": "inicialmente 15-40 mg/dia em doses divididas até atingir o estado eutiroideu, depois reduzir gradualmente para uma dose de manutenção de 5-15 mg/dia; pode levar 4-8 semanas para obter controlo; continuar por 12-18 meses.",
+          "criancas": "inicialmente 250 μg/kg 3 x/dia."
+        },
+        "efeitosSecundarios": [
+          "Náusea, ligeiro distúrbio gastrointestinal, cefaleia, mal-estar, artralgia, prurido e erupção cutânea.",
+          "Raramente alopécia, lesão hepática incluindo icterícia, discrasias sanguíneas incluindo agranulocitose e aplasia da medula óssea."
+        ],
+        "contraIndicacoes": "Severa doença hematológica.",
+        "notasPrecaucoes": [
+          "(1) Pode ser administrado em dose única devido à sua acção prolongada.",
+          "(2) Monitorização clínica para detecção de neutropenia - avisar os doentes para relatarem de imediato sintomas como dor de garganta, ulcerações da boca, equimoses, febre, mal-estar ou infecção não específica.",
+          "(3) Um hemograma deve ser efectuado se houver evidência clínica de neutropenia.",
+          "(4) O carbimazol pode ser usado durante a gravidez mas a dose mais baixa possível deve ser usada; pode também ser usado durante a lactação mas apenas com monitorização neo-natal.",
+          "(5) Fazer monitorização da função tiroideia."
+        ]
+      },
+      {
+        "codigo": "3-C-2",
+        "nivelPrescricao": "3",
+        "nome": "LEVOTIROXINA SÓDICA",
+        "apresentacao": "Comp. 50 μg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Hipotiroidismo (incluindo coma mixedematoso).",
+          "(2) Difusão de um bócio simples.",
+          "(3) Carcinoma tiroideu."
+        ],
+        "doses": {
+          "adultos": {
+            "hipotiroidismo": "inicialmente 25-50 μg/dia, aumentar com intervalos de pelo menos 4 semanas em 25-50 μg até se normalizarem os testes da função tiroideia; dose usual de manutenção 100-200 μg/dia (até 300 μg/dia podem ocasionalmente ser necessários); nos idosos iniciar com 25 μg/dia.",
+            "hipotiroidismoGrave": "inicialmente 12,5-25 μg/dia, aumentar com intervalos de 4 semanas."
+          },
+          "criancas": {
+            "hipotiroidismoCongenito": "6 meses: 25 μg/dia; 6 meses-2 anos: 50 μg/dia; 2-5 anos: 75 μg/dia; 6-12 anos: 100 μg/dia, acima de 12 anos: 150 μg/dia."
+          }
+        },
+        "efeitosSecundarios": "Normalmente não ocorrem excepto com sobredosagem ou dose inicial muito alta - taquicardia, arritmias, angina do peito, tremor, inquietação, excitabilidade, insónia, cefaleia, rubor, sudação, diarreia, perda de peso e intolerância ao calor.",
+        "contraIndicacoes": "Tireotoxicose.",
+        "notasPrecaucoes": [
+          "(1) Usar com cuidado na doença cardiovascular (doença isquémica cardíaca, hipertensão), idosos, diabetes mellitus e diabetes insípido (pode aumentar as necessidades de medicação anti-diabética, diuréticos e insulina).",
+          "(2) Monitorização da função tiroideia - medições iniciais repetidas após 6 semanas da mudança de dose.",
+          "(3) Pode aumentar o efeito dos anticoagulantes orais.",
+          "(4) A absorção da levotiroxina pode ser afectada pelo sulfato ferroso, colestiramina e antiácidos contendo alumínio, cálcio ou magnésio.",
+          "(5) O efeito da levotiroxina pode ser aumentado pelos anti-depressivos tricíclicos.",
+          "(6) A dose de levotiroxina pode necessitar de ser aumentada na gravidez.",
+          "(7) A quantidade excretada no leite é muito pequena para afectar os testes neo-natais para hipotiroidismo."
+        ]
+      },
+      {
+        "codigo": "3-C-3",
+        "nivelPrescricao": "3",
+        "nome": "LEVOTIROXINA SÓDICA",
+        "apresentacao": "Comp. 100 μg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 3-C-2.",
+        "doses": "As mesmas de 3-C-2.",
+        "efeitosSecundarios": "Os mesmos de 3-C-2.",
+        "contraIndicacoes": "As mesmas de 3-C-2.",
+        "notasPrecaucoes": "As mesmas de 3-C-2."
+      }
+    ]
+  },
+  "SISTEMA GENITO-URINÁRIO E HORMÔNIOS SEXUAIS": {
+    "4-A- DIURÉTICOS": [
+      {
+        "codigo": "4-A-1",
+        "nivelPrescricao": "1",
+        "nome": "HIDROCLOROTIAZIDA",
+        "apresentacao": "Comp. 25 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Edema devido a insuficiência cardíaca, hepática e renal.",
+          "(2) HTA ligeira a moderada.",
+          "(3) Nefrolitíase cálcica recidivante."
+        ],
+        "doses": {
+          "edema": "inicialmente 25-100 mg/dia ou em dias alternados; dose de manutenção pode ser de 25-50 mg/dia ou em dias alternados; alguns doentes podem necessitar até 200 mg/dia.",
+          "hipertensao": "inicialmente 25 mg/dia, aumentar se necessário para 50 mg/dia; acima desta dose há pouco benefício adicional e os efeitos secundários aumentam.",
+          "nefrolitiase": "25-50 mg/dia."
+        },
+        "efeitosSecundarios": [
+          "Hipotensão postural e ligeiras tonturas inicialmente; impotência pode ocorrer.",
+          "Perturbações hidro-electrolíticas incluindo hiponatremia, hipokaliemia, hipomagnesemia, hipercalcemia, hiperuricemia e hiperglicemia.",
+          "Menos comummente cefaleia, perturbações gastrointestinais, impotência; raramente reacções de hipersensibilidade incluindo pneumonite, edema pulmonar, fotossensibilidade, perturbações hematológicas (incluindo neutropenia e trombocitopenia), pancreatite, colestase intra-hepática e necrose aguda do miocárdio."
+        ],
+        "contraIndicacoes": [
+          "Hiponatremia refractária, hipercalcemia, hipokalemia refractária, hiperucricemia sintomática, doença de Addison, insuficiência renal severa, cirrose hepática severa."
+        ],
+        "notasPrecaucoes": [
+          "(1) Monitorizar electrólitos plasmáticos regularmente; monitorizar para hiponatremia em idosos.",
+          "(2) Usar com cuidado na insuficiência renal ou hepática (pode precipitar coma hepático), gota, diabetes mellitus, lúpus eritematoso sistémico.",
+          "(3) Pode aumentar a incidência de diabetes mellitus.",
+          "(4) Potencia o efeito hipotensor dos anti-hipertensivos e anestésicos.",
+          "(5) Aumenta o risco de nefrotoxicidade e ototoxicidade dos aminoglicosidos.",
+          "(6) Hipokaliemia aumenta os riscos de toxicidade da digoxina.",
+          "(7) Reduz a excreção renal do lítio (aumenta o risco de toxicidade).",
+          "(8) AINEs antagonizam o efeito diurético.",
+          "(9) A administração concomitante de corticosteróides aumenta o risco de hipokaliemia.",
+          "(10) Usar com cuidado na gravidez e lactação."
+        ]
+      },
+      {
+        "codigo": "4-A-2",
+        "nivelPrescricao": "1",
+        "nome": "HIDROCLOROTIAZIDA",
+        "apresentacao": "Comp. 50 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 4-A-1.",
+        "doses": "As mesmas de 4-A-1.",
+        "efeitosSecundarios": "Os mesmos de 4-A-1.",
+        "contraIndicacoes": "As mesmas de 4-A-1.",
+        "notasPrecaucoes": "As mesmas de 4-A-1."
+      },
+      {
+        "codigo": "4-A-3",
+        "nivelPrescricao": "2",
+        "nome": "FUROSEMIDA",
+        "apresentacao": "Comp. 40 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Edema devido a insuficiência cardíaca, hepática e renal.",
+          "(2) Edema pulmonar.",
+          "(3) HTA resistente."
+        ],
+        "doses": {
+          "edema": "inicialmente 40 mg de manhã, depois ajustar de acordo com a resposta; dose de manutenção pode variar entre 20 mg em dias alternados a 80 mg/dia ou mais.",
+          "edemaGrave": "podem ser necessárias doses até 600 mg/dia ou mais.",
+          "hipertensao": "40-80 mg/dia."
+        },
+        "efeitosSecundarios": [
+          "Perturbações hidro-electrolíticas incluindo hiponatremia, hipokaliemia, hipomagnesemia, hipocalcemia, alcalose metabólica; hiperuricemia e gota; hiperglicemia e glicosúria (mas menos provável que com as tiazidas).",
+          "Ototoxicidade e surdez (usualmente reversível); mais comum com doses altas e administração rápida E.V. e em doentes com insuficiência renal.",
+          "Náusea, mal-estar; raramente pancreatite, hepatotoxicidade, reacções de hipersensibilidade (incluindo erupção cutânea, fotossensibilidade, prurido, urticária, febre, vasculite, pneumonite intersticial, necrose tubular aguda), perturbações hematológicas incluindo leucopenia, eosinofilia, trombocitopenia; tinnitus e surdez."
+        ],
+        "contraIndicacoes": [
+          "Anúria, insuficiência renal com anúria, coma e pré-coma hepáticos associados a encefalopatia hepática, desidratação severa, hiponatremia ou hipokaliemia severas."
+        ],
+        "notasPrecaucoes": [
+          "(1) Monitorizar electrólitos plasmáticos; hipokaliemia é perigosa em doentes severos e em doentes tratados concomitantemente com digoxina.",
+          "(2) Usar com cuidado durante a gravidez e lactação.",
+          "(3) Pode precipitar diabetes mellitus e gota.",
+          "(4) Usar com cuidado em doentes com ampliamento da próstata.",
+          "(5) Usar com precaução se dado concomitantemente com aminoglicósidos ou cefalosporinas (aumenta o risco de nefrotoxicidade) e com vancomicina (aumenta o risco de ototoxicidade e nefrotoxicidade).",
+          "(6) Hipokaliemia aumenta o risco de toxicidade da digoxina e de arritmias com antiarrítmicos.",
+          "(7) Potencia o nefrotoxicidade dos AINEs; AINEs antagonizam o efeito diurético.",
+          "(8) Potencia o efeito ototóxico e nefrotóxico do cisplatino.",
+          "(9) Aumenta a secreção de lítio (risco de toxicidade do lítio).",
+          "(10) Hipokaliemia aumenta o risco de toxicidade da digoxina.",
+          "(11) Potencia o efeito hipotensor dos anti-hipertensivos e anestésicos.",
+          "(12) A administração concomitante de corticosteróides aumenta o risco de hipokaliemia."
+        ]
+      },
+      {
+        "codigo": "4-A-4",
+        "nivelPrescricao": "3",
+        "nome": "FUROSEMIDA",
+        "apresentacao": "Inj. 20 mg/2 mL- Amp.",
+        "viaAdministracao": "E.V.; I.M.",
+        "indicacoes": "As mesmas de 4-A-3 quando a terapêutica oral não é possível.",
+        "doses": {
+          "adultos": {
+            "EVouIM": "inicialmente 20-50 mg, depois ajustar de acordo com a resposta.",
+            "perfusaoEV": "0,5-1 mg/h, ajustar de acordo com a resposta; doses até 4 mg/h foram usadas em insuficiência cardíaca severa e 1-3 mg/h na insuficiência renal.",
+            "dosesAltas": "administrar não mais que 4 mg/min; se necessárias doses superiores a 50 mg dar por perfusão E.V."
+          },
+          "criancas": "1 mg/kg (máximo 40 mg) repetida depois de 4-8 h se necessário; crianças maiores podem necessitar doses mais altas."
+        },
+        "efeitosSecundarios": "Os mesmos de 4-A-3.",
+        "contraIndicacoes": "As mesmas de 4-A-3.",
+        "notasPrecaucoes": "As mesmas de 4-A-3."
+      },
+      {
+        "codigo": "4-A-5",
+        "nivelPrescricao": "3",
+        "nome": "ESPIRONOLACTONA",
+        "apresentacao": "Comp. 25 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Edema e ascite na cirrose hepática.",
+          "(2) Edema refractário na insuficiência cardíaca congestiva (normalmente com diurético de ansa).",
+          "(3) Hiperaldosteronismo primário (S. de Conn); hipertensão.",
+          "(4) Nefrolitíase cálcica recidivante."
+        ],
+        "doses": {
+          "edema": "100-400 mg/dia, inicialmente em doses divididas, depois como dose única diária ou em dias alternados.",
+          "cirrose": "inicialmente 100 mg/dia se não há edema ou ascite ou 200-400 mg/dia se há edema; dose de manutenção 75-400 mg/dia.",
+          "insuficienciaCardiaca": "12,5-25 mg/dia; ocasionalmente pode aumentar para 50 mg 2 x/dia; monitorizar electrólitos plasmáticos e função renal.",
+          "hiperaldosteronismo": "100-400 mg/dia."
+        },
+        "efeitosSecundarios": [
+          "Hiperkaliemia (interromper o tratamento), hiponatremia, perturbações gastro-intestinais, impotência, ginecomastia, irregularidades menstruais, letargia, cefaleia, confusão e erupções cutâneas."
+        ],
+        "contraIndicacoes": [
+          "Hiperkaliemia, hiponatremia, anúria, insuficiência renal severa, doença de Addison."
+        ],
+        "notasPrecaucoes": [
+          "(1) Monitorizar electrólitos plasmáticos (interromper se hiperkaliemia ocorrer) e função renal.",
+          "(2) Usar com cuidado em diminuição da função renal, idosos e durante a gravidez e lactação.",
+          "(3) Evitar suplementos de potássio e alimentos ricos em potássio.",
+          "(4) Aumenta os níveis plasmáticos da digoxina.",
+          "(5) AINEs aumentam o risco de hiperkaliemia e nefrotoxicidade.",
+          "(6) IECAs e antagonistas dos receptores da angiotensina II aumentam o risco de hiperkaliemia severa."
+        ]
+      }
+    ],
+    "4-B- FÁRMACOS USADOS NAS AFECÇÕES GENITO-URINÁRIAS": [
+      {
+        "codigo": "4-B-1",
+        "nivelPrescricao": "2",
+        "nome": "FINASTERIDA",
+        "apresentacao": "Comp. 5 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Hiperplasia benigna da próstata.",
+        "doses": "5 mg 1 x/dia.",
+        "efeitosSecundarios": [
+          "Impotência, diminuição da libido, diminuição do volume do ejaculado, hipersensibilidade incluindo erupção cutânea e edema dos lábios."
+        ],
+        "contraIndicacoes": "Mulheres e crianças.",
+        "notasPrecaucoes": [
+          "(1) Antes do tratamento excluir carcinoma da próstata (finasterida diminui os níveis séricos de antigénio específico da próstata).",
+          "(2) Diminui a contagem espermática.",
+          "(3) As mulheres em idade reprodutiva devem evitar manusear comprimidos cortados ou triturados de finasterida.",
+          "(4) Pode levar 6 meses de tratamento antes de se obter benefício."
+        ]
+      }
+    ],
+    "4-C- CONTRACEPTIVOS": [
+      {
+        "codigo": "4-C-1",
+        "nivelPrescricao": "2",
+        "nome": "ETINILESTRADIOL + LEVONORGESTREL",
+        "apresentacao": "Comp. (30 μg de etinilestradiol + 150 μg de levonorgestrel)",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Contracepção oral.",
+        "doses": "Cada comp. uma vez por dia durante 21 dias consecutivos, começando no 1º dia da menstruação; intervalo subsequente de 7 dias sem medicação e depois repetir.",
+        "efeitosSecundarios": [
+          "Náusea (pode ser reduzida tomando à noite ou com alimentos), vómitos, cefaleia, tensão mamária, mudanças de peso, retenção de fluidos, tromboembolismo (ver abaixo).",
+          "Depressão, cloasma, alteração da libido, irregularidades menstruais, amenorreia pós pílula.",
+          "Raramente colestase (interromper o tratamento), adenomas hepáticos, hipertensão, chorea, otosclerose com deterioração da audição, distúrbios visuais, reacções de hipersensibilidade incluindo erupção cutânea, urticária e angioedema.",
+          "TROMBOEMBOLISMO: O risco de doença tromboembólica arterial ou venosa aumenta com a idade e pode também estar aumentado em presença de outros factores de risco para doença arterial como tabagismo, obesidade e antecedentes familiares. O risco de tromboembolismo venoso está também aumentado durante a imobilização prolongada e cirurgia major; sempre que possível os contraceptivos combinados devem ser descontinuados (e métodos alternativos de contracepção aconselhados) 4 semanas antes de cirurgia major e durante a imobilização prolongada."
+        ],
+        "contraIndicacoes": [
+          "Gravidez; trombose venosa ou arterial passada ou presente, distúrbios trombofílicos, enxaqueca com aura, doença cardíaca isquémica, doença cerebrovascular, hipertensão não controlada, doença valvular cardíaca complicada, miocardiopatia, fibrilhação auricular; colestase presente ou passada, adenoma hepático, carcinoma hepatocelular; carcinoma da mama presente ou passado; carcinoma do endométrio, cervical ou outros tumores estrogénio-dependentes; hemorragia vaginal não diagnosticada; Diabetes mellitus com complicações vasculares; enxaqueca com sintomas neurológicos focais."
+        ],
+        "notasPrecaucoes": [
+          "(1) Factores de risco para doença arterial incluem tabagismo, diabetes mellitus, hipertensão, obesidade, idade e antecedentes familiares de doença arterial; estes factores também se aplicam quando se considera a conveniência de continuar a terapêutica.",
+          "(2) Factores de risco para tromboembolismo venoso incluem antecedentes familiares, obesidade, cirurgia, trauma, imobilização prolongada.",
+          "(3) Migrar para uma preparação com dose menor de estrogénio se surgir aumento da TA, dor de cabeça severa, perturbações visuais parciais, sinais de trombose ou tromboflebite.",
+          "(4) Parar imediatamente se: alteração súbita ou perturbação visual gradual, proptose ou diplopia, aumento severo da TA, sinais de tromboembolismo.",
+          "(5) Usar métodos não-hormonais de contracepção durante episódios de vómitos ou diarreia severa e durante 7 dias depois.",
+          "(6) Interacções: a eficácia dos contraceptivos orais é reduzida por alguns fármacos que induzem enzimas hepáticos (p.ex. carbamazepina, griseofulvina, modafinil, nelfinavir, nevirapina, oxcarbazepina, fenitoína, primidona, rifampicinas, ritonavir, rufinamida, hierba de São João, topiramato). Um método contraceptivo adicional não-hormonal é recomendado durante o tratamento e por 4 semanas (8 semanas para rifampicinas) depois de parar o indutor enzimático; se estas 4 semanas (8 semanas para rifampicinas) se estendem para além do fim dum ciclo, o próximo ciclo deve ser iniciado imediatamente sem um intervalo (no caso de preparações todos os dias, omitir os comprimidos inativos).",
+          "(7) Interacções: para cursos curtos dum indutor enzimático (p.ex. griseofulvina), ajustar a dosagem para providenciar pelo menos 50 μg etinilestradiol diariamente e usar método contraceptivo adicional não-hormonal por 4 semanas depois de parar.",
+          "(8) Interacções: contraceptivos orais podem potenciar os efeitos da prednisolona, ciclosporina e teofilina."
+        ]
+      },
+      {
+        "codigo": "4-C-2",
+        "nivelPrescricao": "2",
+        "nome": "NORETISTERONA",
+        "apresentacao": "Comp. 350 μg",
+        "viaAdministracao": "Oral",
+        "indicacoes": [
+          "(1) Contracepção (particularmente quando contraceptivos combinados contra-indicados).",
+          "(2) Como adjuvante da amamentação."
+        ],
+        "doses": "1 comp./dia continuamente, começando no 1º dia da menstruação (se 100% da amamentação, começar 6 semanas depois do parto; no caso contrário, começar 3 semanas depois do parto ou no 1º dia da menstruação); tomar à mesma hora cada dia; se atrasado por mais de 3 horas, a eficácia contraceptiva pode estar reduzida.",
+        "efeitosSecundarios": [
+          "Irregularidades menstruais (podem melhorar com o tempo), náusea, vómitos, cefaleia, tonturas, tensão mamária, depressão, alterações cutâneas, distúrbios do apetite, mudanças de peso; ovários císticos reportados."
+        ],
+        "contraIndicacoes": [
+          "Gravidez; tumores do fígado, se malignos ou se benignos mas com história de antecedentes ou se desenvolvem durante o uso; história de herpes gestacional; deterioração de otosclerose durante a gravidez; antecedentes de tromboembolismo arterial, doença cardíaca isquémica severa, hemorragia cerebrovascular; hipertensão severa; diabetes mellitus com nefropatia, retinopatia, neuropatia ou outras complicações vasculares; enxaqueca severa; carcinoma da mama; hemorragia vaginal não diagnosticada; porfíria; lipoproteínas severamente alteradas."
+        ],
+        "notasPrecaucoes": [
+          "(1) Parar imediatamente e procurar assessoria médica se houver aparecimento súbito ou agravamento de enxaqueca, perturbações visuais severas, sinais de tromboembolismo, TA severamente elevada.",
+          "(2) História de enxaqueca, asma, epilepsia, diabetes mellitus, hipertensão, disfunção cardíaca ou renal, antecedentes familiares de carcinoma da mama, doença trofoblástica.",
+          "(3) Se vómitos ocorrem dentro de 2 horas da toma, tomar outra pílula; usar métodos contraceptivos adicionais durante a doença gastro-intestinal e durante 7 dias depois.",
+          "(4) Interacções: a eficácia é reduzida por indutor enzimáticos hepáticos ver 4-C-1; usar métodos contraceptivos adicionais durante o tratamento e por 4 semanas depois de parar o indutor enzimático."
+        ]
+      },
+      {
+        "codigo": "4-C-3",
+        "nivelPrescricao": "2",
+        "nome": "ACETATO DE MEDROXIPROGESTERONA",
+        "apresentacao": "Inj. 150 mg/mL- Amp.",
+        "viaAdministracao": "I.M.",
+        "indicacoes": "Contracepção de longa duração.",
+        "doses": "150 mg de 12/12 semanas; primeira injecção durante os primeiros 5 dias da menstruação ou dentro de 5 dias do parto se não amamentando ou na 6ª semana pós parto se amamentando.",
+        "efeitosSecundarios": [
+          "Ver noretisterona; irregularidades menstruais comuns especialmente nos primeiros meses (aconselhamento antes do tratamento é importante); amenorreia eventual comum e pode persistir por 1 ano ou mais depois de descontinuar; mudanças de peso comuns.",
+          "Raramente reacções de hipersensibilidade, osteoporose com uso a longo prazo."
+        ],
+        "contraIndicacoes": "Ver noretisterona; também carcinoma da mama ou genital e doença hepática severa.",
+        "notasPrecaucoes": [
+          "(1) História de tromboembolismo, hipertensão, diabetes mellitus, asma, epilepsia, depressão, enxaqueca; susceptibilidade a osteoporose (evitar em adolescentes a não ser que outros métodos sejam inadequados porque acredita-se que reduz a aquisição de densidade mineral óssea).",
+          "(2) Se houver atraso na menstruação na altura da próxima injecção, excluir gravidez antes de administrar.",
+          "(3) Diminuição da fertilidade e irregularidades menstruais podem persistir por meses depois de descontinuar.",
+          "(4) Interacções: eficácia possivelmente reduzida por aminoglutetimida."
+        ]
+      }
+    ]
+  },
+  "APARELHO RESPIRATÓRIO": {
+    "5-A- ANTI-ASMÁTICOS": [
+      {
+        "codigo": "5-A-1",
+        "nivelPrescricao": "1",
+        "nome": "AMINOFILINA",
+        "apresentacao": "Comp. 100 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Tratamento de manutenção da asma brônquica e de outras situações acompanhadas de broncospasmo (enfisema, bronquite).",
+        "doses": "5 a 10 mg/kg/dia divididos em 3 tomas. Iniciar com doses baixas e ir aumentando progressivamente de 3 em 3 dias até se obter resposta (máximo 16 mg/kg/dia). Crianças e adultos fumadores podem requerer doses maiores, (18-20 mg/kg/dia).",
+        "efeitosSecundarios": [
+          "São dose-dependentes e incluem os seguintes: dispepsia, náusea, vómitos, taquicardia, palpitações, cefaleia, zumbidos, insónias, tremores, agitação e arritmias."
+        ],
+        "notasPrecaucoes": [
+          "(1) Reduzir a dose em doentes com insuficiência cardíaca ou hepática, infecções virais, epilepsia, cor pulmonale ou que estejam a tomar concomitantemente eritromicina, cimetidina ou ciprofloxacina (estes fármacos reduzem significativamente o metabolismo hepático da teofilina levando o aumento dos seus níveis plasmáticos).",
+          "(2) Os doentes fumadores activos, ou que estejam a tomar fármacos como a fenitoína, carbamazepina, rifampicina, fenobarbital, podem necessitar de doses mais elevadas de aminofilina (estes fármacos aumentam o metabolismo hepático da teofilina levando a diminuição dos seus níveis plasmáticos)."
+        ]
+      },
+      {
+        "codigo": "5-A-2",
+        "nivelPrescricao": "3",
+        "nome": "AMINOFILINA",
+        "apresentacao": "Inj. 250 mg/10 mL- Amp.",
+        "viaAdministracao": "E.V. (lenta)",
+        "indicacoes": "Asma brônquica aguda severa que não responde ao salbutamol.",
+        "doses": {
+          "cargaInicial": "5 mg/kg diluídos em 50 mL de dextrose a 5% ou soro fisiológico, administrados em 20 min (nos doentes já medicados com teofilina omitir a dose de carga).",
+          "manutencao": "0,5 mg/kg/h por perfusão E.V."
+        },
+        "efeitosSecundarios": [
+          "Quando administrada muito rapidamente pode provocar arritmias severas, convulsões, hipotensão e paragem cardíaca."
+        ],
+        "contraIndicacoes": "As mesmas de 5-A-1.",
+        "notasPrecaucoes": [
+          "(1) Administrar sempre diluída em dextrose a 5% ou soro fisiológico e muito lentamente.",
+          "(2) Monitorizar os sinais vitais durante a administração.",
+          "(3) Ver também 5-A-1."
+        ]
+      },
+      {
+        "codigo": "5-A-3",
+        "nivelPrescricao": "3",
+        "nome": "BECLOMETASONA, dipropionato",
+        "apresentacao": "Aerossol pressurizado, 250 μg/inalação - Fr. 10 mL",
+        "viaAdministracao": "Inalatória",
+        "indicacoes": "Profilaxia da asma brônquica.",
+        "doses": {
+          "adultos": "100-200 μg (2-4 inalações), 2 x/dia ou 100 μg (2 inalações), 3-4 x/dia. Dose máxima de 1 mg (20 inalações)/dia.",
+          "criancas": "50-100 μg (1-2 inalações), 2 x/dia."
+        },
+        "efeitosSecundarios": [
+          "Candidíase da boca e garganta (enxaguar a boca com água depois de cada inalação); ocasionalmente rouquidão.",
+          "Muito raramente hipersensibilidade incluindo erupção cutânea, urticária, prurido, eritema e edema dos olhos, face, lábios e garganta; broncospasmo paradoxal.",
+          "Com doses altas, efeitos sistémicos incluindo supressão adrenal podem raramente ocorrer."
+        ],
+        "notasPrecaucoes": [
+          "(1) Usar com cuidado em doentes com tuberculose pulmonar.",
+          "(2) Transferir doentes recebendo corticosteróides sistémicos para inalação pode revelar alergias previamente suprimidas como rinite alérgica e eczema; pode também ocorrer síndrome de abstinência incluindo artralgia e mialgia; por isso a retirada dos corticosteróides sistémicos deve ser gradual.",
+          "(3) Pode ser necessário tratamento sistémico durante episódios de infecção severa, stress cirúrgico ou elective ou trauma.",
+          "(4) Monitorizar crescimento em crianças (se o crescimento estiver retardado, reduzir à menor dose de controlo).",
+          "(5) Enxaguar a boca com água depois de inalação para prevenir candidíase oral e rouquidão."
+        ]
+      },
+      {
+        "codigo": "5-A-4",
+        "nivelPrescricao": "2",
+        "nome": "BUDESONIDA",
+        "apresentacao": "Aerossol pressurizado, 200 μg/inalação - Fr. 10 mL",
+        "viaAdministracao": "Inalatória",
+        "indicacoes": "Profilaxia da asma brônquica.",
+        "doses": {
+          "adultos": "inicialmente 200-800 μg, 2 x/dia, reduzindo para 200-400 μg, 2 x/dia quando o controlo for atingido.",
+          "criancas": "6 meses-12 anos, 200-800 μg/dia em doses divididas (iniciar com 400 μg/dia, 2 x/dia se a asma for severa ou se os doentes estiveram recebendo previamente corticosteróides orais)."
+        },
+        "efeitosSecundarios": "Os mesmos de 5-A-3.",
+        "notasPrecaucoes": "As mesmas de 5-A-3."
+      },
+      {
+        "codigo": "5-A-5",
+        "nivelPrescricao": "3",
+        "nome": "CROMOGLICATO DE SÓDIO",
+        "apresentacao": "Aerossol pressurizado, 5 mg/inalação - Fr. 10 mL",
+        "viaAdministracao": "Inalatória",
+        "indicacoes": [
+          "(1) Profilaxia da asma brônquica (incluindo asma induzida por exercício e asma ocupacional).",
+          "(2) Rinite alérgica."
+        ],
+        "doses": {
+          "asma": {
+            "adultos": "2 inalações 4 x/dia, aumentar se necessário para 6-8 inalações/dia; dose adicional pode ser tomada antes do exercício.",
+            "criancas": "maiores de 5 anos: 2 inalações 4 x/dia."
+          },
+          "rinite": "1 inalação em cada narina 2-4 x/dia."
+        },
+        "efeitosSecundarios": [
+          "Tosse, irritação da garganta e broncospasmo ocasional (retirar se severo); cefaleia, náusea e vómitos; raramente artralgia, erupção cutânea e urticária."
+        ],
+        "notasPrecaucoes": [
+          "(1) Preferir inaladores pressurizados nos doentes que não conseguem usar adequadamente os inaladores de pó seco.",
+          "(2) Pode levar até 4 semanas para estabelecer o máximo benefício.",
+          "(3) A retirada da terapêutica deve ser gradual ao longo de 1 semana - sintomas de asma podem reaparecer."
+        ]
+      },
+      {
+        "codigo": "5-A-6",
+        "nivelPrescricao": "3",
+        "nome": "IPRATRÓPIO, brometo",
+        "apresentacao": "Aerossol pressurizado, 20 μg/inalação - Fr. 10 mL",
+        "viaAdministracao": "Inalatória",
+        "indicacoes": "Broncodilatador na DPOC; pode ser usado como adjuvante ao salbutamol na asma aguda.",
+        "doses": {
+          "adultos": "20-40 μg (1-2 inalações) 3-4 x/dia; até 240 μg (12 inalações)/dia foram usadas em alguns doentes.",
+          "criancas": "1-12 anos: 20 μg (1 inalação) 3 x/dia."
+        },
+        "efeitosSecundarios": [
+          "Secura da boca; menos comummente náusea, obstipação e tosse; raramente cefaleia, taquicardia, palpitações, retenção urinária, reações de hipersensibilidade incluindo urticária, angioedema, erupção cutânea, broncospasmo, anafilaxia e edema da orofaringe; broncospasmo paradoxal reportado."
+        ],
+        "contraIndicacoes": "Hipersensibilidade ao ipratrópio ou atropina.",
+        "notasPrecaucoes": [
+          "(1) Usar com cuidado na hipertrofia prostática, obstrução do colo da bexiga e glaucoma de ângulo fechado.",
+          "(2) Evitar contacto com os olhos."
+        ]
+      },
+      {
+        "codigo": "5-A-7",
+        "nivelPrescricao": "3",
+        "nome": "PREDNISOLONA",
+        "apresentacao": "Comp. 5 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Asma brônquica aguda que não responde a outros tratamentos; exacerbação severa da DPOC.",
+        "doses": {
+          "asmaAguda": {
+            "adultos": "30-60 mg/dia por 7-14 dias ou até a recuperação.",
+            "criancas": "1-2 mg/kg (máximo 40 mg)/dia por até 3 dias ou até a recuperação."
+          },
+          "DPOC": "30 mg/dia por 7-14 dias."
+        },
+        "efeitosSecundarios": "Ver 3-A-4.",
+        "contraIndicacoes": "Ver 3-A-4.",
+        "notasPrecaucoes": [
+          "(1) Cursos curtos (até 3 semanas) podem usualmente ser retirados abruptamente; para cursos mais longos, retirar gradualmente para evitar insuficiência adrenal.",
+          "(2) Ver também 3-A-4."
+        ]
+      },
+      {
+        "codigo": "5-A-8",
+        "nivelPrescricao": "2",
+        "nome": "SALBUTAMOL",
+        "apresentacao": "Aerossol pressurizado 100 μg/inalação – Fr. 10 mL",
+        "viaAdministracao": "Inalatória",
+        "indicacoes": "Prevenção e tratamento das crises de asma brônquica ou de outras situações acompanhadas de broncospasmo (bronquite, enfisema).",
+        "doses": {
+          "crisesAgudas": "2-3 jactos como dose única. Se necessário, repetir em intervalos de 2-4 h, por períodos não superiores a 8 h.",
+          "manutencao": {
+            "adultos": "2-3 jactos 3-4 x/dia",
+            "criancas": "1 jacto 3-4 x/dia"
+          },
+          "prevencaoEsforco": "1-2 jactos 5 min. antes do exercício."
+        },
+        "efeitosSecundarios": [
+          "Muito menos acentuados do que por via oral ou parenteral.",
+          "Raramente, podem ocorrer tremor fino ligeiro, cefaleia e palpitações.",
+          "(ver também 5-A-10)."
+        ],
+        "contraIndicacoes": "Evitar ou usar com muito cuidado nos doentes com insuficiência cardíaca, arritmias cardíaca, HTA, hipertiroidismo e diabetes.",
+        "notasPrecaucoes": [
+          "(1) Educar o doente no uso correcto do aerossol.",
+          "(2) Quando se fizerem duas inalações, convém deixar um intervalo de 2-3 min. entre elas.",
+          "(3) Aconselhar o doente a procurar conselho médico, se as doses previamente eficazes já não produzirem alívio de pelo menos 3 h. de duração.",
+          "(4) Pode ocorrer, raramente, agravamento paradoxal do broncospasmo ou reacções de hipersensibilidade.",
+          "(5) Actua de forma mais rápida e com menores efeitos secundários que as formas orais.",
+          "(6) Ver também 5-A-10."
+        ]
+      },
+      {
+        "codigo": "5-A-9",
+        "nivelPrescricao": "3",
+        "nome": "SALBUTAMOL",
+        "apresentacao": "Inj. 500 μg/mL- Amp.",
+        "viaAdministracao": "S.C.; I.M.; E.V. lenta; perfusão E.V.",
+        "indicacoes": "Asma severa e estado de mal asmático que não respondem à terapêutica inalatória.",
+        "doses": {
+          "SC_IM": "8 μg/kg até 4 x/dia; dose única máxima 500 μg.",
+          "EV": "4 μg/kg por injecção lenta.",
+          "perfusaoEV": "iniciar com 5 μg/min, ajustando de acordo com a resposta e efeitos secundários até 20 μg/min; se necessário pode-se aumentar até 25 μg/min ou ocasionalmente mais; quando melhoria obtida reduzir gradualmente (usualmente possível dentro de 6-12 horas)."
+        },
+        "efeitosSecundarios": [
+          "Tremor fino (particularmente nas mãos), inquietação nervosa, taquicardia, palpitações e tensão muscular.",
+          "Doses altas podem causar hipokaliemia.",
+          "Podem também ocorrer cefaleia, vasodilatação periférica, arritmias, alterações do sono e do comportamento nas crianças.",
+          "Raramente broncospasmo paradoxal, urticária, angioedema, hipotensão e colapso."
+        ],
+        "contraIndicacoes": "As mesmas de 5-A-8.",
+        "notasPrecaucoes": [
+          "(1) Para uso exclusivo hospitalar e por médicos experientes no seu manuseamento.",
+          "(2) Para administração E.V. diluir 5 mL (2,5 mg) em 500 mL de dextrose a 5%.",
+          "(3) Monitorizar a FC, TA e, se necessário, ECG e níveis de potássio (risco de hipokaliemia especialmente quando usado concomitantemente com teofilina e seus derivados, corticosteróides e diuréticos).",
+          "(4) Ver também 5-A-8."
+        ]
+      },
+      {
+        "codigo": "5-A-10",
+        "nivelPrescricao": "1",
+        "nome": "SALBUTAMOL",
+        "apresentacao": "Comp. 2 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 5-A-8.",
+        "doses": {
+          "adultos": "2-4 mg 3-4 x/dia; alguns doentes podem beneficiar com até 8 mg 3-4 x/dia.",
+          "criancas": "1-2 anos: 100 μg/kg 4 x/dia; 2-6 anos: 1-2 mg 3-4 x/dia; 6-12 anos: 2 mg 3-4 x/dia."
+        },
+        "efeitosSecundarios": "Os mesmos de 5-A-9.",
+        "contraIndicacoes": "As mesmas de 5-A-8.",
+        "notasPrecaucoes": [
+          "(1) É preferível a administração por via inalatória por ser mais eficaz e ter menos efeitos secundários.",
+          "(2) A hipokaliemia pode resultar da terapêutica com agonistas β2 e pode ser potenciada pelo tratamento concomitante com derivados da xantina, esteróides e diuréticos.",
+          "(3) Ver também 5-A-8."
+        ]
+      },
+      {
+        "codigo": "5-A-11",
+        "nivelPrescricao": "2",
+        "nome": "SALBUTAMOL",
+        "apresentacao": "Xpe. 2 mg/5 mL",
+        "viaAdministracao": "Oral",
+        "indicacoes": "As mesmas de 5-A-8.",
+        "doses": {
+          "adultos": "2-4 mg (5-10 mL) 3-4 x/dia.",
+          "criancas": "menores de 2 anos: 100 μg/kg 4 x/dia; 2-6 anos: 1-2 mg (2,5-5 mL) 3-4 x/dia; 6-12 anos: 2 mg (5 mL) 3-4 x/dia."
+        },
+        "efeitosSecundarios": "Os mesmos de 5-A-9.",
+        "contraIndicacoes": "As mesmas de 5-A-8.",
+        "notasPrecaucoes": "As mesmas de 5-A-10."
+      }
+    ],
+    "5-B- ANTITÚSSICOS": [
+      {
+        "codigo": "5-B-1",
+        "nivelPrescricao": "1",
+        "nome": "CODEÍNA, fosfato",
+        "apresentacao": "Comp. 30 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Tosse seca irritativa.",
+        "doses": {
+          "adultos": "15-30 mg 3-4 x/dia; dose máxima 240 mg/dia.",
+          "criancas": "1-12 anos: 1-2 mg/kg/dia dividido em 4 doses."
+        },
+        "efeitosSecundarios": [
+          "Obstipação, sonolência, náusea, vómitos; pode causar dependência com uso prolongado."
+        ],
+        "contraIndicacoes": [
+          "Depressão respiratória, obstrução das vias aéreas e depressão do centro da tosse; evitar na diarreia associada à colite pseudomembranosa ou envenenamento até que o material tóxico seja eliminado."
+        ],
+        "notasPrecaucoes": [
+          "(1) Reduzir dose ou evitar na insuficiência hepática.",
+          "(2) Usar com cuidado na asma e na insuficiência renal.",
+          "(3) Pode causar dependência; evitar uso prolongado.",
+          "(4) Pode aumentar o efeito de sedativos, antidepressivos e álcool."
+        ]
+      },
+      {
+        "codigo": "5-B-2",
+        "nivelPrescricao": "1",
+        "nome": "DEXTROMETORFANO",
+        "apresentacao": "Xpe. 15 mg/5 mL",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Tosse seca.",
+        "doses": {
+          "adultos": "15-30 mg 3-4 x/dia.",
+          "criancas": "6-12 anos: 5-10 mg 3-4 x/dia; 2-6 anos: 2,5-5 mg 3-4 x/dia."
+        },
+        "efeitosSecundarios": [
+          "Ocasionalmente tonturas, perturbações gastrointestinais; raramente erupção cutânea; muito raramente depressão respiratória com doses altas."
+        ],
+        "contraIndicacoes": "Insuficiência hepática; não recomendado para crianças menores de 2 anos.",
+        "notasPrecaucoes": [
+          "(1) Usar com cuidado na insuficiência respiratória crónica.",
+          "(2) Sedação pode afectar a performance de tarefas especializadas (p.ex. conduzir)."
+        ]
+      }
+    ],
+    "5-C- EXPECTORANTES E MUCOLÍTICOS": [
+      {
+        "codigo": "5-C-1",
+        "nivelPrescricao": "2",
+        "nome": "ACETILCISTEÍNA",
+        "apresentacao": "Saqueta de 200 mg",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Redução da viscosidade das secreções respiratórias.",
+        "doses": {
+          "adultos": "200 mg 2-3 x/dia.",
+          "criancas": "maiores de 6 anos: 200 mg 2 x/dia; 2-6 anos: 200 mg 1 x/dia."
+        },
+        "efeitosSecundarios": [
+          "Ocasionalmente náusea, vómitos, estomatite, febre, rinorreia; muito raramente cefaleia, tinnitus e broncoespasmo."
+        ],
+        "contraIndicacoes": "Úlcera péptica activa.",
+        "notasPrecaucoes": [
+          "(1) Dissolva o conteúdo da saqueta em água.",
+          "(2) Use com cuidado na asma (pode ocasionalmente causar broncoespasmo)."
+        ]
+      },
+      {
+        "codigo": "5-C-2",
+        "nivelPrescricao": "1",
+        "nome": "BROMEXINA",
+        "apresentacao": "Xpe. 4 mg/5 mL",
+        "viaAdministracao": "Oral",
+        "indicacoes": "Redução da viscosidade das secreções respiratórias.",
+        "doses": {
+          "adultos": "8-16 mg 3 x/dia.",
+          "criancas": "maiores de 10 anos: 8 mg 3 x/dia; 6-10 anos: 4 mg 3 x/dia; 2-6 anos: 2 mg 3 x/dia."
+        },
+        "efeitosSecundarios": "Ocasionalmente náusea, vómitos, diarreia; raramente erupção cutânea.",
+        "notasPrecaucoes": "Evitar na úlcera péptica activa."
+      }
+    ]
+  }
+};

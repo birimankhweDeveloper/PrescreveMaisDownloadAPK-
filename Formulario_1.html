@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre'Screve+ - Consulta FNM 2007</title>
+    <style>
+        :root {
+            --primary-color: #5D5CDE;
+            --bg-color: #181818;
+            --surface-color: #2a2a2a;
+            --text-color: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-color: #404040;
+            --success-color: #4CAF50;
+            --warning-color: #FF9800;
+            --error-color: #f44336;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            
+            
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), #7c3aed);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #e0e0e0;
+            font-size: 0.9rem;
+        }
+
+        .search-section {
+            margin-bottom: 2rem;
+        }
+
+        .search-container {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--surface-color);
+            color: var(--text-color);
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .filter-select {
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            background-color: var(--surface-color);
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        .results-info {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background-color: var(--surface-color);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .medication-card {
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.2s ease;
+        }
+
+        .medication-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .medication-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .medication-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .medication-code {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .medication-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .meta-value {
+            font-size: 0.9rem;
+        }
+
+        .level-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .level-0 { background-color: var(--success-color); }
+        .level-1 { background-color: #2196F3; }
+        .level-2 { background-color: var(--warning-color); }
+        .level-3 { background-color: #FF5722; }
+        .level-4 { background-color: var(--error-color); }
+
+        .medication-section {
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.25rem;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .section-content ul {
+            padding-left: 1rem;
+        }
+
+        .section-content li {
+            margin-bottom: 0.25rem;
+        }
+
+        .dose-group {
+            background-color: var(--bg-color);
+            padding: 0.75rem;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .dose-group h4 {
+            color: var(--warning-color);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0.5rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .filters {
+                grid-template-columns: 1fr;
+            }
+
+            .medication-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .medication-meta {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .collapse-btn {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            text-decoration: underline;
+        }
+
+        .collapsed {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Pre'Screve+</h1>
+            <p>Formulário Nacional de Medicamentos - Moçambique 2007</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Pesquisar por código, nome ou indicação (ex: 1-A-1, digoxina, angina)..."
+                >
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label class="filter-label">Capítulo</label>
+                    <select id="chapterFilter" class="filter-select">
+                        <option value="">Todos os capítulos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Subcapítulo</label>
+                    <select id="subchapterFilter" class="filter-select">
+                        <option value="">Todos os subcapítulos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Nível de Prescrição</label>
+                    <select id="levelFilter" class="filter-select">
+                        <option value="">Todos os níveis</option>
+                        <option value="0">Nível 0 - Agente Polivalente Elementar</option>
+                        <option value="1">Nível 1 - Agentes de Medicina e Enfermeiros</option>
+                        <option value="2">Nível 2 - Técnicos de Medicina Geral</option>
+                        <option value="3">Nível 3 - Médicos de Clínica Geral</option>
+                        <option value="4">Nível 4 - Médicos Especialistas</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div id="resultsInfo" class="results-info" style="display: none;"></div>
+        <div id="loading" class="loading" style="display: none;">Carregando medicamentos...</div>
+        <div id="results"></div>
+    </div>
+
+    <script>
+        let medicamentos = [];
+        let filteredMedicamentos = [];
+
+        // Níveis de prescrição
+        const niveisDescricao = {
+            0: "Nível 0 - Medicamentos dispensados pelo Agente Polivalente Elementar",
+            1: "Nível 1 - Medicamentos prescritos por Agentes de Medicina, Enfermeiros",
+            2: "Nível 2 - Medicamentos prescritos por Técnicos de Medicina Geral",
+            3: "Nível 3 - Medicamentos prescritos por Médicos de Clínica Geral",
+            4: "Nível 4 - Medicamentos prescritos por Médicos Especialistas"
+        };
+
+        // Capítulos do FNM
+        const capitulos = {
+            1: "Aparelho Cardiovascular",
+            2: "Aparelho Digestivo", 
+            3: "Endocrinologia e Metabolismo",
+            4: "Aparelho Génito-Urinário e Hormonas Sexuais",
+            5: "Aparelho Respiratório",
+            6: "Sangue",
+            7: "Sistema Nervoso",
+            8: "Antibióticos",
+            9: "Citostáticos e Imunosupressores",
+            10: "Diuréticos",
+            11: "Equilíbrio Hidro-Electrolítico e Ácido-Base",
+            12: "Nutrição, Sais Minerais e Vitaminas",
+            13: "Fármacos Usados nos Transtornos Alérgicos",
+            14: "Fármacos Usados nas Afecções Musculo-Esqueléticas",
+            15: "Dermatologia",
+            16: "Otorrinolaringologia",
+            17: "Oftalmologia",
+            18: "Anestesia",
+            19: "Imunotropos",
+            20: "Anti-sépticos e Desinfectantes",
+            21: "Antídotos",
+            22: "Agentes de Diagnóstico"
+        };
+
+        // Dados dos medicamentos (extraídos do FNM)
+        const medicamentosData = [
+            {
+                codigo: "1-A-1",
+                nivel: 2,
+                capitulo: 1,
+                subcapitulo: "A",
+                nome: "DIGOXINA",
+                apresentacao: "Comp. 0,25 mg",
+                via: "Oral",
+                indicacoes: [
+                    "Controlo da resposta ventricular na fibrilhação auricular",
+                    "Tratamento da insuficiência cardíaca com compromisso sistólico ou com baixo débito"
+                ],
+                doses: {
+                    adulto: "Digitalização: 0,75-1,5 mg divididos em 2 ou 3 tomas/dia durante 2 a 3 dias. Manutenção: 1/2 a 2 comp./dia (usualmente 1 comp./dia)",
+                    crianca: "Ver 1-A-2"
+                },
+                efeitos_secundarios: [
+                    "Anorexia, náusea e vómitos",
+                    "Cefaleia e tonturas, confusão, depressão",
+                    "Alteração da visão das cores, ginecomastia",
+                    "Toxicidade cardíaca: arritmias, bradicardia sinusal, bloqueio AV"
+                ],
+                contraindicacoes: [
+                    "Arritmias ventriculares na ausência de insuficiência cardíaca",
+                    "Síndrome de Wolff-Parkinson-White",
+                    "Cardiomiopatia hipertrófica",
+                    "Tetralogia de Fallot",
+                    "Bloqueio AV"
+                ],
+                precaucoes: [
+                    "Margem muito estreita entre dose terapêutica e tóxica",
+                    "Reduzir dose na insuficiência renal e em idosos",
+                    "Hipokaliemia e hipomagnesiemia potenciam toxicidade",
+                    "Quinidina, amiodarona, verapamil podem aumentar níveis plasmáticos"
+                ]
+            },
+            {
+                codigo: "1-A-2",
+                nivel: 2,
+                capitulo: 1,
+                subcapitulo: "A",
+                nome: "DIGOXINA",
+                apresentacao: "Gotas Orais, 2,5 mg - Fr. 50 mL",
+                via: "Oral",
+                indicacoes: [
+                    "Mesmas indicações de 1-A-1, em crianças mais pequenas"
+                ],
+                doses: {
+                    adulto: "Não aplicável",
+                    crianca: "Digitalização: 0,015 mg/kg/dia divididos em 3 tomas nas primeiras 24h. Manutenção: 0,01 mg/kg/dia dividido em duas tomas diárias"
+                },
+                efeitos_secundarios: [
+                    "Os mesmos de 1-A-1"
+                ],
+                contraindicacoes: [
+                    "As mesmas de 1-A-1"
+                ],
+                precaucoes: [
+                    "Usar gotas somente em crianças até 7 kg de peso",
+                    "Acima deste peso, preferir comprimidos",
+                    "Ver também 1-A-1"
+                ]
+            },
+            {
+                codigo: "5-A-8",
+                nivel: 2,
+                capitulo: 5,
+                subcapitulo: "A",
+                nome: "SALBUTAMOL",
+                apresentacao: "Aerossol pressurizado 100 μg/inalação",
+                via: "Inalatória",
+                indicacoes: [
+                    "Prevenção e tratamento das crises de asma brônquica",
+                    "Outras situações acompanhadas de broncospasmo (bronquite, enfisema)"
+                ],
+                doses: {
+                    adulto: "Crises agudas: 2-3 jactos como dose única. Manutenção: 2-3 jactos 3-4 x/dia",
+                    crianca: "Manutenção: 1 jacto 3-4 x/dia. Prevenção da asma de esforço: 1-2 jactos 5 min antes do exercício"
+                },
+                efeitos_secundarios: [
+                    "Tremor fino ligeiro",
+                    "Cefaleia",
+                    "Palpitações"
+                ],
+                contraindicacoes: [
+                    "Insuficiência cardíaca",
+                    "Arritmias cardíacas",
+                    "HTA",
+                    "Hipertiroidismo",
+                    "Diabetes"
+                ],
+                precaucoes: [
+                    "Educar o doente no uso correcto do aerossol",
+                    "Procurar conselho médico se doses não forem eficazes por mais de 3h",
+                    "Pode ocorrer agravamento paradoxal do broncospasmo",
+                    "Actua mais rapidamente que formas orais"
+                ]
+            },
+            {
+                codigo: "7-A-3",
+                nivel: 0,
+                capitulo: 7,
+                subcapitulo: "A",
+                nome: "PARACETAMOL",
+                apresentacao: "Comp. 500 mg",
+                via: "Oral",
+                indicacoes: [
+                    "Dor de intensidade ligeira a moderada",
+                    "Febre"
+                ],
+                doses: {
+                    adulto: "0,5-1 g de 4/4-6/6 h. Máximo 4 g/dia",
+                    crianca: "6-12 anos: 250-500 mg de 4/4-6/6 h até máximo 4 doses/dia. 1-5 anos: 120-250 mg. 3-12 meses: 60-120 mg"
+                },
+                efeitos_secundarios: [
+                    "Geralmente muito bem tolerado",
+                    "Raramente reacções cutâneas de hipersensibilidade",
+                    "Neutropenia e trombocitopenia",
+                    "Administração prolongada pode levar a hepatotoxicidade"
+                ],
+                contraindicacoes: [
+                    "Doença hepática severa",
+                    "Doença renal severa"
+                ],
+                precaucoes: [
+                    "Reduzir doses na insuficiência hepática ou renal",
+                    "Melhor tolerado que AAS",
+                    "Desprovido de actividade anti-inflamatória",
+                    "Analgésico de eleição durante toda a gravidez"
+                ]
+            },
+            {
+                codigo: "8-A-1",
+                nivel: 1,
+                capitulo: 8,
+                subcapitulo: "A",
+                nome: "AMOXICILINA",
+                apresentacao: "Cáps. 500 mg",
+                via: "Oral",
+                indicacoes: [
+                    "Infecções do tracto respiratório superior e inferior",
+                    "Infecções do tracto génito-urinário",
+                    "Infecções da pele e tecidos moles",
+                    "Otite média aguda"
+                ],
+                doses: {
+                    adulto: "500 mg de 8/8 h ou 1 g de 12/12 h",
+                    crianca: "20-40 mg/kg/dia divididos em 3 tomas de 8/8 h"
+                },
+                efeitos_secundarios: [
+                    "Distúrbios gastrointestinais (náusea, vómitos, diarreia)",
+                    "Reacções alérgicas (erupção cutânea, urticária)",
+                    "Raramente anafilaxia"
+                ],
+                contraindicacoes: [
+                    "Hipersensibilidade às penicilinas",
+                    "História de reacções alérgicas graves a β-lactâmicos"
+                ],
+                precaucoes: [
+                    "Questionar sobre alergias a penicilinas antes da prescrição",
+                    "Pode causar colite pseudomembranosa",
+                    "Segura na gravidez e lactação",
+                    "Tomar com alimentos para reduzir distúrbios gastrointestinais"
+                ]
+            },
+            {
+                codigo: "2-A-4",
+                nivel: 3,
+                capitulo: 2,
+                subcapitulo: "A",
+                nome: "OMEPRAZOL",
+                apresentacao: "Cáps. 20 mg",
+                via: "Oral",
+                indicacoes: [
+                    "Refluxo gastroesofágico e esofagite erosiva",
+                    "Úlcera gástrica benigna e úlcera duodenal",
+                    "Erradicação de H. pylori",
+                    "Síndrome de Zollinger-Ellison",
+                    "Profilaxia da úlcera péptica associada aos AINEs"
+                ],
+                doses: {
+                    adulto: "Refluxo: 20 mg 1x/dia por 4-8 semanas. Úlcera: 20 mg 1x/dia por 4-8 semanas. Erradicação H. pylori: 20 mg 2x/dia + antibióticos por 7 dias",
+                    crianca: "Maiores de 20 kg: 20 mg 1x/dia. 10-20 kg: 10 mg 1x/dia"
+                },
+                efeitos_secundarios: [
+                    "Distúrbios gastrointestinais (náusea, vómitos, dor abdominal)",
+                    "Cefaleia e tonturas",
+                    "Raramente reacções de hipersensibilidade",
+                    "Distúrbios hematológicos raros"
+                ],
+                contraindicacoes: [
+                    "Gravidez",
+                    "Lactação"
+                ],
+                precaucoes: [
+                    "Usar com precaução em anomalias hepáticas",
+                    "Pode mascarar sintomas de cancro do estômago",
+                    "Pode interferir com absorção de outros medicamentos",
+                    "Aumentar vigilância em doentes com sintomas de alarme"
+                ]
+            }
+        ];
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            medicamentos = medicamentosData;
+            filteredMedicamentos = [...medicamentos];
+            
+            initializeFilters();
+            setupEventListeners();
+            displayResults();
+        });
+
+        function initializeFilters() {
+            const chapterFilter = document.getElementById('chapterFilter');
+            const subchapterFilter = document.getElementById('subchapterFilter');
+
+            // Populate chapter filter
+            Object.entries(capitulos).forEach(([num, name]) => {
+                const option = document.createElement('option');
+                option.value = num;
+                option.textContent = `Capítulo ${num} - ${name}`;
+                chapterFilter.appendChild(option);
+            });
+
+            // Populate subcapítulo filter based on available data
+            const subcapitulos = [...new Set(medicamentos.map(m => `${m.capitulo}-${m.subcapitulo}`))];
+            subcapitulos.sort().forEach(sub => {
+                const [cap, subcap] = sub.split('-');
+                const option = document.createElement('option');
+                option.value = sub;
+                option.textContent = `${cap}-${subcap}`;
+                subchapterFilter.appendChild(option);
+            });
+        }
+
+        function setupEventListeners() {
+            const searchInput = document.getElementById('searchInput');
+            const chapterFilter = document.getElementById('chapterFilter');
+            const subchapterFilter = document.getElementById('subchapterFilter');
+            const levelFilter = document.getElementById('levelFilter');
+
+            searchInput.addEventListener('input', performSearch);
+            chapterFilter.addEventListener('change', performSearch);
+            subchapterFilter.addEventListener('change', performSearch);
+            levelFilter.addEventListener('change', performSearch);
+        }
+
+        function normalizeString(str) {
+            return str.toLowerCase()
+                     .replace(/[áàâãä]/g, 'a')
+                     .replace(/[éèêë]/g, 'e')
+                     .replace(/[íìîï]/g, 'i')
+                     .replace(/[óòôõö]/g, 'o')
+                     .replace(/[úùûü]/g, 'u')
+                     .replace(/[ç]/g, 'c')
+                     .replace(/[-\s]/g, '');
+        }
+
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.trim();
+            const chapterFilter = document.getElementById('chapterFilter').value;
+            const subchapterFilter = document.getElementById('subchapterFilter').value;
+            const levelFilter = document.getElementById('levelFilter').value;
+
+            filteredMedicamentos = medicamentos.filter(med => {
+                // Search term filter
+                if (searchTerm) {
+                    const normalizedSearch = normalizeString(searchTerm);
+                    const normalizedCode = normalizeString(med.codigo);
+                    const normalizedName = normalizeString(med.nome);
+                    const normalizedIndicacoes = med.indicacoes.map(ind => normalizeString(ind)).join(' ');
+
+                    const matchesSearch = normalizedCode.includes(normalizedSearch) ||
+                                        normalizedName.includes(normalizedSearch) ||
+                                        normalizedIndicacoes.includes(normalizedSearch);
+
+                    if (!matchesSearch) return false;
+                }
+
+                // Chapter filter
+                if (chapterFilter && med.capitulo.toString() !== chapterFilter) {
+                    return false;
+                }
+
+                // Subcapítulo filter
+                if (subchapterFilter) {
+                    const [cap, subcap] = subchapterFilter.split('-');
+                    if (med.capitulo.toString() !== cap || med.subcapitulo !== subcap) {
+                        return false;
+                    }
+                }
+
+                // Level filter
+                if (levelFilter && med.nivel.toString() !== levelFilter) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            displayResults();
+        }
+
+        function displayResults() {
+            const resultsContainer = document.getElementById('results');
+            const resultsInfo = document.getElementById('resultsInfo');
+
+            // Show results info
+            resultsInfo.style.display = 'block';
+            resultsInfo.textContent = `${filteredMedicamentos.length} medicamento(s) encontrado(s)`;
+
+            if (filteredMedicamentos.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="no-results">
+                        <h3>Nenhum medicamento encontrado</h3>
+                        <p>Tente ajustar os critérios de pesquisa</p>
+                    </div>
+                `;
+                return;
+            }
+
+            resultsContainer.innerHTML = filteredMedicamentos.map(med => `
+                <div class="medication-card">
+                    <div class="medication-header">
+                        <h2 class="medication-name">${med.nome}</h2>
+                        <span class="medication-code">${med.codigo}</span>
+                    </div>
+
+                    <div class="medication-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Capítulo</span>
+                            <span class="meta-value">Capítulo ${med.capitulo} - ${capitulos[med.capitulo]}</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Subcapítulo</span>
+                            <span class="meta-value">${med.capitulo}-${med.subcapitulo}</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Nível de Prescrição</span>
+                            <span class="level-badge level-${med.nivel}">${niveisDescricao[med.nivel]}</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Apresentação</span>
+                            <span class="meta-value">${med.apresentacao}</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Via de Administração</span>
+                            <span class="meta-value">${med.via}</span>
+                        </div>
+                    </div>
+
+                    <div class="medication-section">
+                        <h3 class="section-title">Indicações</h3>
+                        <div class="section-content">
+                            <ul>
+                                ${med.indicacoes.map(ind => `<li>${ind}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="medication-section">
+                        <h3 class="section-title">Doses</h3>
+                        <div class="section-content">
+                            <div class="dose-group">
+                                <h4>Adultos:</h4>
+                                <p>${med.doses.adulto}</p>
+                            </div>
+                            <div class="dose-group">
+                                <h4>Crianças:</h4>
+                                <p>${med.doses.crianca}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="medication-section">
+                        <h3 class="section-title">Efeitos Secundários</h3>
+                        <div class="section-content">
+                            <ul>
+                                ${med.efeitos_secundarios.map(ef => `<li>${ef}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="medication-section">
+                        <h3 class="section-title">Contra-indicações</h3>
+                        <div class="section-content">
+                            <ul>
+                                ${med.contraindicacoes.map(ci => `<li>${ci}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="medication-section">
+                        <h3 class="section-title">Precauções</h3>
+                        <div class="section-content">
+                            <ul>
+                                ${med.precaucoes.map(prec => `<li>${prec}</li>`).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>

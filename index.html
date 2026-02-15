@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>BIRIMANKHWE'S DEVELOPER - PreScreve+</title>
+    <style>
+        /* ===== Variáveis de Tema ===== */
+        :root {
+            --primary-dark: #1b2545;
+            --primary-light: #5D5CDE;
+            --secondary-color: #2E7D96;
+            --accent-green: #28A745;
+            --background-light: #F3F4FF;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --card-bg-light: #F8F9FA;
+            --card-bg-dark: #2C2C2C;
+            --border-light: #E0E0E0;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --success: #28A745;
+            --info: #17A2B8;
+            --warning: #FFC107;
+            --danger: #DC3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ===== Header Aprimorado ===== */
+        .header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            width: 100%;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .logo-area {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+            flex: 1;
+        }
+
+        .site-title {
+            font-size: clamp(18px, 5vw, 24px);
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #fff, var(--warning));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            white-space: nowrap;
+        }
+
+        .app-name {
+            font-size: clamp(12px, 3.5vw, 16px);
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .app-name span {
+            background: var(--warning);
+            color: var(--primary-dark);
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: clamp(10px, 2.5vw, 12px);
+            font-weight: bold;
+        }
+
+        /* Menu de navegação estilizado */
+        .nav-menu {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 6px 10px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            cursor: pointer;
+            font-size: clamp(12px, 3vw, 14px);
+            white-space: nowrap;
+        }
+
+        .nav-link i {
+            font-size: clamp(14px, 3.5vw, 16px);
+        }
+
+        .nav-link:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-color: var(--warning);
+        }
+
+        .nav-link.active {
+            background: var(--warning);
+            color: var(--primary-dark);
+            border-color: var(--warning);
+            font-weight: 600;
+        }
+
+        .nav-link.active i {
+            color: var(--primary-dark);
+        }
+
+        /* Badge de notificação */
+        .nav-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--danger);
+            color: white;
+            font-size: 9px;
+            padding: 2px 5px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+            padding: 40px 0;
+            background: linear-gradient(135deg, rgba(27,37,69,0.02) 0%, rgba(46,125,150,0.05) 100%);
+            width: 100%;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: clamp(28px, 6vw, 42px);
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .hero-title span {
+            color: var(--secondary-color);
+            display: block;
+            font-size: clamp(16px, 3.5vw, 20px);
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        .hero-description {
+            font-size: clamp(14px, 3vw, 17px);
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: white;
+            padding: 12px 15px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-light);
+            flex: 1;
+            min-width: 80px;
+        }
+
+        .stat-number {
+            font-size: clamp(22px, 5vw, 28px);
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .stat-label {
+            font-size: clamp(11px, 2.5vw, 13px);
+            color: #777;
+        }
+
+        .hero-image {
+            text-align: center;
+            width: 100%;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-light);
+        }
+
+        /* ===== Download Cards Melhorados ===== */
+        .download-showcase {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .download-card {
+            flex: 1;
+            min-width: 280px;
+            background: white;
+            border-radius: 20px;
+            padding: 25px 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .download-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-dark), var(--secondary-color), var(--warning));
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(27,37,69,0.15);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--secondary-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .card-icon i {
+            font-size: 32px;
+            color: white;
+        }
+
+        .card-title {
+            font-size: clamp(20px, 5vw, 24px);
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+        }
+
+        .card-subtitle {
+            color: #666;
+            font-size: clamp(12px, 3vw, 14px);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border-light);
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .card-features li {
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: clamp(13px, 3vw, 14px);
+            color: #555;
+        }
+
+        .card-features li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .card-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: clamp(14px, 3.5vw, 16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-btn.android {
+            background: linear-gradient(135deg, #3DDC84, #00C853);
+            color: white;
+        }
+
+        .card-btn.web {
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+        }
+
+        .card-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .card-btn i {
+            font-size: 18px;
+        }
+
+        .badge-new {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--warning);
+            color: var(--primary-dark);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            transform: rotate(5deg);
+            z-index: 1;
+        }
+
+        /* ===== Seções ===== */
+        .section {
+            padding: 50px 0;
+            border-bottom: 1px solid var(--border-light);
+            width: 100%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(24px, 6vw, 32px);
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            padding: 0 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: clamp(14px, 3.5vw, 17px);
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            padding: 0 15px;
+        }
+
+        /* ===== Features Grid ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid var(--border-light);
+            height: 100%;
+            width: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(27,37,69,0.15);
+            border-color: var(--primary-light);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: clamp(18px, 4vw, 20px);
+            margin-bottom: 10px;
+            color: var(--primary-dark);
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: clamp(13px, 3vw, 14px);
+        }
+
+        /* ===== Screenshots ===== */
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .screenshot-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s ease;
+            aspect-ratio: 9/16;
+            width: 100%;
+        }
+
+        .screenshot-item:hover {
+            transform: scale(1.03);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ===== Modal do Desenvolvedor ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: clamp(18px, 4vw, 22px);
+        }
+
+        .close-modal {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .close-modal:hover {
+            background: rgba(255,255,255,0.3);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 25px 20px;
+        }
+
+        .developer-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            color: white;
+            border: 3px solid var(--warning);
+        }
+
+        .developer-name {
+            font-size: clamp(18px, 4vw, 22px);
+            font-weight: bold;
+            color: var(--primary-dark);
+            text-align: center;
+            margin-bottom: 8px;
+            word-break: break-word;
+        }
+
+        .developer-title {
+            text-align: center;
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-light);
+            font-size: clamp(13px, 3vw, 14px);
+        }
+
+        .developer-info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .developer-info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-icon {
+            width: 35px;
+            height: 35px;
+            background: rgba(46,125,150,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .info-text {
+            flex: 1;
+        }
+
+        .info-text strong {
+            display: block;
+            color: var(--primary-dark);
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+
+        .info-text span {
+            color: #666;
+            font-size: 13px;
+            word-break: break-word;
+        }
+
+        .developer-contact {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            flex: 1;
+            min-width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .contact-btn.email {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .contact-btn.phone {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* ===== FAQ ===== */
+        .faq-grid {
+            max-width: 800px;
+            margin: 30px auto 0;
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .faq-question {
+            padding: 15px;
+            background: var(--card-bg-light);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+            font-size: clamp(14px, 3.5vw, 15px);
+            gap: 10px;
+        }
+
+        .faq-question:hover {
+            background: #eef2f7;
+        }
+
+        .faq-answer {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #666;
+            font-size: clamp(13px, 3vw, 14px);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 15px;
+            max-height: 500px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-dark), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            width: 100%;
+        }
+
+        .cta-title {
+            font-size: clamp(24px, 6vw, 32px);
+            margin-bottom: 15px;
+            padding: 0 15px;
+        }
+
+        .cta-text {
+            font-size: clamp(14px, 3.5vw, 17px);
+            margin-bottom: 25px;
+            opacity: 0.9;
+            padding: 0 15px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: var(--primary-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: clamp(14px, 3.5vw, 16px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            background: var(--warning);
+            color: var(--primary-dark);
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: var(--primary-dark);
+            color: white;
+            padding: 40px 0 20px;
+            width: 100%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 15px;
+            font-size: clamp(15px, 3.5vw, 16px);
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--warning);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: clamp(13px, 3vw, 14px);
+            word-break: break-word;
+        }
+
+        .footer-column a:hover {
+            color: white;
+            transform: translateX(3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: clamp(12px, 3vw, 13px);
+        }
+
+        /* ===== Ajustes para scroll com header fixo ===== */
+        html {
+            scroll-padding-top: 70px;
+        }
+
+        /* ===== Responsividade Otimizada para Android ===== */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+            }
+
+            .logo-area {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            .site-title {
+                white-space: normal;
+                text-align: center;
+            }
+
+            .app-name {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .nav-menu {
+                justify-content: center;
+                gap: 4px;
+                width: 100%;
+            }
+
+            .nav-link {
+                padding: 6px 8px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 25px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .stat-item {
+                min-width: 70px;
+            }
+
+            .download-showcase {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .download-card {
+                min-width: 100%;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .section-subtitle {
+                margin-bottom: 25px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .screenshots-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .footer-grid {
+                text-align: center;
+                gap: 20px;
+            }
+
+            .footer-column h4::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-column a {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 3px;
+            }
+
+            .nav-link {
+                padding: 5px 7px;
+                font-size: 11px;
+            }
+
+            .nav-link i {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 30px 0;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .stat-item {
+                width: 100%;
+            }
+
+            .download-card {
+                padding: 20px 15px;
+            }
+
+            .card-icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 15px;
+            }
+
+            .card-icon i {
+                font-size: 28px;
+            }
+
+            .card-features li {
+                font-size: 12px;
+                padding: 6px 0;
+            }
+
+            .card-btn {
+                padding: 12px;
+                font-size: 13px;
+            }
+
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+                max-width: 220px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .modal-content {
+                margin: 0;
+            }
+
+            .developer-name {
+                font-size: 18px;
+            }
+
+            .developer-info-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+
+            .info-icon {
+                margin: 0 auto;
+            }
+
+            .developer-contact {
+                flex-direction: column;
+            }
+
+            .contact-btn {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+                gap: 5px;
+            }
+
+            .nav-link {
+                width: 100%;
+                justify-content: center;
+                padding: 8px;
+            }
+
+            .site-title {
+                font-size: 16px;
+            }
+
+            .app-name {
+                font-size: 11px;
+            }
+
+            .hero-title {
+                font-size: 24px;
+            }
+
+            .hero-title span {
+                font-size: 14px;
+            }
+
+            .hero-description {
+                font-size: 13px;
+            }
+
+            .stat-number {
+                font-size: 20px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+            }
+
+            .card-title {
+                font-size: 18px;
+            }
+
+            .card-subtitle {
+                font-size: 12px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .feature-card h3 {
+                font-size: 16px;
+            }
+
+            .feature-card p {
+                font-size: 12px;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Aprimorado -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-area">
+                    <div class="site-title">BIRIMANKHWE'S DEVELOPER</div>
+                    <div class="app-name">
+                        <i>💊</i> PreScreve+ <span>v1.0</span>
+                    </div>
+                </div>
+                
+                <nav class="nav-menu">
+                    <div class="nav-item">
+                        <a href="#features" class="nav-link">
+                            <i>📋</i>
+                            <span>Func.</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#screenshots" class="nav-link">
+                            <i>📱</i>
+                            <span>App</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#download" class="nav-link active">
+                            <i>⬇️</i>
+                            <span>Download</span>
+                            <span class="nav-badge">Novo</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="#faq" class="nav-link">
+                            <i>❓</i>
+                            <span>FAQ</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Botão do Desenvolvedor -->
+                    <div class="nav-item">
+                        <button class="nav-link" onclick="openDevModal()">
+                            <i>👨‍💻</i>
+                            <span>Dev</span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Modal do Desenvolvedor -->
+    <div class="modal" id="devModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>
+                    <i>👨‍💻</i>
+                    Desenvolvedor
+                </h2>
+                <button class="close-modal" onclick="closeDevModal()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="developer-avatar">
+                    👨‍⚕️
+                </div>
+                
+                <div class="developer-name">
+                    Marcos Jeremias Bernardo Birimankhwe
+                </div>
+                
+                <div class="developer-title">
+                    Estudante do curso de Técnicos de Medicina Geral<br>
+                    & Desenvolvedor de Softwares para a comunidade.
+                </div>
+                
+                <div class="developer-info-item">
+                    <div class="info-icon">🎓</div>
+                    <div class="info-text">
+                        <strong>Formação</strong>
+                        <span>Formando do Curso de Técnicos de Medicina Geral - Moçambique</span>
+                    </div>
+                </div>
+                
+                <div class="developer-info-item">
+                    <div class="info-icon">💻</div>
+                    <div class="info-text">
+                        <strong>Especialidade</strong>
+                        <span>Soluções tecnológicas para saúde</span>
+                    </div>
+                </div>
+                
+                <div class="developer-info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-text">
+                        <strong>E-mail</strong>
+                        <span>birimankhwedeveloper@gmail.com</span>
+                    </div>
+                </div>
+                
+                <div class="developer-info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <strong>Contactos</strong>
+                        <span>85 369 0042 • 83 331 1040</span>
+                    </div>
+                </div>
+                
+                <div class="developer-contact">
+                    <a href="mailto:birimankhwedeveloper@gmail.com" class="contact-btn email">
+                        <i>✉️</i> E-mail
+                    </a>
+                    <a href="tel:+258853690042" class="contact-btn phone">
+                        <i>📞</i> Ligar
+                    </a>
+                </div>
+                
+                <div style="margin-top: 15px; text-align: center; color: #666; font-size: 13px;">
+                    <p>Unindo medicina e tecnologia para<br>melhorar os serviços de atendimento e prescrição médica em Moçambique.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="fade-in">
+                    <h1 class="hero-title">
+                        Prescrição Médica Inteligente
+                        <span>Baseado no Formulário Nacional de Medicamentos de Moçambique</span>
+                    </h1>
+                    <p class="hero-description">
+                        Aceda a informação completa sobre medicamentos de forma rápida e offline.
+                        Desenvolvido para profissionais de saúde moçambicanos.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">+500</div>
+                            <div class="stat-label">Medicamentos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">22</div>
+                            <div class="stat-label">Capítulos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Offline</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image fade-in">
+                    <img src="img_abertura.jpg" alt="PreScreve+ Mockup">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Cards Section -->
+    <section id="download" class="section">
+        <div class="container">
+            <h2 class="section-title">Obter o PreScreve+</h2>
+            <p class="section-subtitle">
+                Escolha a versão que melhor se adapta às suas necessidades. Ambas dão acesso total à base de dados do FNM.
+            </p>
+            
+            <div class="download-showcase">
+                <!-- Card Android -->
+                <div class="download-card fade-in">
+                    <div class="badge-new">Recomendado</div>
+                    <div class="card-icon">
+                        <i>📱</i>
+                    </div>
+                    <h3 class="card-title">Android</h3>
+                    <div class="card-subtitle">Aplicação Nativa</div>
+                    <ul class="card-features">
+                        <li>Totalmente offline</li>
+                        <li>Instalação rápida (APK)</li>
+                        <li>Ícone no ecrã principal</li>
+                        <li>Ocupa apenas 9 MB</li>
+                        <li>Atualizações automáticas</li>
+                    </ul>
+                    <a href="PreScreve+.apk" download>
+                    <button class="card-btn android" onclick="ddownloadAndroid()">
+                        <i>📲</i> Transferir APK
+                    </button>
+                    </a>
+                </div>
+                
+                <!-- Card Web App -->
+                <div class="download-card fade-in">
+                    <div class="card-icon">
+                        <i>🌐</i>
+                    </div>
+                    <h3 class="card-title">Web App</h3>
+                    <div class="card-subtitle">Instalável (PWA)</div>
+                    <ul class="card-features">
+                        <li>Funciona offline</li>
+                        <li>Compatível com iOS/Android/PC</li>
+                        <li>Sem loja de aplicativos</li>
+                        <li>Atualizações em tempo real</li>
+                        <li>Ocupa espaço mínimo</li>
+                    </ul>
+                    <a href="#">
+                    <button class="card-btn web" onclick="openWebApp()">
+                        <i>🌍</i> Abrir Web App
+                    </button>
+                    </a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px; padding: 0 15px;">
+                <p style="color: #666; font-size: clamp(12px, 3vw, 14px);">
+                    <strong>🔒 Privacidade garantida:</strong> O aplicativo não coleta dados pessoais.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">Porquê o PreScreve+?</h2>
+            <p class="section-subtitle">
+                Uma ferramenta completa e intuitiva para auxiliar na prescrição diária.
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Pesquisa Avançada</h3>
+                    <p>Por nome, código FNM, indicação, via de administração e nível de prescrição.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Totalmente Offline</h3>
+                    <p>Todas as informações ficam armazenadas no seu dispositivo.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Favoritos</h3>
+                    <p>Acesso rápido aos medicamentos mais utilizados.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📊</div>
+                    <h3>Filtros Detalhados</h3>
+                    <p>Filtre por capítulo, nível de prescrição e via de administração.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🌓</div>
+                    <h3>Modo Claro/Escuro</h3>
+                    <p>Interface adaptável para conforto visual em qualquer ambiente.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Privacidade Garantida</h3>
+                    <p>Nenhum dado é coletado. Consulta 100% local.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots" class="section">
+        <div class="container">
+            <h2 class="section-title">Pré-visualização</h2>
+            <p class="section-subtitle">
+                Conheça a interface simples e objetiva do PreScreve+.
+            </p>
+            
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="pesquisaa.jpg" alt="Lista de medicamentos">
+                </div>
+                <div class="screenshot-item">
+                    <img src="info_meds.jpg" alt="Detalhes do medicamento">
+                </div>
+                <div class="screenshot-item">
+                    <img src="favoritos.jpg" alt="Pesquisa">
+                </div>
+                <div class="screenshot-item">
+                    <img src="sobre_desenvolvedor.jpg" alt="Favoritos">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>📱 O aplicativo funciona sem internet?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Sim! Após a instalação, toda a base de dados fica armazenada no seu dispositivo e o aplicativo funciona perfeitamente offline.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>🤔 Quem pode usar o PreScreve+?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Médicos, técnicos de medicina, enfermeiros e estudantes. O nível de prescrição de cada medicamento é claramente indicado.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>🔄 As atualizações são frequentes?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        A base de dados segue o Formulário Nacional de Medicamentos de Moçambique. Atualizações serão disponibilizadas conforme novas versões do FNM.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>🔐 Meus dados estão seguros?</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutamente. O PreScreve+ não coleta, armazena ou transmite nenhum dado pessoal. Toda a informação fica apenas no seu aparelho.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Pronto para otimizar suas prescrições?</h2>
+            <p class="cta-text">
+                Junte-se a centenas de profissionais de saúde que já utilizam o PreScreve+.
+            </p>
+            <button class="cta-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+                ⬆️ Início
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>BIRIMANKHWE'S</h4>
+                    <ul>
+                        <li><a href="#" onclick="openExternalLink('sobre_app.html'); return false;">Sobre o PreScreve+</a></li>
+                        <li><a href="#features">Funcionalidades</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="mailto:birimankhwedeveloper@gmail.com">📧 Email: birimankhwedeveloper@gmail.com</a></li>
+                        <li><a href="tel:+258853690042">📞 85 369 0042</a></li>
+                        <li><a href="tel:+258833311040">📞 83 331 1040</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Desenvolvedor</h4>
+                    <ul>
+                        <li>👨‍⚕️ Marcos Jeremias Bernardo Birimankhwe</li>
+                        <li>📚 Tecnico De Medicina Geral</li>
+                        <li>💻 Desenvolvedor</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>BIRIMANKHWE'S DEVELOPER © 2023-2025</p>
+                <p style="margin-top: 5px;">PreScreve+ v1.0 - FNM Moçambique</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== Funções de Download =====
+        function downloadAndroid() {
+            const fileName = 'PreScreve+.apk';
+            
+            // Criar um arquivo de demonstração
+            const content = 'PreScreve+ APK - Versão 1.0\n\nEste é o instalador do aplicativo PreScreve+ para Android.\n\nDesenvolvido por BIRIMANKHWE\'S DEVELOPER\nPara profissionais de saúde em Moçambique.';
+            const blob = new Blob([content], { type: 'application/vnd.android.package-archive' });
+            const url = window.URL.createObjectURL(blob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+            
+            alert('📱 Download do PreScreve+.apk iniciado!\n\nFicheiro: ' + fileName);
+        }
+        
+        function openWebApp() {
+            const webAppUrl = '#';
+            window.open(webAppUrl, '_blank');
+            alert('🌐 Web App será aberto em nova aba.\n\nPreScreve+ Web App');
+        }
+        
+        function openExternalLink(url) {
+            window.open(url, '_blank');
+        }
+        
+        // ===== Modal do Desenvolvedor =====
+        function openDevModal() {
+            document.getElementById('devModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeDevModal() {
+            document.getElementById('devModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        window.onclick = function(event) {
+            const modal = document.getElementById('devModal');
+            if (event.target === modal) {
+                closeDevModal();
+            }
+        }
+        
+        // ===== FAQ Toggle =====
+        function toggleFAQ(element) {
+            const faqItem = element.closest('.faq-item');
+            const isActive = faqItem.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            faqItem.classList.toggle('active');
+        }
+        
+        // ===== Scroll Suave =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        // ===== Atualizar ano no footer =====
+        document.addEventListener('DOMContentLoaded', () => {
+            const footerText = document.querySelector('.footer-bottom p:first-child');
+            if (footerText) {
+                const currentYear = new Date().getFullYear();
+                footerText.innerHTML = footerText.innerHTML.replace('2023-2025', `2023-${currentYear}`);
+            }
+        });
+    </script>
+</body>
+</html>
